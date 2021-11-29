@@ -1,0 +1,272 @@
+/*! DESKTOP VIEW */
+
+/** Page Structures */
+body {
+    font-family: var(--body) !important;
+    background-color: var(--dark-blue);
+}
+
+main {
+    margin-bottom: 7.5rem;
+}
+
+/** Blade Components */
+h1,
+h2,
+h3 {
+    font-weight: 800 !important;
+}
+
+h4,
+h5,
+h6,
+strong,
+button,
+.nav-link,
+.page-link {
+    font-weight: 600 !important;
+}
+
+img,
+a,
+.nav-link,
+.page-link {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+th {
+    background-color: var(--black) !important;
+}
+
+th,
+tr {
+    border-top: 1.5px solid var(--light-gray) !important;
+}
+
+th,
+td {
+    border-right: 1.5px solid var(--light-gray) !important;
+    border-bottom: 1.5px solid var(--light-gray) !important;
+}
+
+th:first-child,
+td:first-child {
+    border-left: 1.5px solid var(--light-gray) !important;
+}
+
+tr:first-child th:first-child {
+    border-top-left-radius: 5px !important;
+}
+
+tr:first-child th:last-child {
+    border-top-right-radius: 5px !important;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 5px !important;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 5px !important;
+}
+
+label {
+    margin-bottom: .5rem;
+}
+
+input {
+    caret-color: var(--dark-blue);
+}
+
+select {
+    padding: .4rem;
+    border-radius: 5px;
+}
+
+hr {
+    height: 2px !important;
+    border-radius: 50px !important
+}
+
+/** Pseudo-elements */
+::-webkit-scrollbar {
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 4px solid var(--black);
+    background-color: var(--dark-blue);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--normal-blue);
+}
+
+::selection {
+    background: var(--normal-blue);
+}
+
+::placeholder {
+    color: var(--light-gray) !important;
+}
+
+/** Pseudo-classes */
+:root {
+    --dark-blue: #020E3A;
+    --normal-blue: #313465;
+    --normal-yellow: #FFFF00;
+    --light-gray: #999999;
+    --transparent-1: #FFFFFF25;
+    --transparent-2: #FFFFFF1A;
+    --black: #000000;
+    --white: #FFFFFF;
+    --body: 'Poppins', sans-serif !important;
+}
+
+a:hover {
+    color: var(--normal-blue);
+}
+
+.nav-link:hover {
+    color: var(--normal-blue) !important;
+}
+
+.nav-logo:hover {
+    filter: brightness(120%);
+}
+
+button:active,
+.create:active,
+.show:active,
+.edit:active {
+    transform: scale(0.75);
+}
+
+.btn-outline-primary:hover {
+    border: 1px solid var(--normal-blue) !important;
+    background-color: transparent !important;
+    color: var(--normal-blue) !important;
+}
+
+.btn-outline-warning:hover {
+    border: 1px solid var(--normal-yellow) !important;
+    background-color: transparent !important;
+    color: var(--normal-yellow) !important;
+}
+
+.btn-link:hover {
+    color: var(--normal-blue);
+}
+
+.btn-link:active,
+.btn-link:focus {
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus-visible {
+    box-shadow: 0 0 0 3px var(--dark-blue) !important;
+}
+
+.custom-radio:checked,
+.custom-radio:focus {
+    background-color: var(--dark-blue);
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.page-link:hover {
+    color: var(--normal-blue) !important;
+}
+
+.page-link:focus,
+.page-link:hover,
+.page-link:not(:visited) {
+    box-shadow: none !important;
+    background-color: var(--dark-blue) !important;
+    color: var(--white) !important;
+}
+
+/** Classes */
+.nav-link.active {
+    font-weight: 900 !important;
+    border-bottom: 2px solid var(--dark-blue) !important;
+    color: var(--normal-blue) !important;
+}
+
+.nav-link {
+    margin-right: .75rem;
+    color: var(--white) !important;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+.contact {
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+select,
+.form-control {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+    border: none;
+    outline: none;
+}
+
+.card {
+    padding: 1.25rem;
+    border-radius: 10px !important;
+    border: 3px solid var(--transparent-1) !important;
+    background: var(--transparent-2) !important;
+    backdrop-filter: blur(3px) !important;
+}
+
+.page-link {
+    border: 1px solid var(--dark-blue) !important;
+    background-color: var(--black) !important;
+    color: var(--dark-blue) !important;
+}
+
+.nav-logo {
+    max-width: 50%;
+    max-height: 2rem;
+}
+
+.content-img {
+    max-width: 50%;
+    max-height: 20rem;
+}
+
+.jumbotron-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    filter: contrast(90%) brightness(120%) saturate(135%);
+}
