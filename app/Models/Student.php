@@ -6,9 +6,9 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Laravel\Passport\HasApiTokens;
 
-class User extends Authenticatable
+class Student extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -17,10 +17,20 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+
+    protected $table = 'students';
+
     protected $fillable = [
-        'name',
         'email',
         'password',
+        'username',
+        'name',
+        'school',
+        'city',
+        'birthyear',
+        'role',
+        'is_login',
+        'is_active'
     ];
 
     /**
