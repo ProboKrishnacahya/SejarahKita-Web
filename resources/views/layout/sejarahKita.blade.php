@@ -3,8 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords"
+        content="SejarahKita, Web Application, Game Edukasi, Sejarah Indonesia, Informatika Universitas Ciputra Surabaya" />
+    <meta name="description" content="SejarahKita Web Application." />
+    <meta name="owner" content="Vanness Zhong Anthony, Nathanael Abel Arianto, Probo Krishnacahya, Michael Chandra." />
+    <meta name="robots" content="home, follow" />
     <meta name="theme-color" content="#020E3A">
 
     {{-- CSRF Token --}}
@@ -18,32 +23,31 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
-    {{-- External CSS public/assets/css/style.css --}}
+    {{-- External CSS --}}
     <link rel="stylesheet" href="{{ url('assets/css/style.css') }}" type="text/css" />
 
-    {{-- Google Fonts --}}
+    {{-- Google Fonts & Google Icons --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
-    {{-- Favicon --}}
-    <link rel="icon" href="{{ url('assets/img/favicon.ico?v=2') }}" type="image/ico" />
+    {{-- Tab Page Favicon --}}
+    <link rel="icon" href="{{ url('assets/img/favicon.png?v=2') }}" type="image/png" />
 
-    {{-- Title --}}
+    {{-- Tab Page Title --}}
     <title>@yield("title")</title>
 </head>
 
 <body class="text-white">
     {{-- Header --}}
-    <nav class="navbar navbar-expand-lg user-select-none">
+    <nav class="navbar navbar-dark navbar-expand-lg user-select-none">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ url('assets/img/logo.png') }}" alt="Logo" class="nav-logo pe-3"><strong
-                    class="fw-bold">SejarahKita</strong>
+                <img src="{{ url('assets/img/logo.png') }}" alt="Logo" class="nav-logo pe-3"><span
+                    class="nav-brand">SejarahKita</span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="{{ __('Toggle navigation') }}">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -53,7 +57,15 @@
                         <a class="nav-link {{ $active_game ?? '' }}" href="/game">Game</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-0 {{ $active_leaderboard ?? '' }}" href="/leaderboard">Leaderboard</a>
+                        <a class="nav-link {{ $active_leaderboard ?? '' }}" href="/leaderboard">Leaderboard</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle ms-4 me-0" data-bs-toggle="dropdown" role="button"
+                            aria-expanded="false">Profile</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
+                            <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -66,7 +78,7 @@
     </main>
 
     {{-- Footer --}}
-    <footer class="navbar bg-dark user-select-none">
+    {{-- <footer class="navbar bg-dark user-select-none">
         <div class="container">
             <div class="d-flex">
                 &copy; 2021<a href="/">&nbsp;<span class="fw-bold">SejarahKita</span></a>
@@ -81,7 +93,7 @@
                             class="bi bi-facebook contact"></i></a></li>
             </ul>
         </div>
-    </footer>
+    </footer> --}}
 </body>
 
 </html>
