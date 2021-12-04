@@ -13,7 +13,7 @@ class RegisterController extends Controller
         $this->validate($request, [
             'email' => 'required|email|unique:students',
             'password' => 'required|string|min:8|confirmed',
-            'username' => 'required',
+            'username' => 'required|string|min:4',
             'name' => 'required',
             'school' => '',
             'city' => '',
@@ -39,6 +39,9 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'username' => $data['username'],
             'name' => $data['name'],
+            'school' => $data['school'],
+            'city' => $data['city'],
+            'birthyear' => $data['birthyear'],
             'role' => 'admin',
             'created_at' => \Carbon\Carbon::now(),
         ]);

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -26,4 +28,22 @@ Route::resource('leaderboard', LeaderboardController::class);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+    Route::middleware(['admin'])->group(function () {
+        Route::get('admin', [AdminController::class, 'index']);
+    });
+
+    Route::middleware(['user'])->group(function () {
+        Route::get('user', [StudentController::class, 'index']);
+    });
+
+    Route::get('/logout', function () {
+        Auth::logout();
+        redirect('/');
+    });
+});
