@@ -20,6 +20,8 @@ class Student extends Authenticatable
 
     protected $table = 'students';
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'email',
         'password',

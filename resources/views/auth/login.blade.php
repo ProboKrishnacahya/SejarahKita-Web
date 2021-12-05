@@ -69,10 +69,11 @@
                     </div>
                 </div>
 
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary mt-5 mb-3">
-                        <i class="bi bi-box-arrow-in-right"></i>&emsp;{{ __('Login') }}
-                    </button>
+                <div class="d-grid"> 
+                        <button type="submit" class="btn btn-primary mt-5 mb-3">
+                            <a class="text-white " href="{{ route('login') }}">
+                            <i class="bi bi-box-arrow-in-right"></i>&emsp;{{ __('Login') }}</a>
+                        </button>
                     <p class="text-center">Belum punya akun?
                         <strong>
                             <a href="{{ route('register') }}">Register</a>
