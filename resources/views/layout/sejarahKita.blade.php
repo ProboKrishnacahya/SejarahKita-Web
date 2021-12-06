@@ -94,6 +94,9 @@
             </ul>
         </div>
     </footer> --}}
+
+    {{-- External JS --}}
+    <script src="{{ asset('assets/js') }}/script.js"></script>
 </body>
 
 </html>

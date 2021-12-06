@@ -219,7 +219,12 @@ select:focus-visible {
     color: var(--white) !important;
 }
 
-/** Classes */
+/** Selector (ID) */
+#togglePassword {
+    cursor: pointer;
+}
+
+/** Selector (Class) */
 .btn {
     padding: .5rem;
 }
