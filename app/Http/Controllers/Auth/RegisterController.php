@@ -50,14 +50,24 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        // return Validator::make($data, [
+        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:students'],
+        //     'password' => ['required', 'string', 'min:8', 'confirmed'],
+        //     'username' => ['required' , 'string', 'min:4'],
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'school' => [''],
+        //     'city' => [''],
+        //     'birthyear' => ['']
+        // ]);
+
         return Validator::make($data, [
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:students'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'username' => ['required' , 'string', 'min:4'],
-            'name' => ['required', 'string', 'max:255'],
-            'school' => [''],
-            'city' => [''],
-            'birthyear' => ['']
+            'email' => 'required|email|unique:students,email',
+            'password' => 'required|string|min:8|max:20|confirmed',
+            'username' => 'required|string|min:4|max:20',
+            'name' => 'required|string|max:255',
+            'school' => '-',
+            'city' => '-',
+            'birthyear' => '-'
         ]);
     }
 
@@ -77,7 +87,7 @@ class RegisterController extends Controller
             'school' => $data['school'],
             'city' => $data['city'],
             'birthyear' => $data['birthyear'],
-            'role' => 'admin',
+            'role' => 'user',
             'created_at' => Carbon::now()
         ]);
     }

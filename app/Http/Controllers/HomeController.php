@@ -34,7 +34,7 @@ class HomeController extends Controller
         if ($role == "admin") {
             return redirect()->to('admin');
         } else if ($role == "user") {
-            return redirect()->to('user');
+            return redirect()->route('user');
         } else {
             return redirect()->to('logout');
         }

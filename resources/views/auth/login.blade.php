@@ -66,14 +66,12 @@
                                     </a>
                                 @endif
                             </div>
-                        </form>
                     </div>
                 </div>
 
                 <div class="d-grid">
                     <button type="submit" class="btn btn-primary mt-5 mb-3">
-                        <a class="text-white" href="{{ route('login') }}">
-                            <i class="bi bi-box-arrow-in-right"></i>&emsp;{{ __('Login') }}</a>
+                        <i class="bi bi-box-arrow-in-right"></i>&emsp;{{ __('Login') }}
                     </button>
                     <p class="text-center">Belum punya akun?
                         <strong>
@@ -82,6 +80,7 @@
                     </p>
                 </div>
             </div>
+            </form>
 
             <div class="col-md-4 align-self-center d-none d-sm-block">
                 <img src="{{ url('assets/img/ill_login.svg') }}" alt="Login" class="illustration-img" loading="lazy">

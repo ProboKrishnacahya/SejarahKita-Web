@@ -17,7 +17,7 @@ use App\Http\Controllers\Api\StudentController;
 |
 */
 
-Route::post('register', [RegisterController::class, 'register']);
+Route::post('register', [RegisterController::class, 'register'])->name('register');
 Route::post('login', [LoginController::class, 'login']);
 Route::post('refresh', [LoginController::class, 'refresh']);
 

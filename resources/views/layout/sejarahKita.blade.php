@@ -42,7 +42,7 @@
     {{-- Header --}}
     <nav class="navbar navbar-dark navbar-expand-lg user-select-none">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="{{ route('user') }}">
                 <img src="{{ url('assets/img/logo.png') }}" alt="Logo" class="nav-logo pe-3"><span
                     class="nav-brand">SejarahKita</span>
             </a>
@@ -59,14 +59,30 @@
                     <li class="nav-item">
                         <a class="nav-link {{ $active_leaderboard ?? '' }}" href="/leaderboard">Leaderboard</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle ms-4 me-0" data-bs-toggle="dropdown" role="button"
-                            aria-expanded="false">Profile</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
-                            <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
-                        </ul>
-                    </li>
+
+                    @if (Auth::user() != null)
+                        <li>
+                            <a href="{{ route('profile') }}">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle ms-4 me-0" data-bs-toggle="dropdown" role="button"
+                                aria-expanded="false"></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
+                            </ul>
+                        </li>
+                    @else
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle ms-4 me-0" data-bs-toggle="dropdown" role="button"
+                                aria-expanded="false">Profile</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
+                                <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
+                            </ul>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>

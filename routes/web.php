@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StudentController;
+use App\Http\Resources\StudentResource;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -17,9 +18,6 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-//* Home
-Route::get('/', [HomeController::class, 'home']);
-
 //* Game
 Route::resource('game', GameController::class);
 
@@ -27,8 +25,6 @@ Route::resource('game', GameController::class);
 Route::resource('leaderboard', LeaderboardController::class);
 
 Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth'])->group(function () {
 
@@ -39,11 +35,15 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::middleware(['user'])->group(function () {
-        Route::get('user', [StudentController::class, 'index']);
+        Route::get('', [StudentController::class, 'index'])->name('user');
+        Route::get('profile', [StudentController::class, 'edit'])->name('profile');
     });
 
     Route::get('/logout', function () {
-        Auth::logout();
-        redirect('/');
+        dd(Auth::logout());
     });
 });
+
+// Route::post('register', function () {
+//     dd("abc");
+// })->name('register');

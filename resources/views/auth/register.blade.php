@@ -105,7 +105,7 @@
                                         class="bi bi-calendar2-week"></i>&emsp;{{ __('Birthyear') }}</label>
 
                                 <div class="col-md-7">
-                                    <input id="birthyear" type="text"
+                                    <input id="birthyear" type="number"
                                         class="form-control @error('birthyear') is-invalid @enderror" name="birthyear"
                                         value="{{ old('birthyear') }}" placeholder="Masukkan Tahun Kelahiran" required
                                         autocomplete="birthyear">
@@ -145,7 +145,6 @@
                                         autocomplete="new-password">
                                 </div>
                             </div>
-                        </form>
                     </div>
                 </div>
 
@@ -160,6 +159,7 @@
                     </p>
                 </div>
             </div>
+            </form>
 
             <div class="col-md-4 align-self-center d-none d-sm-block">
                 <img src="{{ url('assets/img/ill_register.svg') }}" alt="Register" class="illustration-img"
