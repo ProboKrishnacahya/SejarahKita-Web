@@ -38,12 +38,4 @@ Route::middleware(['auth'])->group(function () {
         Route::get('', [StudentController::class, 'index'])->name('user');
         Route::get('profile', [StudentController::class, 'edit'])->name('profile');
     });
-
-    Route::get('/logout', function () {
-        dd(Auth::logout());
-    });
 });
-
-// Route::post('register', function () {
-//     dd("abc");
-// })->name('register');

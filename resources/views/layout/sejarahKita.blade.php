@@ -70,7 +70,17 @@
                             <a class="nav-link dropdown-toggle ms-4 me-0" data-bs-toggle="dropdown" role="button"
                                 aria-expanded="false"></a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                </li>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    class="d-none">
+                                    @csrf
+                                </form>
                             </ul>
                         </li>
                     @else

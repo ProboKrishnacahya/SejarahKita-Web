@@ -46,28 +46,26 @@
         </div>
 
         <div class="card">
-            <p><strong>SejarahKita-Web</strong> adalah Aplikasi Web tentang Game Edukasi berupa Anagram dengan topik mata
-                pelajaran Sejarah Indonesia Kelas 12 yang berfokus pada bab-bab berikut:</p>
-            <ul>
-                <li>Perjuangan Bangsa Indonesia dalam Menghadapi Ancaman Disintegrasi dari Ideologi, Kepentingan, dan Sistem
-                    Pemerintahan.
-                </li>
-                <li>Peran dan Nilai-nilai Perjuangan Tokoh Nasional serta Tokoh Daerah dalam Mempertahankan Keutuhan Negara
-                    dan Bangsa Indonesia pada Masa 1945–1965.
-                </li>
-            </ul>
+        <p><strong>SejarahKita-Web</strong> adalah Aplikasi Web tentang Game Edukasi berupa Anagram dengan topik mata
+            pelajaran Sejarah Indonesia Kelas 12 yang berfokus pada bab-bab berikut:</p>
+        <ul>
+            <li>Perjuangan Bangsa Indonesia dalam Menghadapi Ancaman Disintegrasi dari Ideologi, Kepentingan, dan Sistem Pemerintahan.
+            </li>
+            <li>Peran dan Nilai-nilai Perjuangan Tokoh Nasional serta Tokoh Daerah dalam Mempertahankan Keutuhan Negara dan Bangsa Indonesia pada Masa 1945–1965.
+            </li>
+        </ul>
 
-            <p>Terdapat 2 mode permainan, yaitu</p>
-            <ol>
-                <li>Casual</li>
-                <li>Ranked (memiliki 2 pilihan level yang setiap perolehan Ranked Point nya diakumulasi pada masing-masing
-                    Leaderboard):</li>
-                <ul>
-                    <li>Easy</li>
-                    <li>Hard</li>
-                </ul>
-            </ol>
-        </div>
+        <p>Terdapat 2 mode permainan, yaitu</p>
+        <ol>
+            <li>Casual</li>
+            <li>Ranked (memiliki 2 pilihan level yang setiap perolehan Ranked Point nya diakumulasi pada masing-masing
+                Leaderboard):</li>
+            <ul>
+                <li>Easy</li>
+                <li>Hard</li>
+            </ul>
+        </ol>
+    </div>
     </div>
 
 @endsection
