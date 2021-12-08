@@ -15,9 +15,9 @@ class RegisterController extends Controller
             'password' => 'required|string|min:8|confirmed',
             'username' => 'required|string|min:4',
             'name' => 'required',
-            'school' => '',
-            'city' => '',
-            'birthyear' => '',
+            'school' => '-',
+            'city' => '-',
+            'birthyear' => '-',
         ]);
 
         $user = $this->newUser($request->all());
