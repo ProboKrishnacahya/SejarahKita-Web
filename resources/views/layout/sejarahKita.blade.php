@@ -43,8 +43,8 @@
     <nav class="navbar navbar-dark navbar-expand-lg user-select-none">
         <div class="container">
             <a class="navbar-brand" href="{{ route('user') }}">
-                <img src="{{ url('assets/img/logo.png') }}" alt="Logo" class="nav-logo pe-3"><span
-                    class="nav-brand">SejarahKita</span>
+                <img src="{{ url('assets/img/logo.png') }}" alt="Logo" class="nav-logo pe-3">
+                <span class="nav-brand">SejarahKita</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -61,20 +61,21 @@
                     </li>
 
                     @if (Auth::user() != null)
-                        <li>
-                            <a href="{{ route('profile') }}">
-                                <i class="bi bi-person-circle"></i>
-                            </a>
-                        </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle ms-4 me-0" data-bs-toggle="dropdown" role="button"
-                                aria-expanded="false"></a>
+                            <a href="{{ route('profile') }}" class="nav-link dropdown-toggle ms-4 me-0"
+                                data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                                &emsp;{{ Auth::user()->username }}
+                            </a>
                             <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                                 </li>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -88,8 +89,12 @@
                             <a class="nav-link dropdown-toggle ms-4 me-0" data-bs-toggle="dropdown" role="button"
                                 aria-expanded="false">Profile</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
-                                <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('register') }}">Register</a>
+                                </li>
                             </ul>
                         </li>
                     @endif
@@ -104,22 +109,52 @@
     </main>
 
     {{-- Footer --}}
-    {{-- <footer class="navbar bg-dark user-select-none">
+    <footer class="navbar mt-5 user-select-none">
         <div class="container">
             <div class="d-flex">
-                &copy; 2021<a href="/">&nbsp;<span class="fw-bold">SejarahKita</span></a>
+                &copy; 2021<a href="{{ url('/') }}">&nbsp;<span class="fw-bold">SejarahKita</span></a>
             </div>
 
+            <div class="justify-content-center"><q>Creating World Class Entrepreneurs</q></div>
             <ul class="justify-content-end list-unstyled d-flex pt-2 mb-1">
-                <li><a href="mailto:SejarahKita@gmail.com"><i class="bi bi-envelope-fill contact"></i></a></li>
-                <li class="ms-3"><a href="https://twitter.com/SejarahKita"><i class="bi bi-twitter contact"></i></a>
+                <li>
+                    <a href="mailto:info@ciputra.ac.id">
+                        <i class="bi bi-envelope icon-font"></i>
+                    </a>
                 </li>
-                <li class="ms-3"><a href="instagram.com/SejarahKita"><i class="bi bi-instagram contact"></i></a></li>
-                <li class="ms-3"><a href="https://www.facebook.com/SejarahKita"><i
-                            class="bi bi-facebook contact"></i></a></li>
+                <li class="ms-3">
+                    <a href="https://api.whatsapp.com/send?phone=6282234941824">
+                        <i class="bi bi-whatsapp icon-font"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="http://line.me/ti/p/~@ucpeople">
+                        <i class="bi bi-line icon-font"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="https://www.facebook.com/univ.ciputra/">
+                        <i class="bi bi-facebook icon-font"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="https://twitter.com/UCPeople">
+                        <i class="bi bi-twitter icon-font"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="https://www.youtube.com/channel/UCi7krrB8kCs8VYZoaODBVAA">
+                        <i class="bi bi-youtube icon-font"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="https://www.instagram.com/universitasciputra/">
+                        <i class="bi bi-instagram icon-font"></i>
+                    </a>
+                </li>
             </ul>
         </div>
-    </footer> --}}
+    </footer>
 
     {{-- External JS --}}
     <script src="{{ asset('assets/js') }}/script.js"></script>

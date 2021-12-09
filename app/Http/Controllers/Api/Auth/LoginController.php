@@ -49,17 +49,17 @@ class LoginController extends Controller
                     return $response->json();
                 } else {
                     return response([
-                        'message' => 'Login Failed'
+                        'message' => 'Login Failed. Please Try Again Later.',
                     ]);
                 }
             } else {
                 return response([
-                    'message' => 'Account is used'
+                    'message' => 'Account is used.'
                 ]);
             }
         } else {
             return response([
-                'message' => 'Account is suspended'
+                'message' => 'Account is suspended.'
             ]);
         }
     }
@@ -77,7 +77,7 @@ class LoginController extends Controller
         $this->validate($request, [
             'refresh_token' => 'required',
         ], [
-            'refresh_token' => 'refresh token is required'
+            'refresh_token' => 'Refresh token is required.'
         ]);
 
         $response = Http::asForm()->post('http://sejarahkita.test/oauth/token', [
@@ -105,7 +105,7 @@ class LoginController extends Controller
         $accessToken->revoke();
 
         return response([
-            'message' => 'Logged out',
+            'message' => 'Logged out.',
         ]);
     }
 }
