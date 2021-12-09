@@ -35,6 +35,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware(['user'])->group(function () {
         Route::get('', [StudentController::class, 'index'])->name('user');
+
         Route::get('profile', [StudentController::class, 'edit'])->name('profile');
     });
 });
