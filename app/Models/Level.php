@@ -17,6 +17,6 @@ class Level extends Model
 
     public function playingHistories()
     {
-        return $this->hasMany(Level::class, 'id_level', 'id_level');
+        return $this->hasMany(PlayingHistory::class, 'id_level', 'id_level');
     }
 }
