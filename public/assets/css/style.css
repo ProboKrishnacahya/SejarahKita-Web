@@ -37,7 +37,7 @@ a,
 
 a {
     text-decoration: none;
-    color: var(--normal-yellow);
+    color: var(--normal-orange);
 }
 
 .btn-outline-primary {
@@ -142,7 +142,13 @@ iframe {
     --dark-blue: #020E3A;
     --semi-dark-blue: #313465;
     --normal-blue: #2256B8;
-    --normal-yellow: #FFB800;
+    --normal-orange: #FFB800;
+    --normal-yellow: #FFFF00;
+    --easy1: #00B88C;
+    --easy2: #3695B2;
+    --hard1: #DC3C6C;
+    --hard2: #AD06B0;
+    --secondary: #6C757D;
     --light-gray: #999999;
     --transparent-1: #FFFFFF25;
     --transparent-2: #FFFFFF1A;
@@ -153,7 +159,7 @@ iframe {
 
 a:hover,
 .nav-link:hover {
-    color: var(--normal-yellow) !important;
+    color: var(--normal-orange) !important;
 }
 
 .btn-primary:hover,
@@ -177,13 +183,13 @@ button:active,
 }
 
 .btn-outline-warning:hover {
-    border: 1px solid var(--normal-yellow) !important;
+    border: 1px solid var(--normal-orange) !important;
     background-color: transparent !important;
-    color: var(--normal-yellow) !important;
+    color: var(--normal-orange) !important;
 }
 
 .btn-link:hover {
-    color: var(--normal-yellow);
+    color: var(--normal-orange);
 }
 
 .btn-link:active,
@@ -197,7 +203,7 @@ button:active,
 input:focus,
 textarea:focus,
 select:focus-visible {
-    border: solid 2px var(--normal-yellow) !important;
+    border: solid 2px var(--normal-orange) !important;
     box-shadow: none !important;
     background-color: var(--black) !important;
 }
@@ -224,7 +230,7 @@ select:focus-visible {
 }
 
 .page-link:hover {
-    color: var(--normal-yellow) !important;
+    color: var(--normal-orange) !important;
 }
 
 .page-link:focus,
@@ -261,13 +267,13 @@ select:focus-visible {
 
 .btn-link {
     text-decoration: none;
-    color: var(--normal-yellow);
+    color: var(--normal-orange);
 }
 
 .nav-link.active {
     font-weight: 900 !important;
-    border-bottom: 2px solid var(--normal-yellow) !important;
-    color: var(--normal-yellow) !important;
+    border-bottom: 2px solid var(--normal-orange) !important;
+    color: var(--normal-orange) !important;
 }
 
 .nav-link {
@@ -286,7 +292,7 @@ select:focus-visible {
 
 .dropdown-item:hover {
     background-color: transparent;
-    color: var(--normal-yellow);
+    color: var(--normal-orange);
 }
 
 .icon-font {
@@ -310,12 +316,46 @@ select,
     border-radius: 15px !important;
     border: 3px solid var(--transparent-1) !important;
     background: var(--transparent-2) !important;
-    backdrop-filter: blur(3px) !important;
+    backdrop-filter: blur(5px) !important;
 }
 
 .card-header {
     background-color: transparent !important;
     border-bottom: solid 2px var(--transparent-2) !important;
+}
+
+.card-wrap {
+    overflow: hidden;
+    position: relative;
+    filter: saturate(2.75) !important;
+}
+
+.easyProfile {
+    border-radius: 15px 15px 0px 0px !important;
+    background-image: linear-gradient(to right, var(--easy1), var(--easy2)) !important;
+}
+
+.hardProfile {
+    border-radius: 0px 0px 15px 15px !important;
+    background-image: linear-gradient(to right, var(--hard1), var(--hard2)) !important;
+}
+
+.rankedPointTerkini-bg {
+    opacity: 0.7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    filter: brightness(55%);
+}
+
+.rankedPointTerkini-content {
+    position: relative;
+}
+
+.bi-star {
+    color: var(--normal-yellow);
 }
 
 .page-link {
@@ -326,7 +366,7 @@ select,
 
 .nav-brand {
     font-weight: 800 !important;
-    color: var(--normal-yellow);
+    color: var(--normal-orange);
 }
 
 .nav-logo {
@@ -356,8 +396,18 @@ select,
     border-radius: .25rem;
 }
 
-.registered {
-    cursor: text !important;
+.profile {
+    width: 30%;
+    border-radius: 50%;
+    border: solid 5px var(--normal-orange);
+    background-color: var(--semi-dark-blue);
+}
+
+.typeCursor {
+    font-size: larger;
+    font-weight: bolder;
+    color: var(--normal-blue);
+    animation: blink 1s infinite linear;
 }
 
 .scrollToTopBtn {
@@ -370,7 +420,7 @@ select,
     transform: translateY(100px);
     transition: all .5s ease;
     border-radius: .25rem;
-    color: var(--normal-yellow);
+    color: var(--normal-orange);
 }
 
 .showBtn {

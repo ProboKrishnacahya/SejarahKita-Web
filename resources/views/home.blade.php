@@ -4,25 +4,25 @@
 
 @section('content')
     <div class="row my-5 hero">
-        <div class="col-md-9">
-            <div>
+        <div class="col-md-8 align-self-center">
+            <div class="mb-5">
                 <span class="fs-3">Mari Berlatih <strong>Sejarah Indonesia</strong></span>
                 <p class="fs-1">Bersama <a href="{{ url('/') }}"><span
                             class="fw-bold fs-1">SejarahKita</span></a></p>
-                <br>
-                <a href="game">
-                    <button class="btn btn-lg btn-primary px-3 me-3">
-                        <i class="bi bi-controller"></i>&emsp;{{ __('Mulai Permainan') }}
-                    </button>
-                </a>
-                <a href="leaderboard">
-                    <button class="btn btn-lg btn-outline-primary px-3">
-                        <i class="bi bi-bar-chart"></i>&emsp;{{ __('Lihat Peringkat') }}
-                    </button>
-                </a>
+                <q id="typewriting"></q>
             </div>
+            <a href="game">
+                <button class="btn btn-lg btn-primary px-3 me-3">
+                    <i class="bi bi-controller"></i>&emsp;{{ __('Mulai Permainan') }}
+                </button>
+            </a>
+            <a href="leaderboard">
+                <button class="btn btn-lg btn-outline-primary px-3">
+                    <i class="bi bi-bar-chart"></i>&emsp;{{ __('Lihat Peringkat') }}
+                </button>
+            </a>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <img src="https://static.vecteezy.com/system/resources/previews/002/406/486/non_2x/an-intelligent-and-proud-owl-with-a-graduation-cap-free-vector.jpg"
                 alt="Jumbotron" loading="lazy" class="jumbotron-img" />
         </div>
@@ -127,6 +127,9 @@
         </div>
     </div>
     <i class="bi bi-arrow-up-circle-fill scrollToTopBtn fs-1" data-bs-toggle="tooltip" title="Scroll to Top Page"></i>
+
+    {{-- JS Library (TypewriterJS) --}}
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 @endsection
 
 @section('footer')
