@@ -1,12 +1,15 @@
 @extends('layout.sejarahKita')
 
-@section('title', 'Riwayat History')
+@section('title', 'Riwayat Bermain')
 
 @section('content')
 
-    @foreach ($students -> $playinghistories  as $ph )
-        <p>{{ $ph->id_level }}</p>
-        <p>{{ $ph->skor }}</p>
+    @php
+    $level = ['Casual', 'Easy', 'Hard'];
+    @endphp
+
+    @foreach ($user->PlayingHistory as $ph)
+        <strong>{{ $level[$ph->id_level] }} {{ $ph->skor }}</strong>
         <p>{{ $ph->created_at }}</p>
     @endforeach
 

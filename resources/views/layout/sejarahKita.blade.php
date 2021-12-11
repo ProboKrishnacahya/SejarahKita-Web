@@ -70,36 +70,33 @@
                     </li>
 
                     @if (Auth::user() != null)
-                        <li class="nav-item">
-                            <a class="nav-link {{ $active_profile ?? '' }}" href="{{ route('profile') }}">
-
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
-                                aria-expanded="false" data-bs-toggle="tooltip" title="Profile">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                    class="bi bi-person-circle" viewBox="0 0 16 16">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                                    <path fill-rule="evenodd"
-                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                                </svg>&emsp;{{ Auth::user()->username }}
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
-                                </li>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    class="d-none">
-                                    @csrf
-                                </form>
-                            </ul>
-                        </li>
+                        @if (Auth::user()->role == 'admin')
+                            <li class="nav-item">
+                                <a class="nav-link {{ $active_profile ?? '' }}"
+                                    href="{{ route('admin.profile') }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                        <path fill-rule="evenodd"
+                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                    </svg>&emsp;{{ Auth::user()->username }}
+                                </a>
+                            </li>
+                        @elseif (Auth::user()->role == 'user')
+                            <li class="nav-item">
+                                <a class="nav-link {{ $active_profile ?? '' }}" href="{{ route('profile') }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                        <path fill-rule="evenodd"
+                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                    </svg>&emsp;{{ Auth::user()->username }}
+                                </a>
+                            </li>
+                        @endif
                     @else
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle ms-4 me-0" data-bs-toggle="dropdown" role="button"
+                            <a class="nav-link dropdown-toggle me-0" data-bs-toggle="dropdown" role="button"
                                 aria-expanded="false">Profile</a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -118,7 +115,7 @@
 
     {{-- Content --}}
     <main class="mt-5">
-        @yield('content')
+        <div class="container">@yield('content')</div>
     </main>
 
     {{-- Footer --}}

@@ -31,6 +31,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware(['admin'])->group(function () {
         Route::get('admin', [AdminController::class, 'index']);
+
+        Route::get('admin/profile', [AdminController::class, 'edit'])->name('admin.profile');
     });
 
     Route::middleware(['user'])->group(function () {
@@ -38,6 +40,6 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('profile', [StudentController::class, 'edit'])->name('profile');
 
-        // Route::get('playing-history'[StudentController::class], 'show');
+        Route::get('playing-history', [StudentController::class, 'show'])->name('playing-history');
     });
 });

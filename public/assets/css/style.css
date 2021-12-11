@@ -356,6 +356,10 @@ select,
     border-radius: .25rem;
 }
 
+.registered {
+    cursor: text !important;
+}
+
 .scrollToTopBtn {
     position: fixed;
     bottom: 2rem;
