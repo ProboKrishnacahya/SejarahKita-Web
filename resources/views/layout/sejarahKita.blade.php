@@ -48,7 +48,8 @@
     {{-- Header --}}
     <nav class="navbar navbar-dark navbar-expand-lg user-select-none">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('user') }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Homepage">
+            <a class="navbar-brand" href="{{ route('user') }}" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="Homepage">
                 <img src="{{ url('assets/img/logo.png') }}" alt="Logo" class="nav-logo pe-3">
                 <span class="nav-brand">SejarahKita</span>
             </a>
@@ -69,9 +70,14 @@
                     </li>
 
                     @if (Auth::user() != null)
+                        <li class="nav-item">
+                            <a class="nav-link {{ $active_profile ?? '' }}" href="{{ route('profile') }}">
+
+                            </a>
+                        </li>
                         <li class="nav-item dropdown">
-                            <a href="{{ route('profile') }}" class="nav-link dropdown-toggle"
-                                data-bs-toggle="dropdown" role="button" aria-expanded="false" data-bs-toggle="tooltip" title="Profile">
+                            <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+                                aria-expanded="false" data-bs-toggle="tooltip" title="Profile">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                     class="bi bi-person-circle" viewBox="0 0 16 16">
                                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -119,7 +125,8 @@
     <footer class="navbar mt-5 user-select-none">
         <div class="container">
             <div class="d-flex">
-                &copy; 2021<a href="{{ url('/') }}" data-bs-toggle="tooltip" title="Homepage">&nbsp;<span class="fw-bold">SejarahKita</span></a>
+                &copy; 2021<a href="{{ url('/') }}" data-bs-toggle="tooltip" title="Homepage">&nbsp;<span
+                        class="fw-bold">SejarahKita</span></a>
             </div>
 
             <div class="justify-content-center"><q>Creating World Class Entrepreneurs</q></div>

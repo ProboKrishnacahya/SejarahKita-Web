@@ -37,5 +37,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('', [StudentController::class, 'index'])->name('user');
 
         Route::get('profile', [StudentController::class, 'edit'])->name('profile');
+
+        // Route::get('playing-history'[StudentController::class], 'show');
     });
 });
