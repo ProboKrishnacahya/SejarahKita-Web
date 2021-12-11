@@ -4,6 +4,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
+use App\Http\Controllers\Api\LeaderboardController;
+use App\Http\Controllers\Api\LevelController;
+use App\Http\Controllers\Api\PlayingHistoryController;
+use App\Http\Controllers\Api\QuestionController;
 use App\Http\Controllers\Api\StudentController;
 
 /*
@@ -23,6 +27,10 @@ Route::post('refresh', [LoginController::class, 'refresh']);
 
 Route::group(['middleware' => 'auth:api'], function () {
     Route::apiResource('students', StudentController::class);
+    Route::apiResource('playinghistories', PlayingHistoryController::class);
+    Route::apiResource('leaderboards', LeaderboardController::class);
+    Route::apiResource('levels', LevelController::class);
+    Route::apiResource('questions', QuestionController::class);
     Route::post('logout', [LoginController::class, 'logout']);
 });
 

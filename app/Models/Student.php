@@ -36,9 +36,14 @@ class Student extends Authenticatable
         'is_active'
     ];
 
-    public function PlayingHistory()
+    public function playingHistories()
     {
         return $this->hasMany(PlayingHistory::class, 'id_student', 'id');
+    }
+
+    public function leaderboards()
+    {
+        return $this->hasMany(Leaderboard::class, 'id_student', 'id');
     }
 
     /**
