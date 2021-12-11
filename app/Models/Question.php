@@ -9,6 +9,8 @@ class Question extends Model
 {
     use HasFactory;
 
+    protected $table = 'sej12_questions';
+
     protected $primaryKey = 'id_question';
 
     protected $fillable = [

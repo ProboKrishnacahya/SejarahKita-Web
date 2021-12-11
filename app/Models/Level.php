@@ -9,6 +9,8 @@ class Level extends Model
 {
     use HasFactory;
 
+    protected $table = 'sej12_levels';
+
     protected $primaryKey = 'id_level';
 
     protected $fillable = [

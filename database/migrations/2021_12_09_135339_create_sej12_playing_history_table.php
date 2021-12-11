@@ -15,6 +15,11 @@ class CreateSej12PlayingHistoryTable extends Migration
     {
         Schema::create('sej12_playing_history', function (Blueprint $table) {
             $table->unsignedBigInteger('id_playing_history')->primary();
+            $table->integer('skor');
+            $table->timestamps();
+        });
+
+        Schema::table('sej12_playing_history', function (Blueprint $table) {
             $table->foreignId('id_student')
                 ->references('id')
                 ->on('students')
@@ -23,12 +28,10 @@ class CreateSej12PlayingHistoryTable extends Migration
                 ->cascadeOnUpdate();
             $table->foreignId('id_level')
                 ->references('id_level')
-                ->on('levels')
+                ->on('sej12_levels')
                 ->constrained()
                 ->cascadeOnDelete()
                 ->cascadeOnUpdate();
-            $table->integer('skor');
-            $table->timestamps();
         });
     }
 

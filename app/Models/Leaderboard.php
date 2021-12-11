@@ -9,6 +9,8 @@ class Leaderboard extends Model
 {
     use HasFactory;
 
+    protected $table = 'sej12_leaderboards';
+
     protected $primaryKey = 'id_leaderboard';
 
     protected $fillable = [

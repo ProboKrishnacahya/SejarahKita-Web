@@ -22,12 +22,14 @@ class CreateSej12LeaderboardsLevelsTable extends Migration
             $table->foreignId('id_leaderboard')
                 ->references('id_leaderboard')
                 ->on('sej12_leaderboards')
+                ->constrained()
                 ->cascadeOnDelete()
                 ->cascadeOnUpdate();
-            
+
             $table->foreignId('id_level')
                 ->references('id_level')
                 ->on('sej12_levels')
+                ->constrained()
                 ->cascadeOnDelete()
                 ->cascadeOnUpdate();
         });

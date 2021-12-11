@@ -15,16 +15,19 @@ class CreateSej12QuestionsTable extends Migration
     {
         Schema::create('sej12_questions', function (Blueprint $table) {
             $table->unsignedBigInteger('id_question')->primary();
-            $table->foreignId('id_level')
-                ->references('id_level')
-                ->on('levels')
-                ->constrained()
-                ->cascadeOnDelete()
-                ->cascadeOnUpdate();
             $table->text('pertanyaan_kalimat');
             $table->text('pertanyaan_path_gambar');
             $table->text('kunci_jawaban');
             $table->timestamps();
+        });
+
+        Schema::table('sej12_questions', function (Blueprint $table) {
+            $table->foreignId('id_level')
+                ->references('id_level')
+                ->on('sej12_levels')
+                ->constrained()
+                ->cascadeOnDelete()
+                ->cascadeOnUpdate();
         });
     }
 

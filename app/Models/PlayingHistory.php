@@ -10,6 +10,7 @@ class PlayingHistory extends Model
     use HasFactory;
 
     protected $table = 'sej12_playing_history';
+    
     protected $primaryKey = 'id_playing_history';
 
     protected $fillable = [
