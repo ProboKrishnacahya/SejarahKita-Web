@@ -15,6 +15,7 @@ class PlayingHistorySeeder extends Seeder
     public function run()
     {
         DB::table('sej12_playing_history')->insert([
+            'id_playing_history' => 1,
             'id_student' => 9,
             'id_level' => 2,
             'skor' => 100,
