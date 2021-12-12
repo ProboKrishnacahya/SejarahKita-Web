@@ -4,11 +4,12 @@
 
 @section('content')
     <div class="container">
-        <div class="row card align-self-center justify-content-around">
+        <div class="row card justify-content-around">
             <div class="col">
                 <div class="row">
                     <div class="col-sm-6 align-self-center">
-                        <img src="{{ url('assets/img/ill_profile.svg') }}" alt="" class="profile mx-auto d-block mb-3 p-4">
+                        <img src="{{ url('assets/img/ill_profile.svg') }}" alt="Profile"
+                            class="profile mx-auto d-block mb-3 p-4">
                         <div class="badge bg-secondary fs-6 fw-normal d-block my-3 p-3">Register: {{ $createdAt }}</div>
                     </div>
                     <div class="col-sm-6 align-self-center">
@@ -27,13 +28,13 @@
     </div>
 
     <h3 class="mt-5"><i class="bi bi-star"></i>&emsp;{{ 'Ranked Point Terkini' }}</h3>
-    <div class="card-wrap easyProfile mt-4 p-3">
+    <div class="card-wrap easy easyProfile mt-4 p-3">
         <img src="{{ url('assets/img/fg_easy.png') }}" alt="" class="rankedPointTerkini-bg">
         <div class="rankedPointTerkini-content">
             <h4>Easy&emsp;<span class="fs-1 fw-bold">{{ $user->getEasyRankedPoint() }} RP</span></h4>
         </div>
     </div>
-    <div class="card-wrap hardProfile mb-5 p-3">
+    <div class="card-wrap hard hardProfile mb-5 p-3">
         <img src="{{ url('assets/img/fg_hard.png') }}" alt="" class="rankedPointTerkini-bg">
         <div class="rankedPointTerkini-content">
             <h4>Hard&emsp;<span class="fs-1 fw-bold">{{ $user->getHardRankedPoint() }} RP</span></h4>

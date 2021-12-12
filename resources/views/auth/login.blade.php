@@ -36,8 +36,9 @@
                             <div class="col-md-7">
                                 <input id="password" type="password"
                                     class="form-control @error('password') is-invalid @enderror" name="password"
-                                    placeholder="Masukkan Kata Sandi" required autocomplete="current-password">
-
+                                    placeholder="Masukkan Kata Sandi" required autocomplete="current-password"
+                                    onkeyup="countCharacters(this);">
+                                <p class="text-end mt-1" id="characterLength">8 s.d. 20 Karakter</p>
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

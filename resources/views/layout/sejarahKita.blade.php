@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords"
-        content="SejarahKita, Web Application, Game Edukasi, Sejarah Indonesia, Informatika Universitas Ciputra Surabaya" />
-    <meta name="description" content="SejarahKita Web Application." />
+        content="SejarahKita, Web Application, Game Edukasi Anagram, Sejarah Indonesia, Informatika Universitas Ciputra Surabaya" />
+    <meta name="description"
+        content="SejarahKita adalah Aplikasi Web tentang Game Edukasi berupa Anagram dengan topik mata pelajaran Sejarah Indonesia Kelas 12." />
     <meta name="owner" content="Vanness Zhong Anthony, Nathanael Abel Arianto, Probo Krishnacahya, Michael Chandra." />
     <meta name="robots" content="home, follow" />
     <meta name="theme-color" content="#020E3A">
@@ -41,7 +42,7 @@
     <link rel="icon" href="{{ url('assets/img/favicon.png?v=2') }}" type="image/png" />
 
     {{-- Tab Page Title --}}
-    <title>@yield("title")</title>
+    <title>@yield('title')</title>
 </head>
 
 <body class="text-white">
@@ -60,20 +61,19 @@
                 <div class="bi bi-x-lg fs-1"></div>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item me-2">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-3">
                         <a class="nav-link {{ $active_game ?? '' }}" href="/game">Game</a>
                     </li>
-                    <li class="nav-item me-2">
+                    <li class="nav-item me-3">
                         <a class="nav-link {{ $active_leaderboard ?? '' }}" href="/leaderboard">Leaderboard</a>
                     </li>
 
                     @if (Auth::user() != null)
                         @if (Auth::user()->role == 'admin')
                             <li class="nav-item">
-                                <a class="nav-link {{ $active_profile ?? '' }}"
-                                    href="{{ route('admin.profile') }}">
+                                <a class="nav-link" href="{{ route('admin.profile') }}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                         class="bi bi-person-circle" viewBox="0 0 16 16">
                                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -84,7 +84,7 @@
                             </li>
                         @elseif (Auth::user()->role == 'user')
                             <li class="nav-item">
-                                <a class="nav-link {{ $active_profile ?? '' }}" href="{{ route('profile') }}">
+                                <a class="nav-link" href="{{ route('profile') }}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                         class="bi bi-person-circle" viewBox="0 0 16 16">
                                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -122,8 +122,8 @@
     <footer class="navbar mt-5 user-select-none">
         <div class="container">
             <div class="d-flex">
-                &copy; 2021<a href="{{ url('/') }}" data-bs-toggle="tooltip" title="Homepage">&nbsp;<span
-                        class="fw-bold">SejarahKita</span></a>
+                &copy; 2021<a href="{{ url('/') }}" target="_blank" data-bs-toggle="tooltip"
+                    title="Homepage">&nbsp;<span class="fw-bold">SejarahKita</span></a>
             </div>
 
             <div class="justify-content-center"><q>Creating World Class Entrepreneurs</q></div>
@@ -134,33 +134,37 @@
                     </a>
                 </li>
                 <li class="ms-3">
-                    <a href="https://api.whatsapp.com/send?phone=6282234941824" data-bs-toggle="tooltip"
-                        title="WhatsApp">
+                    <a href="https://api.whatsapp.com/send?phone=6282234941824" target="_blank"
+                        rel="noopener noreferrer" data-bs-toggle="tooltip" title="WhatsApp">
                         <i class="bi bi-whatsapp icon-font"></i>
                     </a>
                 </li>
                 <li class="ms-3">
-                    <a href="http://line.me/ti/p/~@ucpeople" data-bs-toggle="tooltip" title="Line">
+                    <a href="http://line.me/ti/p/~@ucpeople" target="_blank" rel="noopener noreferrer"
+                        data-bs-toggle="tooltip" title="Line">
                         <i class="bi bi-line icon-font"></i>
                     </a>
                 </li>
                 <li class="ms-3">
-                    <a href="https://www.facebook.com/univ.ciputra/" data-bs-toggle="tooltip" title="Facebook">
+                    <a href="https://www.facebook.com/univ.ciputra/" target="_blank" rel="noopener noreferrer"
+                        data-bs-toggle="tooltip" title="Facebook">
                         <i class="bi bi-facebook icon-font"></i>
                     </a>
                 </li>
                 <li class="ms-3">
-                    <a href="https://twitter.com/UCPeople" data-bs-toggle="tooltip" title="Twitter">
+                    <a href="https://twitter.com/UCPeople" target="_blank" rel="noopener noreferrer"
+                        data-bs-toggle="tooltip" title="Twitter">
                         <i class="bi bi-twitter icon-font"></i>
                     </a>
                 </li>
                 <li class="ms-3">
-                    <a href="https://www.youtube.com/channel/UCi7krrB8kCs8VYZoaODBVAA" data-bs-toggle="tooltip"
-                        title="YouTube">
+                    <a href="https://www.youtube.com/channel/UCi7krrB8kCs8VYZoaODBVAA" target="_blank"
+                        rel="noopener noreferrer" data-bs-toggle="tooltip" title="YouTube">
                         <i class="bi bi-youtube icon-font"></i>
                     </a>
                 </li>
-                <li class="ms-3" data-bs-toggle="tooltip" title="Instagram">
+                <li class="ms-3" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip"
+                    title="Instagram">
                     <a href="https://www.instagram.com/universitasciputra/">
                         <i class="bi bi-instagram icon-font"></i>
                     </a>

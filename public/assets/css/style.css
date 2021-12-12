@@ -142,12 +142,14 @@ iframe {
     --dark-blue: #020E3A;
     --semi-dark-blue: #313465;
     --normal-blue: #2256B8;
+    --light-blue: #3288B9;
     --normal-orange: #FFB800;
     --normal-yellow: #FFFF00;
     --easy1: #00B88C;
     --easy2: #3695B2;
     --hard1: #DC3C6C;
     --hard2: #AD06B0;
+    --highlight: #636BE5;
     --secondary: #6C757D;
     --light-gray: #999999;
     --transparent-1: #FFFFFF25;
@@ -271,7 +273,7 @@ select:focus-visible {
 }
 
 .nav-link.active {
-    font-weight: 900 !important;
+    font-weight: 800 !important;
     border-bottom: 2px solid var(--normal-orange) !important;
     color: var(--normal-orange) !important;
 }
@@ -330,14 +332,29 @@ select,
     filter: saturate(2.75) !important;
 }
 
+.easy {
+    background-image: linear-gradient(to right, var(--easy1), var(--easy2)) !important;
+}
+
+.hard {
+    background-image: linear-gradient(to right, var(--hard1), var(--hard2)) !important;
+}
+
+.casual {
+    border: none !important;
+    background-color: var(--light-blue) !important;
+}
+
+.casual-text {
+    color: var(--dark-blue) !important;
+}
+
 .easyProfile {
     border-radius: 15px 15px 0px 0px !important;
-    background-image: linear-gradient(to right, var(--easy1), var(--easy2)) !important;
 }
 
 .hardProfile {
     border-radius: 0px 0px 15px 15px !important;
-    background-image: linear-gradient(to right, var(--hard1), var(--hard2)) !important;
 }
 
 .rankedPointTerkini-bg {
@@ -403,6 +420,21 @@ select,
     background-color: var(--semi-dark-blue);
 }
 
+.highlight {
+    font-weight: bold;
+    color: var(--highlight);
+}
+
+.illustration-card {
+    border: none !important;
+    background-color: var(--semi-dark-blue) !important;
+}
+
+.playingHistory {
+    border: 0 !important;
+    border-right: solid 10px var(--normal-orange) !important;
+}
+
 .typeCursor {
     font-size: larger;
     font-weight: bolder;
@@ -419,7 +451,7 @@ select,
     padding: .5rem .75rem;
     transform: translateY(100px);
     transition: all .5s ease;
-    border-radius: .25rem;
+    border-radius: 5px;
     color: var(--normal-orange);
 }
 

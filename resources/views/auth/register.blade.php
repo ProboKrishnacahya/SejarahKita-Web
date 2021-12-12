@@ -130,8 +130,9 @@
                             <div class="col-md-7">
                                 <input id="password" type="password"
                                     class="form-control @error('password') is-invalid @enderror" name="password"
-                                    placeholder="Masukkan Kata Sandi" required autocomplete="new-password">
-
+                                    placeholder="Masukkan Kata Sandi" required autocomplete="new-password"
+                                    onkeyup="countCharacters(this);">
+                                <p class="text-end mt-1 mb-0" id="characterLength">8 s.d. 20 Karakter</p>
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -148,7 +149,8 @@
                             <div class="col-md-7">
                                 <input id="password-confirm" type="password" class="form-control"
                                     name="password_confirmation" placeholder="Masukkan Konfirmasi Kata Sandi" required
-                                    autocomplete="new-password">
+                                    autocomplete="new-password" onkeyup="countCharacters(this);">
+                                <p class="text-end mt-1 mb-0" id="characterLength">8 s.d. 20 Karakter</p>
                             </div>
                         </div>
                 </div>

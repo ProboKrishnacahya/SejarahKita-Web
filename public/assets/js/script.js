@@ -25,10 +25,11 @@ function scrollToTop() {
         behavior: "smooth"
     });
 }
+
 scrollToTopBtn.addEventListener("click", scrollToTop);
 document.addEventListener("scroll", handleScroll);
 
-//* Quote's Typewriting Effect
+//* Quote's Typewriting Effect (TypewriterJS - JS Library)
 var typewriting = document.getElementById('typewriting');
 var typewriter = new Typewriter(typewriting, {
     delay: '50',
@@ -36,9 +37,14 @@ var typewriter = new Typewriter(typewriting, {
     devMode: !0,
     cursorClassName: 'typeCursor'
 });
-typewriter.typeString('Bangsa yang besar adalah bangsa yang menghormati jasa pahlawannya.').pauseFor(3000).deleteAll()
-    .typeString('Bebek berjalan berbondong-bondong, akan tetapi burung elang terbang sendirian.').pauseFor(3000).deleteAll()
-    .typeString('Beri aku 1.000 orang tua, niscaya akan kucabut semeru dari akarnya. Beri aku 10 pemuda niscaya akan kuguncangkan dunia.').pauseFor(3000).deleteAll()
-    .typeString('Gantungkan cita-cita mu setinggi langit! Bermimpilah setinggi langit. Jika engkau jatuh, engkau akan jatuh di antara bintang-bintang.').pauseFor(3000).deleteAll()
-    .typeString('Barangsiapa ingin mutiara, harus berani terjun di lautan yang dalam.').pauseFor(3000).deleteAll()
+typewriter.typeString('"Bangsa yang besar adalah bangsa yang menghormati jasa pahlawannya."').pauseFor(3000).deleteAll()
+    .typeString('"Bebek berjalan berbondong-bondong, akan tetapi burung elang terbang sendirian."').pauseFor(3000).deleteAll()
+    .typeString('"Beri aku 1.000 orang tua, niscaya akan kucabut semeru dari akarnya. Beri aku 10 pemuda niscaya akan kuguncangkan dunia."').pauseFor(3000).deleteAll()
+    .typeString('"Gantungkan cita-cita mu setinggi langit! Bermimpilah setinggi langit. Jika engkau jatuh, engkau akan jatuh di antara bintang-bintang."').pauseFor(3000).deleteAll()
+    .typeString('"Barangsiapa ingin mutiara, harus berani terjun di lautan yang dalam."').pauseFor(3000).deleteAll()
     .start();
+
+//* <input> & <textarea> Characters Counter
+function countCharacters(object) {
+    document.getElementById("characterLength").innerHTML = object.value.length;
+}

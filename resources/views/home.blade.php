@@ -9,7 +9,7 @@
                 <span class="fs-3">Mari Berlatih <strong>Sejarah Indonesia</strong></span>
                 <p class="fs-1">Bersama <a href="{{ url('/') }}"><span
                             class="fw-bold fs-1">SejarahKita</span></a></p>
-                <q id="typewriting"></q>
+                <p id="typewriting"></p>
             </div>
             <a href="game">
                 <button class="btn btn-lg btn-primary px-3 me-3">
@@ -29,7 +29,7 @@
     </div>
 
     <div class="card my-5">
-        <p><strong>SejarahKita-Web</strong> adalah Aplikasi Web tentang Game Edukasi berupa Anagram dengan topik mata
+        <p><strong>SejarahKita</strong> adalah Aplikasi tentang Game Edukasi berupa Anagram dengan topik mata
             pelajaran Sejarah Indonesia Kelas 12 yang berfokus pada bab-bab berikut:</p>
         <ul>
             <li>Perjuangan Bangsa Indonesia dalam Menghadapi Ancaman Disintegrasi dari Ideologi, Kepentingan, dan Sistem
