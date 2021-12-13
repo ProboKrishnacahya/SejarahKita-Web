@@ -126,7 +126,10 @@
                     title="Homepage">&nbsp;<span class="fw-bold">SejarahKita</span></a>
             </div>
 
-            <div class="justify-content-center"><q>Creating World Class Entrepreneurs</q></div>
+            {{-- <div class="justify-content-center">
+                <q>Creating World Class Entrepreneurs</q>
+            </div> --}}
+
             <ul class="justify-content-end list-unstyled d-flex pt-2 mb-1">
                 <li>
                     <a href="mailto:info@ciputra.ac.id" data-bs-toggle="tooltip" title="Email">

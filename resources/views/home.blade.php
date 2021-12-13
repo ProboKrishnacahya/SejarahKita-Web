@@ -62,29 +62,33 @@
         </div>
         <div class="carousel-inner bg-dark">
             <div class="carousel-item active" data-bs-interval="3000">
-                <img src="{{ url('assets/img/logo.png') }}" alt="Carousel" loading="lazy" class="img-fluid" />
-                <div class="carousel-caption d-none d-md-block">
+                <img src="{{ url('assets/img/logo.png') }}" alt="Carousel" loading="lazy"
+                    class="img-fluid mx-auto d-block" />
+                <div class="carousel-caption">
                     <h5>First slide label</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-                <img src="{{ url('assets/img/logo.png') }}" alt="Carousel" loading="lazy" class="img-fluid" />
-                <div class="carousel-caption d-none d-md-block">
+                <img src="{{ url('assets/img/logo.png') }}" alt="Carousel" loading="lazy"
+                    class="img-fluid mx-auto d-block" />
+                <div class="carousel-caption">
                     <h5>Second slide label</h5>
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-                <img src="{{ url('assets/img/logo.png') }}" alt="Carousel" loading="lazy" class="img-fluid" />
-                <div class="carousel-caption d-none d-md-block">
+                <img src="{{ url('assets/img/logo.png') }}" alt="Carousel" loading="lazy"
+                    class="img-fluid mx-auto d-block" />
+                <div class="carousel-caption">
                     <h5>Third slide label</h5>
                     <p>Some representative placeholder content for the third slide.</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-                <img src="{{ url('assets/img/logo.png') }}" alt="Carousel" loading="lazy" class="img-fluid" />
-                <div class="carousel-caption d-none d-md-block">
+                <img src="{{ url('assets/img/logo.png') }}" alt="Carousel" loading="lazy"
+                    class="img-fluid mx-auto d-block" />
+                <div class="carousel-caption">
                     <h5>Fourth slide label</h5>
                     <p>Some representative placeholder content for the third slide.</p>
                 </div>
@@ -111,7 +115,7 @@
                         class="bi bi-compass"></i>&emsp;{{ 'Citraland CBD Boulevard, Made, Kec. Sambikerep, Surabaya, Jawa Timur, 60219.' }}
                 </a>
                 <br>
-                <a href="https://www.uc.ac.id/">
+                <a href="https://www.uc.ac.id/" target="_blank" rel="noopener noreferrer">
                     <button class="btn btn-primary mt-5 px-3">
                         <i class="bi bi-globe2"></i>&emsp;{{ __('Kunjungi Situs Web UC') }}
                     </button>
