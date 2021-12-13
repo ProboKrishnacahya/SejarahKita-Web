@@ -23,9 +23,14 @@
         </div>
     </div>
 
-    <strong>
-        <a href="{{ route('playing-history') }}">{{ 'Riwayat Bermain' }}</a>
-    </strong>
+    <div class="mt-5">
+        <strong>
+            <a href="{{ route('questions') }}">{{ 'Bank Soal' }}</a>
+        </strong>
+        <strong>
+            <a href="{{ route('log') }}">{{ 'Log' }}</a>
+        </strong>
+    </div>
     <br>
     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
         <button class="btn btn-danger mt-5 px-3">

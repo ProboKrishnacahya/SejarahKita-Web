@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -33,5 +34,11 @@ class HomeController extends Controller
         } else {
             return redirect()->to('logout');
         }
+    }
+
+    public function adminHome()
+    {
+        $user = Student::find(Auth::user()->id);
+        return view('home', compact('user'));
     }
 }

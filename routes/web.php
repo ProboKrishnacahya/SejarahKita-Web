@@ -31,14 +31,18 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+    Route::get('', [HomeController::class, 'adminHome'])->name('user');
+
     Route::middleware(['admin'])->group(function () {
-        Route::get('home', [AdminController::class, 'index']);
+        // Route::get('', [AdminController::class, 'index']);
 
         Route::get('admin/profile', [AdminController::class, 'edit'])->name('admin.profile');
+
+        // Route::resource('questions', [QuestionsController::class, 'index'])->name('questions');
     });
 
     Route::middleware(['user'])->group(function () {
-        Route::get('', [StudentController::class, 'index'])->name('user');
+        // Route::get('', [StudentController::class, 'index'])->name('user');
 
         Route::get('profile', [StudentController::class, 'edit'])->name('profile');
 
