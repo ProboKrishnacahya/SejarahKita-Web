@@ -32,7 +32,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 
     Route::middleware(['admin'])->group(function () {
-        Route::get('admin', [AdminController::class, 'index']);
+        Route::get('home', [AdminController::class, 'index']);
 
         Route::get('admin/profile', [AdminController::class, 'edit'])->name('admin.profile');
     });

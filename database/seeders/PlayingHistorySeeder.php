@@ -20,7 +20,7 @@ class PlayingHistorySeeder extends Seeder
             'id_level' => 2,
             'skor' => 100,
             'created_at' => \Carbon\Carbon::now(),
-            'submitted_at' => \Carbon\Carbon::now()
+            'updated_at' => \Carbon\Carbon::now()
         ]);
     }
 }
