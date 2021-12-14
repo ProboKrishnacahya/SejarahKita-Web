@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-7 me-auto">
             <div class="card">
-                <div class="card-header fw-bold text-center mb-3 fs-5">{{ __('Register') }}</div>
+                <div class="card-header text-center fw-bold fs-5 pb-3">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -149,8 +149,7 @@
                             <div class="col-md-7">
                                 <input id="password-confirm" type="password" class="form-control"
                                     name="password_confirmation" placeholder="Masukkan Konfirmasi Kata Sandi" required
-                                    autocomplete="new-password" onkeyup="countCharacters(this);">
-                                <p class="text-end mt-1 mb-0" id="characterLength">8 s.d. 20 Karakter</p>
+                                    autocomplete="new-password">
                             </div>
                         </div>
                 </div>

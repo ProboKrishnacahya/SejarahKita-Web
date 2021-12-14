@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-7 me-auto">
             <div class="card">
-                <div class="card-header fw-bold text-center mb-3 fs-5">{{ __('Login') }}</div>
+                <div class="card-header text-center fw-bold fs-5 pb-3">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">

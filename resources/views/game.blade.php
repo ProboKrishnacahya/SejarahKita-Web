@@ -3,24 +3,21 @@
 @section('title', 'Game')
 
 @section('content')
-
-    <h1>@yield('title')</h1>
-
-    <div class="container mt-3">
+    <div class="container">
         <div class="row card illustration-card justify-content-around p-4">
             <div class="col">
                 <div class="row">
                     <div class="col-sm-6 align-self-center">
                         <div class="row">
-                            <p class="fs-4">{{ 'Belajar Jadi' }}</p>
+                            <p class="display-6">{{ 'Belajar Jadi' }}</p>
                             <div class="d-inline">
-                                <span class="fs-2 highlight">{{ 'Lebih Seru' }}</span>
-                                <span class="fs-2">{{ '👌' }}</span>
+                                <span class="display-4 highlight">{{ 'Lebih Seru' }}</span>
+                                <span class="display-4">{{ '👌' }}</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 align-self-center">
-                        <img src="{{ url('assets/img/ill_game.svg') }}" alt=""
+                        <img src="{{ url('assets/img/ill_game.svg') }}" alt="Game"
                             class="content-img mx-auto d-block">
                     </div>
                 </div>
@@ -28,13 +25,13 @@
         </div>
     </div>
 
-    <h3 class="my-5 text-center">{{ 'Play Now' }}</h3>
+    <p class="fs-2 my-5 text-center">{{ 'Play Now' }}</p>
 
     <div class="container">
         <div class="row card justify-content-around p-5">
             <div class="col">
                 <h2>{{ 'Ranked Mode' }}</h2>
-                <p>{{ 'Menangkan permainan dan dapatkan Ranked Point' }}</p>
+                <p class="lead">{{ 'Menangkan permainan dan dapatkan Ranked Point' }}</p>
                 <div class="row justify-content-around text-center mt-5">
                     <div class="col-md-4 align-self-center rounded-3 easy p-5">
                         <div class="row text-center">
@@ -66,7 +63,7 @@
                     <div class="col-sm-6 align-self-center">
                         <div class="row casual-text">
                             <h2>{{ 'Casual Mode' }}</h2>
-                            <p>{{ 'Bermain dengan santai tanpa pengaruhi Ranked Point mu' }}</p>
+                            <p class="lead">{{ 'Bermain dengan santai tanpa pengaruhi Ranked Point mu' }}</p>
                             <div class="container">
                                 <a href="/playing-game">
                                 <button class="btn btn-warning fs-4 mt-5 px-3">

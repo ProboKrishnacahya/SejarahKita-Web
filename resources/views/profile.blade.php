@@ -30,14 +30,24 @@
     <h3 class="mt-5"><i class="bi bi-star"></i>&emsp;{{ 'Ranked Point Terkini' }}</h3>
     <div class="card-wrap easy easyProfile mt-4 p-3">
         <img src="{{ url('assets/img/fg_easy.png') }}" alt="" class="rankedPointTerkini-bg">
-        <div class="rankedPointTerkini-content">
-            <h4>Easy&emsp;<span class="fs-1 fw-bold">{{ $user->getEasyRankedPoint() }} RP</span></h4>
+        <div class="d-flex rankedPointTerkini-content">
+            <div class="p-2">
+                <span class="fs-1">Easy</span>
+            </div>
+            <div class="ms-auto p-2">
+                <span class="fs-1 fw-bold">{{ $user->getEasyRankedPoint() }} RP</span>
+            </div>
         </div>
     </div>
     <div class="card-wrap hard hardProfile mb-5 p-3">
         <img src="{{ url('assets/img/fg_hard.png') }}" alt="" class="rankedPointTerkini-bg">
-        <div class="rankedPointTerkini-content">
-            <h4>Hard&emsp;<span class="fs-1 fw-bold">{{ $user->getHardRankedPoint() }} RP</span></h4>
+        <div class="d-flex rankedPointTerkini-content">
+            <div class="p-2">
+                <span class="fs-1">Hard</span>
+            </div>
+            <div class="ms-auto p-2">
+                <span class="fs-1 fw-bold">{{ $user->getHardRankedPoint() }} RP</span>
+            </div>
         </div>
     </div>
 
