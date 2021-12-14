@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LevelController;
+use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\StudentController;
 
 /*
@@ -38,7 +40,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('admin/profile', [AdminController::class, 'edit'])->name('admin.profile');
 
-        // Route::resource('questions', [QuestionsController::class, 'index'])->name('questions');
+        Route::resource('question', QuestionController::class);
+
+        Route::resource('level', LevelController::class);
     });
 
     Route::middleware(['user'])->group(function () {
