@@ -14,6 +14,7 @@ class PlayingHistorySeeder extends Seeder
      */
     public function run()
     {
+        
         DB::table('sej12_playing_history')->insert([
             'id_playing_history' => 1,
             'id_student' => 5,
@@ -22,5 +23,6 @@ class PlayingHistorySeeder extends Seeder
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
+        
     }
 }
