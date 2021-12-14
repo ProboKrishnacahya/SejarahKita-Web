@@ -85,4 +85,13 @@ class GameController extends Controller
     {
         //
     }
+
+    //redirect to /playing-game
+    public function playingGame()
+    {
+        $active_game = "active";
+        $active_leaderboard = "";
+
+        return view('playingGame', compact('active_game', 'active_leaderboard'));
+    }
 }
