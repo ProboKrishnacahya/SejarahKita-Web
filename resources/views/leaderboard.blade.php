@@ -54,5 +54,3 @@
         </table>
     </div>
 @endsection
-
-@section('footer')

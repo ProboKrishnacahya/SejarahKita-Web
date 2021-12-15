@@ -41,10 +41,6 @@ a {
     color: var(--button-secondary);
 }
 
-.btn-outline-primary {
-    border: solid 2px var(--button-primary);
-}
-
 thead,
 .nilai {
     background-color: var(--table-thead) !important;
@@ -54,35 +50,12 @@ tbody {
     color: var(--text-primary);
 }
 
-tbody tr:nth-child(odd) {
-    background-color: var(--table-tbody-odd);
-}
-
-tbody tr:nth-child(even) {
-    background-color: var(--table-tbody-even);
-}
-
-tr:first-child th:first-child {
-    border-top-left-radius: 5px !important;
-}
-
-tr:first-child th:last-child {
-    border-top-right-radius: 5px !important;
-}
-
-tr:last-child td:first-child {
-    border-bottom-left-radius: 5px !important;
-}
-
-tr:last-child td:last-child {
-    border-bottom-right-radius: 5px !important;
-}
-
 label {
     margin-bottom: .5rem;
 }
 
-input {
+input,
+textarea {
     caret-color: var(--button-primary);
 }
 
@@ -211,6 +184,30 @@ button:active,
     outline: none !important;
 }
 
+tbody tr:nth-child(odd) {
+    background-color: var(--table-tbody-odd);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--table-tbody-even);
+}
+
+tr:first-child th:first-child {
+    border-top-left-radius: 5px !important;
+}
+
+tr:first-child th:last-child {
+    border-top-right-radius: 5px !important;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 5px !important;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 5px !important;
+}
+
 .dropdown-item:hover {
     background-color: transparent;
     color: var(--button-secondary);
@@ -309,6 +306,10 @@ select:focus-visible {
     color: var(--text-primary) !important;
 }
 
+.btn-outline-primary {
+    border: solid 2px var(--button-primary);
+}
+
 .btn-link {
     text-decoration: none;
     color: var(--button-secondary);
@@ -372,6 +373,11 @@ select,
     color: var(--text-primary) !important;
     border: solid 2px var(--text-primary) !important;
     outline: none;
+}
+
+.form-check-input,
+.form-check-label {
+    cursor: pointer;
 }
 
 .carousel-inner {

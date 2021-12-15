@@ -3,7 +3,6 @@
 @section('title', 'Playing History')
 
 @section('content')
-
     @php
     $level = ['Casual', 'Easy', 'Hard'];
     @endphp
@@ -30,7 +29,4 @@
             </div>
         </div>
     @endforeach
-
 @endsection
-
-@section('footer')
