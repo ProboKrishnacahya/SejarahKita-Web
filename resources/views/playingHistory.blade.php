@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <div class="col-md-3 align-self-center text-end mb-1">
-                            <span class="badge bg-secondary fs-3">{{ $ph->skor }}</span>
+                            <span class="badge nilai text-black fs-3">{{ $ph->skor }}</span>
                         </div>
                     </div>
                 </div>

@@ -45,8 +45,9 @@ a {
     border: solid 2px var(--button-primary);
 }
 
-thead {
-    background-color: var(--table-thead);
+thead,
+.nilai {
+    background-color: var(--table-thead) !important;
 }
 
 tbody {
@@ -88,6 +89,7 @@ input {
 select {
     padding: .4rem;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 hr {
@@ -209,6 +211,11 @@ button:active,
     outline: none !important;
 }
 
+.dropdown-item:hover {
+    background-color: transparent;
+    color: var(--button-secondary);
+}
+
 input:focus,
 textarea:focus,
 select:focus-visible {
@@ -236,10 +243,6 @@ select:focus-visible {
 .custom-radio:checked,
 .custom-radio:focus {
     background-color: var(--button-primary);
-}
-
-.square {
-    list-style-type: square;
 }
 
 .page-link:hover {
@@ -345,11 +348,6 @@ select:focus-visible {
     color: var(--text-primary);
 }
 
-.dropdown-item:hover {
-    background-color: transparent;
-    color: var(--button-secondary);
-}
-
 .content-img {
     max-width: 50%;
     max-height: 15rem;
@@ -407,6 +405,10 @@ select,
 .highlight {
     font-weight: bold;
     color: var(--highlight);
+}
+
+.square {
+    list-style-type: square;
 }
 
 .rankedPointTerkini-bg {

@@ -271,5 +271,3 @@
     {{-- JS Library (TypewriterJS) --}}
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 @endsection
-
-@section('footer')

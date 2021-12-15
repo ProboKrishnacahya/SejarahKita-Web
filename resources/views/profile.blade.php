@@ -65,5 +65,3 @@
         </button>
     </a>
 @endsection
-
-@section('footer')

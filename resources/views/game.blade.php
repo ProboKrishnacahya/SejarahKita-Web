@@ -87,5 +87,3 @@
         </div>
     </div>
 @endsection
-
-@section('footer')
