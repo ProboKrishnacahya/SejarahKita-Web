@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Leaderboard;
+use App\Models\Question;
 use Illuminate\Http\Request;
 
 class LeaderboardController extends Controller
@@ -13,7 +15,12 @@ class LeaderboardController extends Controller
      */
     public function index()
     {
-        //
+        $active_game = "";
+        $active_leaderboard = "active";
+
+        $leaderboards = Leaderboard::all();
+
+        return view('leaderboard', compact('active_game', 'active_leaderboard', 'leaderboard'));
     }
 
     /**
@@ -45,7 +52,9 @@ class LeaderboardController extends Controller
      */
     public function show($id)
     {
-        //
+        // Menunjukkan pertanyaan kepada student untuk dijawab
+        $questions = Question::findOrFail($id);
+        return view('questionView', compact('questions'));
     }
 
     /**

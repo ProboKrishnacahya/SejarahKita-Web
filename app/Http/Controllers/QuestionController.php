@@ -6,6 +6,8 @@ use App\Models\Level;
 use App\Models\Question;
 use Illuminate\Http\Request;
 
+// Controller untuk melakukan CRUD yang hanya bisa diakses oleh Admin.
+
 class QuestionController extends Controller
 {
     /**

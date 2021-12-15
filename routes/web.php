@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LeaderboardController;
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\StudentController;

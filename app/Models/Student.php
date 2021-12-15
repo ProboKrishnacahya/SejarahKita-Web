@@ -46,6 +46,10 @@ class Student extends Authenticatable
         return $this->hasMany(Leaderboard::class, 'id_student', 'id');
     }
 
+    public function students(){
+        return $this->hasOne(LogApps::class, 'id_user', 'id');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

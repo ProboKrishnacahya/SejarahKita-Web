@@ -86,7 +86,7 @@ class GameController extends Controller
         //
     }
 
-    //redirect to /playing-game
+    //redirect to /playing-game     <- function itu harus sesuai playingGame jangan pakai strip beda dengan view.
     public function playingGame()
     {
         $active_game = "active";
