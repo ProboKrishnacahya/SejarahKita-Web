@@ -11,12 +11,12 @@
                             class="fw-bold fs-1">SejarahKita</span></a></p>
                 <p id="typewriting"></p>
             </div>
-            <a href="game">
+            <a href="{{ url('game') }}">
                 <button class="btn btn-lg btn-primary px-3 me-3">
                     <i class="bi bi-controller"></i>&emsp;{{ __('Mulai Permainan') }}
                 </button>
             </a>
-            <a href="leaderboard">
+            <a href="{{ url('leaderboard') }}">
                 <button class="btn btn-lg btn-outline-primary px-3">
                     <i class="bi bi-bar-chart"></i>&emsp;{{ __('Lihat Peringkat') }}
                 </button>
@@ -33,7 +33,7 @@
         <div class="card-body">
             <p><strong>SejarahKita</strong> adalah Aplikasi tentang Game Edukasi berupa Anagram dengan topik mata
                 pelajaran Sejarah Indonesia Kelas 12 yang berfokus pada bab-bab berikut:</p>
-            <ul>
+            <ul class="square">
                 <li>Perjuangan Bangsa Indonesia dalam Menghadapi Ancaman Disintegrasi dari Ideologi, Kepentingan, dan Sistem
                     Pemerintahan.
                 </li>
@@ -120,9 +120,9 @@
                         <a href="https://www.linkedin.com/in/vanness-zhong-8aa102221/" target="_blank"
                             rel="noopener noreferrer">Vanness Zhong Anthony</a>
                     </strong>
-                    <span class="text-center">
+                    <small class="text-center">
                         <i class="bi bi-geo-alt"></i>&emsp;Pekalongan
-                    </span>
+                    </small>
                     <hr>
                     <ul class="list-unstyled">
                         <li>
@@ -151,9 +151,9 @@
                         <a href="https://www.linkedin.com/in/nathanael-abel-arianto-61aa73211/" target="_blank"
                             rel="noopener noreferrer">Nathanael Abel Arianto</a>
                     </strong>
-                    <span class="text-center">
+                    <small class="text-center">
                         <i class="bi bi-geo-alt"></i>&emsp;Makassar
-                    </span>
+                    </small>
                     <hr>
                     <ul class="list-unstyled">
                         <li>
@@ -182,9 +182,9 @@
                         <a href="https://www.linkedin.com/in/probo-krishnacahya/" target="_blank"
                             rel="noopener noreferrer">Probo Krishnacahya</a>
                     </strong>
-                    <span class="text-center">
+                    <small class="text-center">
                         <i class="bi bi-geo-alt"></i>&emsp;Surabaya
-                    </span>
+                    </small>
                     <hr>
                     <ul class="list-unstyled">
                         <li>
@@ -213,9 +213,9 @@
                         <a href="https://www.linkedin.com/in/michael-chandra-330/" target="_blank"
                             rel="noopener noreferrer">Michael Chandra</a>
                     </strong>
-                    <span class="text-center">
+                    <small class="text-center">
                         <i class="bi bi-geo-alt"></i>&emsp;Makassar
-                    </span>
+                    </small>
                     <hr>
                     <ul class="list-unstyled">
                         <li>
@@ -247,7 +247,7 @@
                 <q>Creating World Class <strong>Entrepreneurs</strong></q>
                 <br><br>
                 <address>
-                    <a href="https://goo.gl/maps/kcKtWyQcjksTkcy18">
+                    <a href="https://goo.gl/maps/kcKtWyQcjksTkcy18" target="_blank" rel="noopener noreferrer">
                         <i
                             class="bi bi-compass"></i>&emsp;{{ 'Citraland CBD Boulevard, Made, Kec. Sambikerep, Surabaya, Jawa Timur, 60219.' }}
                     </a>
@@ -259,12 +259,10 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-7 mapouter">
-            <div class="gmap_canvas">
-                <iframe id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=universitas%20ciputra%20surabaya&t=k&z=15&ie=UTF8&iwloc=&output=embed"
-                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-            </div>
+        <div class="col-md-7">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.2300803124476!2d112.62941291424833!3d-7.285587194741468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fde455555555%3A0xd7e2611ae591f046!2sUniversitas%20Ciputra%20Surabaya!5e1!3m2!1sid!2sid!4v1639550236501!5m2!1sid!2sid"
+                width="1440" height="1080" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 

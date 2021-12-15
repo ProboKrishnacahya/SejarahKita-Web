@@ -1,14 +1,15 @@
-var url = "/profile";// Redirect ke URL Tujuan
-var timer = 3; // Timer dalam detik
+var url = "/playing-game"; // Redirect ke URL Tujuan
+var second = 3; // Timer dalam detik
 
 function countDown() {
-    if (timer > 0) {
-        timer--;
-        var waktu = timer + 1;
-        $('#start').html('<b>Halaman Ini Akan Otomatis Di Redirect KE </b> ' + url + ' dalam ' + waktu + ' detik.');
+    if (second > 0) {
+        second--;
+        var timer = second + 1;
+        $('#start').html(timer);
         setTimeout("countDown()", 1000);
     } else {
         window.location.href = url;
     }
 }
+
 countDown();

@@ -20,7 +20,7 @@ class LeaderboardController extends Controller
 
         $leaderboards = Leaderboard::all();
 
-        return view('leaderboard', compact('active_game', 'active_leaderboard', 'leaderboard'));
+        return view('leaderboard', compact('active_game', 'active_leaderboard', 'leaderboards'));
     }
 
     /**

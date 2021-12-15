@@ -17,20 +17,16 @@
     {{-- Laravel CSRF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    {{-- Bootstrap Content Delivery Network (CSS, JS with Popper, Icon Fonts) --}}
+    {{-- Framework Bootstrap Content Delivery Network (Cascading Style Sheets & Icon Fonts) --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
 
-    {{-- jQuery Content Delivery Network --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
 
-    {{-- External CSS --}}
+    {{-- External Cascading Style Sheets --}}
     <link rel="stylesheet" href="{{ url('assets/css/style.css') }}" type="text/css" />
 
     {{-- Google Fonts --}}
@@ -46,7 +42,7 @@
 </head>
 
 <body class="d-flex flex-column h-100 text-white">
-    {{-- Header --}}
+    {{-- Web's Header --}}
     <nav class="navbar navbar-dark navbar-expand-lg py-3 user-select-none">
         <div class="container">
             <a class="navbar-brand" href="{{ route('user') }}" data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -115,12 +111,12 @@
         </div>
     </nav>
 
-    {{-- Content --}}
+    {{-- Web's Content --}}
     <main class="my-5 flex-shrink-0">
         <div class="container">@yield('content')</div>
     </main>
 
-    {{-- Footer --}}
+    {{-- Web's Footer --}}
     <footer class="navbar mt-auto user-select-none">
         <div class="container">
             <div class="d-flex">
@@ -183,8 +179,45 @@
         </div>
     </footer>
 
-    {{-- External JS --}}
+    {{-- External JavaScript --}}
     <script src="{{ url('/assets/js') }}/script.js"></script>
+
+    {{-- jQuery Content Delivery Network --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    {{-- Framework Bootstrap Content Delivery Network (JavaScript Bundle with Popper) --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    {{-- jQuery Plugin (DataTables) --}}
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.js"></script>
+    <script>
+        $(document).ready(function() {
+            var thetable = $('#table').DataTable({
+                stateSave: true,
+                language: {
+                    "pagingType": "full_numbers",
+                    "zeroRecords": "Tidak ada data yang sesuai",
+                    "emptyTable": "Tidak ada data yang tersedia",
+                    "lengthMenu": 'Tampilkan&emsp;<select>' +
+                        '<option value="10">10</option>' +
+                        '<option value="25">25</option>' +
+                        '<option value="50">50</option>' +
+                        '<option value="100">100</option>' +
+                        '<option value="-1">Semua</option>' +
+                        '</select>&emsp;entri',
+                    "search": "Cari&emsp;",
+                    "searchPlaceholder": "Telusuri Leaderboard",
+                    "info": "Menampilkan halaman <strong>_PAGE_</strong> dari <strong>_PAGES_</strong>",
+                    "infoFiltered": "(dari total <strong>_MAX_</strong> data)"
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
