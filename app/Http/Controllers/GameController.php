@@ -15,9 +15,8 @@ class GameController extends Controller
     public function index()
     {
         $active_game = "active";
-        $active_leaderboard = "";
 
-        return view('game', compact('active_game', 'active_leaderboard'));
+        return view('game', compact('active_game'));
     }
 
     /**
@@ -90,8 +89,7 @@ class GameController extends Controller
     public function playingGame()
     {
         $active_game = "active";
-        $active_leaderboard = "";
 
-        return view('playingGame', compact('active_game', 'active_leaderboard'));
+        return view('playingGame', compact('active_game'));
     }
 }

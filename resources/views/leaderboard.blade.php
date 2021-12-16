@@ -23,7 +23,7 @@
             <div class="card-wrap easy rounded-3 mb-2 px-3 pt-2">
                 <img src="{{ url('assets/img/fg_easy.png') }}" alt="" class="rankedPointTerkini-bg">
                 <div class="rankedPointTerkini-content">
-                    <h3>{{ Auth::user()->getEasyRankedPoint() }} RP</h3>
+                    <h3>{{ $user->getEasyRankedPoint() }} RP</h3>
                 </div>
             </div>
         </div>

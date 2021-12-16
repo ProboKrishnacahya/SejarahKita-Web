@@ -12,12 +12,14 @@ class StudentController extends Controller
     public function index()
     {
         $user = Student::find(Auth::user()->id);
+
         return view('home', compact('user'));
     }
 
     public function show()
     {
         $user = Student::find(Auth::user()->id);
+
         return view('playingHistory', compact('user'));
     }
 
@@ -25,6 +27,7 @@ class StudentController extends Controller
     {
         $user = Student::find(Auth::user()->id);
         $createdAt = Carbon::parse($user['created_at'])->format('d/m/Y');
+
         return view('profile', compact('user', 'createdAt'));
     }
 }

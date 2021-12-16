@@ -14,12 +14,12 @@
                     </div>
                     <div class="col-sm-6 align-self-center">
                         <div class="row">
-                            <p><i class="bi bi-at"></i>&emsp;{{ Auth::user()->username }}</p>
-                            <p><i class="bi bi-chat-text"></i>&emsp;{{ Auth::user()->name }}</p>
-                            <p><i class="bi bi-envelope"></i>&emsp;{{ Auth::user()->email }}</p>
-                            <p><i class="bi bi-building"></i>&emsp;{{ Auth::user()->school }}</p>
-                            <p><i class="bi bi-geo-alt"></i>&emsp;{{ Auth::user()->city }}</p>
-                            <p><i class="bi bi-calendar2-week"></i>&emsp;{{ Auth::user()->birthyear }}</p>
+                            <p><i class="bi bi-at"></i>&emsp;{{ $user->username }}</p>
+                            <p><i class="bi bi-chat-text"></i>&emsp;{{ $user->name }}</p>
+                            <p><i class="bi bi-envelope"></i>&emsp;{{ $user->email }}</p>
+                            <p><i class="bi bi-building"></i>&emsp;{{ $user->school }}</p>
+                            <p><i class="bi bi-geo-alt"></i>&emsp;{{ $user->city }}</p>
+                            <p><i class="bi bi-calendar2-week"></i>&emsp;{{ $user->birthyear }}</p>
                         </div>
                     </div>
                 </div>
