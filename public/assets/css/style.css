@@ -417,6 +417,13 @@ select,
     list-style-type: square;
 }
 
+.accordion-button.collapsed,
+.accordion-item {
+    transform: scale(1);
+    background-color: var(--card-secondary);
+    color: var(--text-primary);
+}
+
 .rankedPointTerkini-bg {
     opacity: 0.7;
     position: absolute;

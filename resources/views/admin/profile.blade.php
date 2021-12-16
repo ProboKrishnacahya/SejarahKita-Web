@@ -23,17 +23,17 @@
         </div>
     </div>
 
-    <div class="mt-5">
+    <div class="d-grid my-5">
         <strong>
-            <a href="{{ route('questions') }}">{{ 'Bank Soal' }}</a>
+            <a href="{{ url('admin/profile/question') }}">{{ 'Bank Soal' }}</a>
         </strong>
+        <br>
         <strong>
-            <a href="{{ route('log') }}">{{ 'Log' }}</a>
+            <a href="{{ url('log') }}">{{ 'Log' }}</a>
         </strong>
     </div>
-    <br>
     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-        <button class="btn btn-danger mt-5 px-3">
+        <button class="btn btn-danger px-3">
             <i class="bi bi-box-arrow-right"></i>&emsp;{{ __('Logout') }}
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

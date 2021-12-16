@@ -100,7 +100,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle menu-last-child" data-bs-toggle="dropdown" role="button"
                                 aria-expanded="false">Profile</a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
                                     <a class="dropdown-item" href="{{ route('login') }}">Login</a>
                                 </li>

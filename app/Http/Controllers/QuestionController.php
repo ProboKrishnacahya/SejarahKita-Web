@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Level;
 use App\Models\Question;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-// Controller untuk melakukan CRUD yang hanya bisa diakses oleh Admin.
+//* Controller untuk melakukan CRUD yang hanya bisa diakses oleh Admin.
 
 class QuestionController extends Controller
 {
@@ -20,7 +21,7 @@ class QuestionController extends Controller
         $questions = Question::all();
         $levels = Level::all();
 
-        return view('question', compact( 'questions', 'levels'));
+        return view('admin.question', compact('questions', 'levels'));
     }
 
     /**
@@ -30,7 +31,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        return view('questionCreate');
+        return view('admin.questionCreate');
     }
 
     /**
@@ -60,7 +61,7 @@ class QuestionController extends Controller
     public function show($id)
     {
         $questions = Question::findOrFail($id);
-        return view('questionView', compact('questions'));
+        return view('admin.questionView', compact('questions'));
     }
 
     /**
@@ -74,7 +75,7 @@ class QuestionController extends Controller
         $questions = Question::findOrFail($id);
         $levels = Level::all();
 
-        return view('questionEdit', compact('questions', 'levels'));
+        return view('admin.questionEdit', compact('questions', 'levels'));
     }
 
     /**
@@ -87,7 +88,7 @@ class QuestionController extends Controller
     public function update(Request $request, $id)
     {
         $questions = Question::findOrFail($id);
-        
+
         $questions->update([
             'id_level' => $request->id_level,
             'pertanyaan_kalimat' => $request->pertanyaan_kalimat,

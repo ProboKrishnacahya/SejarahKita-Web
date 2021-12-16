@@ -34,24 +34,18 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/home', [HomeController::class, 'index'])->name('home');
-
     Route::get('', [HomeController::class, 'adminHome'])->name('user');
 
     Route::middleware(['admin'])->group(function () {
-        // Route::get('', [AdminController::class, 'index']);
-
         Route::get('admin/profile', [AdminController::class, 'edit'])->name('admin.profile');
-
         Route::resource('question', QuestionController::class);
-
         Route::resource('level', LevelController::class);
+        // Route::get('', [AdminController::class, 'index']);
     });
 
     Route::middleware(['user'])->group(function () {
-        // Route::get('', [StudentController::class, 'index'])->name('user');
-
         Route::get('profile', [StudentController::class, 'edit'])->name('profile');
-
         Route::get('playing-history', [StudentController::class, 'show'])->name('playing-history');
+        // Route::get('', [StudentController::class, 'index'])->name('user');
     });
 });

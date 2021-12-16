@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="card">
-                <form action="{{ route('question.store') }}" method="post">
+                <form action="{{ route('questions.store') }}" method="post">
                     @csrf
                     <div class="card-header text-center pb-3">
                         <h2>Tambah Pertanyaan</h2>
