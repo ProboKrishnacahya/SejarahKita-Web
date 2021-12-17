@@ -43,6 +43,14 @@
     {{-- External Cascading Style Sheets --}}
     <link rel="stylesheet" href="{{ url('assets/css/style.css') }}" type="text/css" />
 
+    {{-- External JavaScript --}}
+    <script src="{{ url('/assets/js') }}/script.js"></script>
+    <script src="{{ url('/assets/js') }}/dataTables.js"></script>
+
+    {{-- jQuery Plugin (DataTables) --}}
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.js"></script>
+
     {{-- Tab Page Favicon --}}
     <link rel="icon" href="{{ url('assets/img/favicon.png?v=2') }}" type="image/png" />
 
@@ -187,37 +195,6 @@
             </ul>
         </div>
     </footer>
-
-    {{-- External JavaScript --}}
-    <script src="{{ url('/assets/js') }}/script.js"></script>
-
-    {{-- jQuery Plugin (DataTables) --}}
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.js"></script>
-    <script>
-        $(document).ready(function() {
-            var thetable = $('#table').DataTable({
-                stateSave: true,
-                language: {
-                    "pagingType": "full_numbers",
-                    "zeroRecords": "Tidak ada data yang sesuai",
-                    "emptyTable": "Tidak ada data yang tersedia",
-                    "lengthMenu": 'Tampilkan&emsp;<select>' +
-                        '<option value="10">10</option>' +
-                        '<option value="25">25</option>' +
-                        '<option value="50">50</option>' +
-                        '<option value="100">100</option>' +
-                        '<option value="-1">Semua</option>' +
-                        '</select>&emsp;entri',
-                    "search": "Cari&emsp;",
-                    "searchPlaceholder": "Telusuri Leaderboard",
-                    "info": "Menampilkan halaman <strong>_PAGE_</strong> dari <strong>_PAGES_</strong>",
-                    "infoEmpty": "Menampilkan 0 hingga 0 dari 0 entri",
-                    "infoFiltered": "(dari total <strong>_MAX_</strong> data)"
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

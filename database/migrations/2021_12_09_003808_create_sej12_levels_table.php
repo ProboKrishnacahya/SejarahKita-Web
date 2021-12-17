@@ -14,7 +14,7 @@ class CreateSej12LevelsTable extends Migration
     public function up()
     {
         Schema::create('sej12_levels', function (Blueprint $table) {
-            $table->unsignedBigInteger('id_level')->primary();
+            $table->id('id_level');
             $table->string('jenis_level');
             $table->timestamps();
         });

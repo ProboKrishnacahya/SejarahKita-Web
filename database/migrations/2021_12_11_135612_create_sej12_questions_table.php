@@ -14,7 +14,7 @@ class CreateSej12QuestionsTable extends Migration
     public function up()
     {
         Schema::create('sej12_questions', function (Blueprint $table) {
-            $table->unsignedBigInteger('id_question')->primary();
+            $table->id('id_question');
             $table->text('pertanyaan_kalimat');
             $table->text('pertanyaan_path_gambar');
             $table->text('kunci_jawaban');

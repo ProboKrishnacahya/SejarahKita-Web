@@ -14,7 +14,7 @@ class CreateSej12PlayingHistoryTable extends Migration
     public function up()
     {
         Schema::create('sej12_playing_history', function (Blueprint $table) {
-            $table->unsignedBigInteger('id_playing_history')->primary();
+            $table->id('id_playing_history');
             $table->foreignId('id_student')
                 ->references('id')
                 ->on('students')

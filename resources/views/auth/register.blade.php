@@ -11,7 +11,6 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
                         <div class="row mb-3">
                             <label for="email" class="col-md-5 col-form-label text-md-right">
                                 <i class="bi bi-envelope"></i>&emsp;{{ __('Email') }}

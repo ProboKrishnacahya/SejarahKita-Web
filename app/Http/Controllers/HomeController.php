@@ -39,6 +39,7 @@ class HomeController extends Controller
     public function adminHome()
     {
         $user = Student::find(Auth::user()->id);
+
         return view('home', compact('user'));
     }
 }

@@ -14,7 +14,7 @@ class CreateSej12LeaderboardsLevelsTable extends Migration
     public function up()
     {
         Schema::create('sej12_leaderboards_levels', function (Blueprint $table) {
-            $table->unsignedBigInteger('id_leaderboard_level')->primary();
+            $table->id('id_leaderboard_level');
             $table->timestamps();
         });
 

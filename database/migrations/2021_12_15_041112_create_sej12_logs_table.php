@@ -14,7 +14,7 @@ class CreateSej12LogsTable extends Migration
     public function up()
     {
         Schema::create('sej12_logs', function (Blueprint $table) {
-            $table->unsignedBigInteger('id_log')->primary();
+            $table->id('id_log');
             $table->string('table');
             $table->foreignId('id_user')
                 ->references('id')
