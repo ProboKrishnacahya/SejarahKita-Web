@@ -88,7 +88,6 @@ class QuestionController extends Controller
     public function update(Request $request, $id)
     {
         $questions = Question::findOrFail($id);
-
         $questions->update([
             'id_level' => $request->id_level,
             'pertanyaan_kalimat' => $request->pertanyaan_kalimat,
@@ -108,9 +107,8 @@ class QuestionController extends Controller
     public function destroy($id)
     {
         $questions = Question::findOrFail($id);
-
         $questions->delete();
-
+        
         return redirect(route('questions.index'));
     }
 }

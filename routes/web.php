@@ -28,17 +28,16 @@ Route::get('playing-game', [GameController::class, 'playingGame'])->name('playin
 //* Leaderboard
 Route::resource('leaderboard', LeaderboardController::class);
 
-//* Home & Profile
+//* Home, Profile (Playing History & Question + Log)
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
-
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('', [HomeController::class, 'adminHome'])->name('user');
 
     Route::middleware(['admin'])->group(function () {
         Route::get('admin/profile', [AdminController::class, 'edit'])->name('admin.profile');
-        Route::resource('question', QuestionController::class);
+        Route::resource('admin/profile/question', QuestionController::class);
         Route::resource('level', LevelController::class);
         // Route::get('', [AdminController::class, 'index']);
     });

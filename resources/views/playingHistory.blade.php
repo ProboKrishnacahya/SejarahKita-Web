@@ -4,7 +4,7 @@
 
 @section('content')
     @php
-    $level = ['-', 'Casual', 'Easy', 'Hard'];
+    $level = ['', 'Casual', 'Easy', 'Hard'];
     @endphp
 
     @foreach ($user->playinghistories as $ph)
