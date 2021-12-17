@@ -131,8 +131,14 @@
                                     class="form-control @error('password') is-invalid @enderror" name="password"
                                     placeholder="Masukkan Kata Sandi" required autocomplete="new-password"
                                     onkeyup="countCharacters(this);">
-                                <p class="text-end mt-1 mb-0" id="characterLength">8 s.d. 20 Karakter</p>
-                                @error('password')
+                                <small class="d-flex mt-2 rankedPointTerkini-content">
+                                    <div>
+                                        <span>8 s.d. 20 Karakter</span>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <span id="characterLength"></span>
+                                    </div>
+                                </small> @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

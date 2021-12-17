@@ -12,7 +12,7 @@
                             <p class="display-6">{{ 'Belajar Jadi' }}</p>
                             <div class="d-inline">
                                 <span class="display-4 highlight">{{ 'Lebih Seru' }}</span>
-                                <span class="display-4">{{ '👌' }}</span>
+                                <span class="display-4">&#128076;</span>
                             </div>
                         </div>
                     </div>
@@ -32,25 +32,25 @@
                     <p>{{ 'Menangkan permainan dan dapatkan Ranked Point' }}</p>
                 </div>
                 <div class="row justify-content-around text-center my-5">
-                    <div class="col-md-5 align-self-center rounded-3 easy py-5">
+                    <div class="col-md-5 align-self-center rounded-3 easy-bg py-5">
                         <div class="row text-center">
                             <h3>{{ 'Easy' }}</h3>
                             <img src="{{ url('assets/img/ill_nyawa5.svg') }}" alt="Nyawa Easy"
                                 class="content-img mx-auto d-block">
                             <a href="{{ route('playingGame') }}">
-                                <button class="btn btn-warning fs-4 px-3">
+                                <button class="btn btn-warning fs-4">
                                     <i class="bi bi-controller"></i>&emsp;{{ 'Main Sekarang' }}
                                 </button>
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-5 align-self-center rounded-3 hard py-5">
+                    <div class="col-md-5 align-self-center rounded-3 hard-bg py-5">
                         <div class="row text-center">
                             <h3>{{ 'Hard' }}</h3>
                             <img src="{{ url('assets/img/ill_nyawa3.svg') }}" alt="Nyawa Hard"
                                 class="content-img mx-auto d-block">
                             <a href="{{ route('playingGame') }}">
-                                <button class="btn btn-warning fs-4 px-3">
+                                <button class="btn btn-warning fs-4">
                                     <i class="bi bi-controller"></i>&emsp;{{ 'Main Sekarang' }}
                                 </button>
                             </a>
@@ -71,7 +71,7 @@
                             <p>{{ 'Bermain dengan santai tanpa pengaruhi Ranked Point mu' }}</p>
                             <div class="container">
                                 <a href="{{ route('playingGame') }}">
-                                    <button class="btn btn-warning fs-4 mt-5 px-3">
+                                    <button class="btn btn-warning fs-4 mt-5">
                                         <i class="bi bi-controller"></i>&emsp;{{ 'Main Sekarang' }}
                                     </button>
                                 </a>

@@ -108,7 +108,7 @@ class QuestionController extends Controller
     {
         $questions = Question::findOrFail($id);
         $questions->delete();
-        
+
         return redirect(route('questions.index'));
     }
 }

@@ -7,7 +7,7 @@ body {
 }
 
 footer {
-    background-color: var(--card-secondary);
+    background-color: var(--footer);
 }
 
 /** Blade Components */
@@ -29,6 +29,7 @@ button,
 
 img,
 a,
+::placeholder,
 iframe,
 .nav-link,
 .page-link {
@@ -39,6 +40,15 @@ iframe,
 a {
     text-decoration: none;
     color: var(--button-secondary);
+}
+
+button {
+    padding: .65rem 1rem !important;
+}
+
+table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
 }
 
 thead,
@@ -107,6 +117,7 @@ iframe {
 /** Pseudo-classes */
 :root {
     --background: #020E3A;
+    --footer: #0D216A;
     --card-secondary: #313465;
     --button-primary: #2256B8;
     --button-secondary: #FFB800;
@@ -121,6 +132,7 @@ iframe {
     --table-thead: #BBBBBB;
     --table-tbody-odd: #404040;
     --table-tbody-even: #606060;
+    --delete: #ff0000;
     --highlight: #636BE5;
     --static-icon: #FFFF00;
     --text-secondary: #000000;
@@ -177,11 +189,17 @@ button:active,
 }
 
 .btn-link:active,
-.btn-link:focus {
+.btn-link:focus,
+.delete:active,
+.delete:focus {
     transform: none !important;
     box-shadow: none !important;
     border: none !important;
     outline: none !important;
+}
+
+.delete:hover {
+    color: var(--delete);
 }
 
 tbody tr:nth-child(odd) {
@@ -190,6 +208,22 @@ tbody tr:nth-child(odd) {
 
 tbody tr:nth-child(even) {
     background-color: var(--table-tbody-even);
+}
+
+th,
+tr {
+    border-top: 1.5px solid var(--white) !important;
+}
+
+th,
+td {
+    border-right: 1.5px solid var(--white) !important;
+    border-bottom: 1.5px solid var(--white) !important;
+}
+
+th:first-child,
+td:first-child {
+    border-left: 1.5px solid var(--white) !important;
 }
 
 tr:first-child th:first-child {
@@ -264,6 +298,10 @@ select:focus-visible {
 }
 
 /** Selector (Class) */
+.tooltip {
+    font-family: var(--font-primary) !important;
+}
+
 .typeCursor {
     font-size: larger;
     font-weight: bolder;
@@ -313,6 +351,10 @@ select:focus-visible {
 .btn-link {
     text-decoration: none;
     color: var(--button-secondary);
+}
+
+.delete {
+    color: var(--delete);
 }
 
 .nav-link {
@@ -417,13 +459,6 @@ select,
     list-style-type: square;
 }
 
-.accordion-button.collapsed,
-.accordion-item {
-    transform: scale(1);
-    background-color: var(--card-secondary);
-    color: var(--text-primary);
-}
-
 .rankedPointTerkini-bg {
     opacity: 0.7;
     position: absolute;
@@ -438,12 +473,27 @@ select,
     position: relative;
 }
 
-.easy {
+.easy-bg {
     background-image: linear-gradient(to right, var(--easy1), var(--easy2)) !important;
 }
 
-.hard {
+.hard-bg {
     background-image: linear-gradient(to right, var(--hard1), var(--hard2)) !important;
+}
+
+.easy-text {
+    background: -webkit-linear-gradient(360deg, var(--easy1), var(--easy2));
+}
+
+.hard-text {
+    background: -webkit-linear-gradient(360deg, var(--hard1), var(--hard2));
+}
+
+.easy-text,
+.hard-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .casual {

@@ -34,7 +34,9 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
-
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.js"></script>
+    
     {{-- Google Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,12 +46,9 @@
     <link rel="stylesheet" href="{{ url('assets/css/style.css') }}" type="text/css" />
 
     {{-- External JavaScript --}}
-    <script src="{{ url('/assets/js') }}/script.js"></script>
-    <script src="{{ url('/assets/js') }}/dataTables.js"></script>
-
-    {{-- jQuery Plugin (DataTables) --}}
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.js"></script>
+    <script src="{{ url('/assets/js/script.js') }}"></script>
+    <script src="{{ url('/assets/js/libraries.js') }}"></script>
+    <script src="{{ url('/assets/js/ckEditor.js') }}"></script>
 
     {{-- Tab Page Favicon --}}
     <link rel="icon" href="{{ url('assets/img/favicon.png?v=2') }}" type="image/png" />
@@ -112,7 +111,7 @@
                     @else
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle menu-last-child" data-bs-toggle="dropdown" role="button"
-                                aria-expanded="false">Profile</a>
+                                aria-expanded="false">Authentication</a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
                                     <a class="dropdown-item" href="{{ route('login') }}">Login</a>

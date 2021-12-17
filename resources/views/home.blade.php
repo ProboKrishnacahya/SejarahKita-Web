@@ -12,12 +12,12 @@
                 <p id="typewriting"></p>
             </div>
             <a href="{{ url('game') }}">
-                <button class="btn btn-lg btn-primary px-3 me-3">
+                <button class="btn btn-lg btn-primary me-3">
                     <i class="bi bi-controller"></i>&emsp;{{ __('Mulai Permainan') }}
                 </button>
             </a>
             <a href="{{ url('leaderboard') }}">
-                <button class="btn btn-lg btn-outline-primary px-3">
+                <button class="btn btn-lg btn-outline-primary">
                     <i class="bi bi-bar-chart"></i>&emsp;{{ __('Lihat Peringkat') }}
                 </button>
             </a>

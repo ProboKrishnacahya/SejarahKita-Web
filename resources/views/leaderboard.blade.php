@@ -8,7 +8,7 @@
             <p class="display-6">{{ 'Mainkan Gamenya,' }}</p>
             <div class="d-inline">
                 <span class="display-4 highlight">{{ 'Jadilah yang Terbaik' }}</span>
-                <span class="display-4">{{ '👍' }}</span>
+                <span class="display-4">&#128077;</span>
             </div>
         </div>
         <div class="d-flex mx-auto my-4 py-2">
@@ -19,8 +19,8 @@
 
     <div class="card my-5 px-4 pb-4">
         <div class="card-header d-flex align-items-center mb-3">
-            <h4 class="me-auto">Level Easy</h4>
-            <div class="card-wrap easy rounded-3 mb-2 px-3 pt-2">
+            <h4 class="easy-text me-auto user-select-none">Level Easy</h4>
+            <div class="card-wrap easy-bg rounded-3 mb-2 px-3 pt-2">
                 <img src="{{ url('assets/img/fg_easy.png') }}" alt="" class="rankedPointTerkini-bg">
                 <div class="rankedPointTerkini-content">
                     <h3>{{ $user->getEasyRankedPoint() }} RP</h3>
@@ -52,10 +52,12 @@
                     <td>4345 RP</td>
                 </tr>
         </table>
-        <div class="card-header d-flex align-items-center my-3">
-            <h4 class="me-auto">Level Hard</h4>
-            <div class="card-wrap easy rounded-3 mb-2 px-3 pt-2">
-                <img src="{{ url('assets/img/fg_easy.png') }}" alt="" class="rankedPointTerkini-bg">
+    </div>
+    <div class="card mt-5 px-4 pb-4">
+        <div class="card-header d-flex align-items-center mb-3">
+            <h4 class="hard-text me-auto user-select-none">Level Hard</h4>
+            <div class="card-wrap hard-bg rounded-3 mb-2 px-3 pt-2">
+                <img src="{{ url('assets/img/fg_hard.png') }}" alt="" class="rankedPointTerkini-bg">
                 <div class="rankedPointTerkini-content">
                     <h3>{{ $user->getHardRankedPoint() }} RP</h3>
                 </div>

@@ -36,7 +36,7 @@
                         </div>
                         <div class="form-group my-4">
                             <h5>
-                                <label for="isi">
+                                <label for="editor">
                                     <i class="bi bi-patch-question"></i>&emsp;{{ 'Isi Pertanyaan' }}
                                 </label>
                             </h5>

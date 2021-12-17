@@ -37,7 +37,14 @@
                                     class="form-control @error('password') is-invalid @enderror" name="password"
                                     placeholder="Masukkan Kata Sandi" required autocomplete="current-password"
                                     onkeyup="countCharacters(this);">
-                                <p class="text-end mt-1" id="characterLength">8 s.d. 20 Karakter</p>
+                                <small class="d-flex mt-2 rankedPointTerkini-content">
+                                    <div>
+                                        <span>8 s.d. 20 Karakter</span>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <span id="characterLength"></span>
+                                    </div>
+                                </small>
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -47,7 +54,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6 offset-md-5 my-2">
+                            <div class="col-md-6 offset-md-5 my-3">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember"
                                         {{ old('remember') ? 'checked' : '' }}>

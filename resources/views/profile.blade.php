@@ -28,7 +28,7 @@
     </div>
 
     <h3 class="mt-5"><i class="bi bi-star"></i>&emsp;{{ 'Ranked Point Terkini' }}</h3>
-    <div class="card-wrap easy easyProfile mt-4 p-3">
+    <div class="card-wrap easy-bg easyProfile mt-4 p-3">
         <img src="{{ url('assets/img/fg_easy.png') }}" alt="" class="rankedPointTerkini-bg">
         <div class="d-flex rankedPointTerkini-content">
             <div class="p-2">
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="card-wrap hard hardProfile mb-5 p-3">
+    <div class="card-wrap hard-bg hardProfile mb-5 p-3">
         <img src="{{ url('assets/img/fg_hard.png') }}" alt="" class="rankedPointTerkini-bg">
         <div class="d-flex rankedPointTerkini-content">
             <div class="p-2">
@@ -56,7 +56,7 @@
     </strong>
     <br>
     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-        <button class="btn btn-danger mt-5 px-3">
+        <button class="btn btn-danger mt-5">
             <i class="bi bi-box-arrow-right"></i>&emsp;{{ __('Logout') }}
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
