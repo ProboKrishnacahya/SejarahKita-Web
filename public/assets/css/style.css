@@ -164,9 +164,6 @@ a:hover,
 }
 
 button:active,
-.create:active,
-.show:active,
-.edit:active,
 .scrollToTopBtn:active {
     transform: scale(.9);
 }
@@ -297,6 +294,11 @@ select:focus-visible {
     color: var(--button-primary) !important;
 }
 
+/** Selector (ID) */
+#togglePassword {
+    cursor: pointer;
+}
+
 /** Selector (Class) */
 .tooltip {
     font-family: var(--font-primary) !important;
@@ -334,23 +336,23 @@ select:focus-visible {
     color: var(--static-icon);
 }
 
-.btn {
-    padding: .5rem;
-}
-
 .btn-primary {
     border: solid 1px var(--button-primary);
     background-color: var(--button-primary) !important;
     color: var(--text-primary) !important;
 }
 
+.btn-link {
+    text-decoration: none;
+    color: var(--button-secondary);
+}
+
 .btn-outline-primary {
     border: solid 2px var(--button-primary);
 }
 
-.btn-link {
-    text-decoration: none;
-    color: var(--button-secondary);
+.btn-outline-danger {
+    border: solid 2px var(--delete);
 }
 
 .delete {
@@ -420,6 +422,14 @@ select,
 .form-check-input,
 .form-check-label {
     cursor: pointer;
+}
+
+.showHide {
+    border-right: none !important;
+}
+
+.eye {
+    border-left: none !important;
 }
 
 .carousel-inner {

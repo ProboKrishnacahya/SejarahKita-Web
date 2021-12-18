@@ -15,7 +15,7 @@ class QuestionSeeder extends Seeder
      */
     public function run()
     {
-        //Casual
+        //* Casual
         DB::table('sej12_questions')->insert([
             'id_level' => 1,
             'pertanyaan_kalimat' => 'Kelompok yang melancarkan propaganda anti pemerintah, memprovokasi para buruh untuk melakukan mogok kerja, dan melakukan pembunuhan - pembunuhan khususnya di madiun adalah kelompok..',
@@ -196,6 +196,7 @@ class QuestionSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
+        //* Easy
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Partai politik pertama yang didirikan sesudah proklamasi adalah?',
@@ -205,7 +206,6 @@ class QuestionSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
-        //Easy
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Siapakah nama Gubernur yang gugur di Sungai Kakah dan namanya juga ditulis di tugu peringatan?',
@@ -557,7 +557,7 @@ class QuestionSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
-        //Hard
+        //* Hard
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Peristiwa yang kelam dengan terenggutnya banyak nyawa terutama dari kaum ulama adalah peristiwa?',

@@ -23,7 +23,8 @@ use App\Http\Controllers\StudentController;
 
 //* Game
 Route::resource('game', GameController::class);
-Route::get('playing-game', [GameController::class, 'playingGame'])->name('playingGame');
+Route::get('countdown/{level}', [GameController::class, 'countdown'])->name('countdown');
+Route::get('playing-game/{level}', [GameController::class, 'playingGame'])->name('playingGame');
 
 //* Leaderboard
 Route::resource('leaderboard', LeaderboardController::class);

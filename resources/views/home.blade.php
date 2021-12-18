@@ -28,9 +28,9 @@
         </div>
     </div>
 
-    <div class="card my-5">
+    <div class="card illustration-card my-5">
         <div class="card-header text-center fw-bold fs-5 pb-3">{{ 'Tentang SejarahKita' }}</div>
-        <div class="card-body">
+        <div class="card-body pb-1">
             <p><strong>SejarahKita</strong> adalah Aplikasi tentang Game Edukasi berupa Anagram dengan topik mata
                 pelajaran Sejarah Indonesia Kelas 12 yang berfokus pada bab-bab berikut:</p>
             <ul class="square">
@@ -59,9 +59,12 @@
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active p-1"
                 aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2" class="p-1"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3" class="p-1"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4" class="p-1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"
+                class="p-1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"
+                class="p-1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"
+                class="p-1"></button>
         </div>
         <div class="carousel-inner bg-dark">
             <div class="card-header text-center fw-bold fs-5 py-4">{{ 'Cara Bermain' }}</div>
@@ -113,7 +116,7 @@
         <br>
         <div class="row row-cols-1 row-cols-md-4">
             <div class="col">
-                <div class="card illustration-card">
+                <div class="card">
                     <img src="https://media-exp1.licdn.com/dms/image/C4E03AQF-u1y1m-rmxQ/profile-displayphoto-shrink_400_400/0/1632289194582?e=1645056000&v=beta&t=KLzww_viTRL6r4L1PuKI-A_OJ9T26hFRMgfW7dUckq8"
                         alt="Vanness Zhong Anthony" loading="lazy" class="img-fluid mx-auto d-block rounded-circle p-2" />
                     <strong class="text-center my-2">
@@ -144,7 +147,7 @@
             </div>
 
             <div class="col">
-                <div class="card illustration-card">
+                <div class="card">
                     <img src="https://media-exp1.licdn.com/dms/image/C4E03AQEvAhmlXXmPPg/profile-displayphoto-shrink_400_400/0/1631694992395?e=1645056000&v=beta&t=f5ZHRs3raI1L5gye5ohgO7RSRAIhhHgp-nWSrdQHQug"
                         alt="Nathanael Abel Arianto" loading="lazy" class="img-fluid mx-auto d-block rounded-circle p-2" />
                     <strong class="text-center my-2">
@@ -175,7 +178,7 @@
             </div>
 
             <div class="col">
-                <div class="card illustration-card">
+                <div class="card">
                     <img src="https://d33wubrfki0l68.cloudfront.net/13c862a9a09c29bfded6d7423940df84997e1d74/56952/assets/img/pk.png"
                         alt="Probo Krishnacahya" loading="lazy" class="img-fluid mx-auto d-block p-2" />
                     <strong class="text-center my-2">
@@ -206,7 +209,7 @@
             </div>
 
             <div class="col">
-                <div class="card illustration-card">
+                <div class="card">
                     <img src="https://media-exp1.licdn.com/dms/image/C4E03AQE-Y9V0uVIyGQ/profile-displayphoto-shrink_400_400/0/1632552544258?e=1645056000&v=beta&t=ets_CSGRnaHxLoAahcgUyqc1mUBTXqOAjgPtCeagZ18"
                         alt="Michael Chandra" loading="lazy" class="img-fluid mx-auto d-block rounded-circle p-2" />
                     <strong class="text-center my-2">

@@ -20,16 +20,16 @@
                             </h5>
                             <div class="d-flex">
                                 <div class="form-check me-auto">
-                                    <input class="form-check-input custom-radio" type="radio" value="0" name="id_level"
+                                    <input class="form-check-input custom-radio" type="radio" value="1" name="id_level"
                                         checked>
                                     {{ 'Casual' }}
                                 </div>
                                 <div class="form-check mx-auto">
-                                    <input class="form-check-input custom-radio" type="radio" value="1" name="id_level">
+                                    <input class="form-check-input custom-radio" type="radio" value="2" name="id_level">
                                     {{ 'Easy' }}
                                 </div>
                                 <div class="form-check ms-auto">
-                                    <input class="form-check-input custom-radio" type="radio" value="2" name="id_level">
+                                    <input class="form-check-input custom-radio" type="radio" value="3" name="id_level">
                                     {{ 'Hard' }}
                                 </div>
                             </div>

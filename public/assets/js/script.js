@@ -3,6 +3,21 @@
 //     event.preventDefault();
 //     event.returnValue = "";
 // });
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#password');
+togglePassword.addEventListener('click', function (e) {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    this.classList.toggle('bi-eye');
+});
+
+const toggleConfirmPassword = document.querySelector('#toggleConfirmPassword');
+const confirmationPassword = document.querySelector('#password-confirm');
+toggleConfirmPassword.addEventListener('click', function (e) {
+    const type = confirmationPassword.getAttribute('type') === 'password-confirm' ? 'text' : 'password-confirm';
+    confirmationPassword.setAttribute('type', type);
+    this.classList.toggle('bi-eye');
+});
 
 //* Scroll to Top Page's Button
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn");

@@ -41,6 +41,4 @@ $(document).ready(function () {
             "infoFiltered": "(dari total <strong>_MAX_</strong> data)"
         }
     });
-
-    //* 
 });

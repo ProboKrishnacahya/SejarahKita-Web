@@ -12,4 +12,9 @@ function countDown() {
     }
 }
 
+
+function goToPlayingGame(level) {
+    window.location.href = "/playing-game/" + level;
+}
+
 countDown();

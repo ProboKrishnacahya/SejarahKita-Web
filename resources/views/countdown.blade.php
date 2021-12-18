@@ -4,6 +4,12 @@
 
 @section('content')
     {{-- Countdown Timer untuk Redirect ke /playing-game --}}
+    <a href="{{ URL::previous() }}">
+        <button class="btn btn-outline-danger mb-5 w-100">
+            <i class="bi bi-x-lg"></i>&emsp;Cancel
+        </button>
+    </a>
+
     <div class="text-center">
         <h2>Ranked Mode</h2>
         <br>
@@ -17,6 +23,23 @@
         </div>
     </div>
 
+    <script>
+        var url = "/playing-game/"; // Redirect ke URL Tujuan
+        var second = 3; // Timer dalam detik
+
+        function countDown() {
+            if (second > 0) {
+                second--;
+                var timer = second + 1;
+                $('#start').html(timer);
+                setTimeout("countDown()", 1000);
+            } else {
+                let level = '{{ $level }}';
+                window.location.href = url + level;
+            }
+        }
+        countDown()
+    </script>
     {{-- Mengarahkan ke URL tujuan & mengatur waktu Countdown Timer --}}
-    <script src="{{ url('/assets/js') }}/countdown.js"></script>
+    {{-- <script src="{{ url('/assets/js') }}/countdown.js"></script> --}}
 @endsection

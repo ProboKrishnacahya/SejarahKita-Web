@@ -33,16 +33,22 @@
                                     class="bi bi-lock"></i>&emsp;{{ __('Password') }}</label>
 
                             <div class="col-md-7">
-                                <input id="password" type="password"
-                                    class="form-control @error('password') is-invalid @enderror" name="password"
-                                    placeholder="Masukkan Kata Sandi" required autocomplete="current-password"
-                                    onkeyup="countCharacters(this);">
-                                <small class="d-flex mt-2 rankedPointTerkini-content">
+                                <div class="input-group">
+                                    <input id="password" type="password"
+                                        class="form-control showHide @error('password') is-invalid @enderror"
+                                        name="password" placeholder="Masukkan Kata Sandi" required
+                                        autocomplete="current-password"
+                                        onkeyup="countCharacters(this, 'characterLengthPassword');">
+                                    <span class="input-group-text border-2 border-light bg-transparent text-warning eye">
+                                        <i class="bi bi-eye-slash" id="togglePassword"></i>
+                                    </span>
+                                </div>
+                                <small class="d-flex mt-2">
                                     <div>
                                         <span>8 s.d. 20 Karakter</span>
                                     </div>
                                     <div class="ms-auto">
-                                        <span id="characterLength"></span>
+                                        <span id="characterLengthPassword"></span>
                                     </div>
                                 </small>
                                 @error('password')

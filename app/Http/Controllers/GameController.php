@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -85,11 +86,25 @@ class GameController extends Controller
         //
     }
 
-    // Redirect ke /playing-game
-    public function playingGame()
+    // Redirect ke /countdown/{level} kemudian ke playing-game/{level}
+    public function countdown($level)
     {
         $active_game = "active";
 
-        return view('playingGame', compact('active_game'));
+        return view('countdown', compact('active_game', 'level'));
+    }
+
+    public function playingGame($level)
+    {
+        $trans = [
+            'casual' => 1,
+            'easy' => 2,
+            'hard' => 3,
+        ];
+
+        $soal = Question::where('id_level', $trans[$level])->get();
+        // dd($soal);
+
+        return view('playingGame', compact($soal));
     }
 }

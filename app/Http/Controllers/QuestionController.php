@@ -60,8 +60,9 @@ class QuestionController extends Controller
      */
     public function show($id)
     {
-        $questions = Question::findOrFail($id);
-        return view('admin.questionView', compact('questions'));
+        $question = Question::findOrFail($id);
+
+        return view('admin.questionView', compact('question'));
     }
 
     /**

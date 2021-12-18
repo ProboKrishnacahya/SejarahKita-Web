@@ -127,11 +127,16 @@
                             </label>
 
                             <div class="col-md-7">
-                                <input id="password" type="password"
-                                    class="form-control @error('password') is-invalid @enderror" name="password"
-                                    placeholder="Masukkan Kata Sandi" required autocomplete="new-password"
-                                    onkeyup="countCharacters(this, 'characterLengthPassword');">
-                                <small class="d-flex mt-2 rankedPointTerkini-content">
+                                <div class="input-group">
+                                    <input id="password" type="password"
+                                        class="form-control showHide @error('password') is-invalid @enderror"
+                                        name="password" placeholder="Masukkan Sandi" required autocomplete="new-password"
+                                        onkeyup="countCharacters(this, 'characterLengthPassword');">
+                                    <span class="input-group-text border-2 border-light bg-transparent text-warning eye">
+                                        <i class="bi bi-eye-slash" id="togglePassword"></i>
+                                    </span>
+                                </div>
+                                <small class="d-flex mt-2">
                                     <div>
                                         <span>8 s.d. 20 Karakter</span>
                                     </div>
@@ -146,23 +151,29 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-2">
                             <label for="password-confirm" class="col-md-5 col-form-label text-md-right">
                                 <i class="bi bi-arrow-repeat"></i>&emsp;{{ __('Confirm Password') }}
                             </label>
 
                             <div class="col-md-7">
-                                <input id="password-confirm" type="password" class="form-control"
-                                    name="password_confirmation" placeholder="Masukkan Konfirmasi Kata Sandi" required
-                                    autocomplete="new-password" onkeyup="countCharacters(this, 'characterLengthConfirmPassword');">
-                                    <small class="d-flex mt-2 rankedPointTerkini-content">
-                                        <div>
-                                            <span>8 s.d. 20 Karakter</span>
-                                        </div>
-                                        <div class="ms-auto">
-                                            <span id="characterLengthConfirmPassword"></span>
-                                        </div>
-                                    </small>
+                                <div class="input-group">
+                                    <input id="password-confirm" type="password" class="form-control showHide"
+                                        name="password_confirmation" placeholder="Masukkan Konfirmasi Sandi" required
+                                        autocomplete="new-password"
+                                        onkeyup="countCharacters(this, 'characterLengthConfirmPassword');">
+                                    <span class="input-group-text border-2 border-light bg-transparent text-warning eye"><i
+                                            class="bi bi-eye-slash" id="toggleConfirmPassword"></i>
+                                    </span>
+                                </div>
+                                <small class="d-flex mt-2">
+                                    <div>
+                                        <span>8 s.d. 20 Karakter</span>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <span id="characterLengthConfirmPassword"></span>
+                                    </div>
+                                </small>
                             </div>
                         </div>
                 </div>

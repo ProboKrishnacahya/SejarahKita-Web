@@ -37,7 +37,7 @@
                             <h3>{{ 'Easy' }}</h3>
                             <img src="{{ url('assets/img/ill_nyawa5.svg') }}" alt="Nyawa Easy"
                                 class="content-img mx-auto d-block">
-                            <a href="{{ route('playingGame') }}">
+                            <a href="{{ route('countdown', ['level'=>'easy']) }}">
                                 <button class="btn btn-warning fs-4">
                                     <i class="bi bi-controller"></i>&emsp;{{ 'Main Sekarang' }}
                                 </button>
@@ -49,7 +49,7 @@
                             <h3>{{ 'Hard' }}</h3>
                             <img src="{{ url('assets/img/ill_nyawa3.svg') }}" alt="Nyawa Hard"
                                 class="content-img mx-auto d-block">
-                            <a href="{{ route('playingGame') }}">
+                            <a href="{{ route('countdown', ['level'=>'hard']) }}">
                                 <button class="btn btn-warning fs-4">
                                     <i class="bi bi-controller"></i>&emsp;{{ 'Main Sekarang' }}
                                 </button>
@@ -70,7 +70,7 @@
                             <h2>{{ 'Casual Mode' }}</h2>
                             <p>{{ 'Bermain dengan santai tanpa pengaruhi Ranked Point mu' }}</p>
                             <div class="container">
-                                <a href="{{ route('playingGame') }}">
+                                <a href="{{ route('countdown', ['level'=>'casual']) }}">
                                     <button class="btn btn-warning fs-4 mt-5">
                                         <i class="bi bi-controller"></i>&emsp;{{ 'Main Sekarang' }}
                                     </button>

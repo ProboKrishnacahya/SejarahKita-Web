@@ -193,7 +193,6 @@
     {{-- External JavaScript --}}
     <script src="{{ url('/assets/js/script.js') }}"></script>
     <script src="{{ url('/assets/js/libraries.js') }}"></script>
-    <script src="{{ url('/assets/js/ckEditor.js') }}"></script>
 </body>
 
 </html>
