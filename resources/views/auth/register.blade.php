@@ -130,13 +130,13 @@
                                 <input id="password" type="password"
                                     class="form-control @error('password') is-invalid @enderror" name="password"
                                     placeholder="Masukkan Kata Sandi" required autocomplete="new-password"
-                                    onkeyup="countCharacters(this);">
+                                    onkeyup="countCharacters(this, 'characterLengthPassword');">
                                 <small class="d-flex mt-2 rankedPointTerkini-content">
                                     <div>
                                         <span>8 s.d. 20 Karakter</span>
                                     </div>
                                     <div class="ms-auto">
-                                        <span id="characterLength"></span>
+                                        <span id="characterLengthPassword"></span>
                                     </div>
                                 </small> @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -154,13 +154,13 @@
                             <div class="col-md-7">
                                 <input id="password-confirm" type="password" class="form-control"
                                     name="password_confirmation" placeholder="Masukkan Konfirmasi Kata Sandi" required
-                                    autocomplete="new-password" onkeyup="countCharacters(this);">
+                                    autocomplete="new-password" onkeyup="countCharacters(this, 'characterLengthConfirmPassword');">
                                     <small class="d-flex mt-2 rankedPointTerkini-content">
                                         <div>
                                             <span>8 s.d. 20 Karakter</span>
                                         </div>
                                         <div class="ms-auto">
-                                            <span id="characterLength"></span>
+                                            <span id="characterLengthConfirmPassword"></span>
                                         </div>
                                     </small>
                             </div>

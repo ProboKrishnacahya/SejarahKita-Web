@@ -30,6 +30,6 @@ scrollToTopBtn.addEventListener("click", scrollToTop);
 document.addEventListener("scroll", handleScroll);
 
 //* <input> & <textarea> Characters Counter
-function countCharacters(object) {
-    document.getElementById("characterLength").innerHTML = "(" + object.value.length + ")";
+function countCharacters(object, id) {
+    document.getElementById(id).innerHTML = "(" + object.value.length + ")";
 }
