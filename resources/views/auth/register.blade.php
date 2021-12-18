@@ -154,7 +154,15 @@
                             <div class="col-md-7">
                                 <input id="password-confirm" type="password" class="form-control"
                                     name="password_confirmation" placeholder="Masukkan Konfirmasi Kata Sandi" required
-                                    autocomplete="new-password">
+                                    autocomplete="new-password" onkeyup="countCharacters(this);">
+                                    <small class="d-flex mt-2 rankedPointTerkini-content">
+                                        <div>
+                                            <span>8 s.d. 20 Karakter</span>
+                                        </div>
+                                        <div class="ms-auto">
+                                            <span id="characterLength"></span>
+                                        </div>
+                                    </small>
                             </div>
                         </div>
                 </div>

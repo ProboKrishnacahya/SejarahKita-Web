@@ -23,7 +23,7 @@
             <tr>
                 <th scope="col">No</th>
                 <th scope="col">Level</th>
-                <th scope="col">Pertanyaan Kalimat</th>
+                <th scope="col">Kalimat Pertanyaan</th>
                 <th scope="col">Gambar</th>
                 <th scope="col">Kunci Jawaban</th>
             </tr>
@@ -34,10 +34,10 @@
                 <tr>
                     <td scope="row" class="fw-bold text-center">{{ $index }}</td>
                     @php $index++ @endphp
-                    <td>{{ $question['id_level'] }}</td>
-                    <td>{{ $question['pertanyaan_kalimat'] }}</td>
-                    <td>{{ $question['pertanyaan_path_gambar'] }}</td>
-                    <td>{{ $question['kunci_jawaban'] }}</td>
+                    <td>{{ $question->levels->jenis_level }}</td>
+                    <td>{{ $question->pertanyaan_kalimat }}</td>
+                    <td>{{ $question->pertanyaan_path_gambar }}</td>
+                    <td>{{ $question->kunci_jawaban }}</td>
                 </tr>
                 <tr>
                 <tr>
@@ -68,4 +68,6 @@
             @endforeach
         </tbody>
     </table>
+    
+    <i class="bi bi-arrow-up-circle-fill scrollToTopBtn fs-1" data-bs-toggle="tooltip" title="Scroll to Top Page"></i>
 @endsection

@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="card">
-                <form action="{{ route('questions.store') }}" method="post">
+                <form action="{{ route('question.store') }}" method="post">
                     @csrf
                     <div class="card-header text-center pb-3">
                         <h2>Tambah Pertanyaan</h2>
@@ -14,42 +14,42 @@
                     <div class="card-body">
                         <div class="form-group mt-2">
                             <h5>
-                                <label for="kategori">
+                                <label for="id_level">
                                     <i class="bi bi-tag"></i>&emsp;{{ 'Kategori Pertanyaan' }}
                                 </label>
                             </h5>
                             <div class="d-flex">
                                 <div class="form-check me-auto">
-                                    <input class="form-check-input custom-radio" type="radio" value="Casual" name="kategori"
+                                    <input class="form-check-input custom-radio" type="radio" value="0" name="id_level"
                                         checked>
                                     {{ 'Casual' }}
                                 </div>
                                 <div class="form-check mx-auto">
-                                    <input class="form-check-input custom-radio" type="radio" value="Easy" name="kategori">
+                                    <input class="form-check-input custom-radio" type="radio" value="1" name="id_level">
                                     {{ 'Easy' }}
                                 </div>
                                 <div class="form-check ms-auto">
-                                    <input class="form-check-input custom-radio" type="radio" value="Easy" name="kategori">
+                                    <input class="form-check-input custom-radio" type="radio" value="2" name="id_level">
                                     {{ 'Hard' }}
                                 </div>
                             </div>
                         </div>
                         <div class="form-group my-4">
                             <h5>
-                                <label for="editor">
+                                <label for="pertanyaan_kalimat">
                                     <i class="bi bi-patch-question"></i>&emsp;{{ 'Isi Pertanyaan' }}
                                 </label>
                             </h5>
-                            <textarea name="isi" rows="5" class="form-control" placeholder="Masukkan Pertanyaan"
+                            <textarea name="pertanyaan_kalimat" rows="5" class="form-control" placeholder="Masukkan Pertanyaan"
                                 required></textarea>
                         </div>
                         <div class="form-group">
                             <h5>
-                                <label for="jawaban">
+                                <label for="kunci_jawaban">
                                     <i class="bi bi-bookmark-check"></i>&emsp;{{ 'Jawaban' }}
                                 </label>
                             </h5>
-                            <input type="text" class="form-control" name="jawaban" placeholder="Masukkan Jawaban"
+                            <input type="text" class="form-control" name="kunci_jawaban" placeholder="Masukkan Jawaban"
                                 required>
                         </div>
                     </div>

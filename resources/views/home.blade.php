@@ -57,11 +57,11 @@
 
     <div id="carouselExample" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active p-1"
                 aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2" class="p-1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3" class="p-1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4" class="p-1"></button>
         </div>
         <div class="carousel-inner bg-dark">
             <div class="card-header text-center fw-bold fs-5 py-4">{{ 'Cara Bermain' }}</div>

@@ -43,13 +43,13 @@ class QuestionController extends Controller
     public function store(Request $request)
     {
         Question::create([
-            'id_level',
-            'pertanyaan_kalimat',
-            'pertanyaan_path_gambar',
-            'kunci_jawaban'
+            'id_level' => $request->id_level,
+            'pertanyaan_kalimat' => $request->pertanyaan_kalimat,
+            'pertanyaan_path_gambar' => $request->pertanyaan_path_gambar,
+            'kunci_jawaban' => $request->kunci_jawaban
         ]);
 
-        return redirect(route('questions.index'));
+        return redirect(url('admin/profile/question'));
     }
 
     /**
@@ -95,7 +95,7 @@ class QuestionController extends Controller
             'kunci_jawaban' => $request->kunci_jawaban
         ]);
 
-        return redirect(route('questions.index'));
+        return redirect(url('admin/profile/question'));
     }
 
     /**
@@ -109,6 +109,6 @@ class QuestionController extends Controller
         $questions = Question::findOrFail($id);
         $questions->delete();
 
-        return redirect(route('questions.index'));
+        return redirect(url('admin/profile/question'));
     }
 }

@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.js"></script>
-    
+
     {{-- Google Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,11 +44,6 @@
 
     {{-- External Cascading Style Sheets --}}
     <link rel="stylesheet" href="{{ url('assets/css/style.css') }}" type="text/css" />
-
-    {{-- External JavaScript --}}
-    <script src="{{ url('/assets/js/script.js') }}"></script>
-    <script src="{{ url('/assets/js/libraries.js') }}"></script>
-    <script src="{{ url('/assets/js/ckEditor.js') }}"></script>
 
     {{-- Tab Page Favicon --}}
     <link rel="icon" href="{{ url('assets/img/favicon.png?v=2') }}" type="image/png" />
@@ -194,6 +189,11 @@
             </ul>
         </div>
     </footer>
+
+    {{-- External JavaScript --}}
+    <script src="{{ url('/assets/js/script.js') }}"></script>
+    <script src="{{ url('/assets/js/libraries.js') }}"></script>
+    <script src="{{ url('/assets/js/ckEditor.js') }}"></script>
 </body>
 
 </html>

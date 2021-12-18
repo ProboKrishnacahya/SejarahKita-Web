@@ -16,7 +16,7 @@ class CreateSej12QuestionsTable extends Migration
         Schema::create('sej12_questions', function (Blueprint $table) {
             $table->id('id_question');
             $table->text('pertanyaan_kalimat');
-            $table->text('pertanyaan_path_gambar');
+            $table->text('pertanyaan_path_gambar')->nullable(true);
             $table->text('kunci_jawaban');
             $table->timestamps();
         });
