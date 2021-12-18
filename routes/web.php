@@ -47,4 +47,5 @@ Route::middleware(['auth'])->group(function () {
         Route::get('playing-history', [StudentController::class, 'show'])->name('playing-history');
         // Route::get('', [StudentController::class, 'index'])->name('user');
     });
+    Route::resource('game', GameController::class);
 });
