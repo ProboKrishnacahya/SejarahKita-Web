@@ -4,6 +4,14 @@
 
 @section('content')
     <div class="container">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url('admin/profile') }}">Profile</a></li>
+                <li class="breadcrumb-item"><a href="{{ url('admin/profile/question') }}">Bank Soal</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><strong>Tambah Pertanyaan</strong></li>
+            </ol>
+        </nav>
+
         <div class="row justify-content-center">
             <div class="card">
                 <form action="{{ route('question.store') }}" method="post">
@@ -40,8 +48,8 @@
                                     <i class="bi bi-patch-question"></i>&emsp;{{ 'Isi Pertanyaan' }}
                                 </label>
                             </h5>
-                            <textarea name="pertanyaan_kalimat" rows="5" class="form-control" placeholder="Masukkan Pertanyaan"
-                                required></textarea>
+                            <textarea name="pertanyaan_kalimat" rows="5" class="form-control"
+                                placeholder="Masukkan Pertanyaan" required></textarea>
                         </div>
                         <div class="form-group">
                             <h5>

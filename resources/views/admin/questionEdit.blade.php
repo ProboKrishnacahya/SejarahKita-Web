@@ -4,6 +4,14 @@
 
 @section('content')
     <div class="container">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url('admin/profile') }}">Profile</a></li>
+                <li class="breadcrumb-item"><a href="{{ url('admin/profile/question') }}">Bank Soal</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><strong>Ubah Pertanyaan</strong></li>
+            </ol>
+        </nav>
+
         <div class="row justify-content-center">
             <div class="card">
                 <form action="{{ route('question.update', $questions->id_question) }}" method="post">

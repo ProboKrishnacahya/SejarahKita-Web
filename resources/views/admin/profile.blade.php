@@ -23,15 +23,35 @@
         </div>
     </div>
 
-    <div class="d-grid my-5">
-        <strong>
-            <a href="{{ url('admin/profile/question') }}">{{ 'Bank Soal' }}</a>
-        </strong>
-        <br>
-        <strong>
-            <a href="{{ url('log') }}">{{ 'Log' }}</a>
-        </strong>
+    <div class="row my-5 text-center">
+        <div class="col-sm-6">
+            <div class="bg-primary bg-gradient rounded-3 p-3">
+                <div class="card-body">
+                    <p>Kumpulan Pertanyaan dan Kunci Jawaban.</p>
+                    <br>
+                    <a href="{{ url('admin/profile/question') }}">
+                        <button class="btn btn-warning w-50">
+                            <i class="bi bi-folder"></i>&emsp;{{ 'Bank Soal' }}
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="bg-success bg-gradient rounded-3 p-3">
+                <div class="card-body">
+                    <p>Pencatatan riwayat aktivitas di aplikasi.</p>
+                    <br>
+                    <a href="{{ url('admin/profile/log') }}">
+                        <button class="btn btn-warning w-50">
+                            <i class="bi bi-clock"></i>&emsp;{{ 'Log' }}
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+
     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
         <button class="btn btn-danger px-3">
             <i class="bi bi-box-arrow-right"></i>&emsp;{{ __('Logout') }}

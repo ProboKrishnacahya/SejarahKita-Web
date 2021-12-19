@@ -27,8 +27,8 @@
         </div>
     </div>
 
-    <h3 class="mt-5"><i class="bi bi-star"></i>&emsp;{{ 'Ranked Point Terkini' }}</h3>
-    <div class="card-wrap easy-bg easyProfile mt-4 p-3">
+    <h3 class="mt-5 mb-4"><i class="bi bi-star"></i>&emsp;{{ 'Ranked Point Terkini' }}</h3>
+    <div class="card-wrap easy-bg easyProfile p-3">
         <img src="{{ url('assets/img/fg_easy.png') }}" alt="" class="rankedPointTerkini-bg">
         <div class="d-flex rankedPointTerkini-content">
             <div class="p-2">
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="card-wrap hard-bg hardProfile mb-5 p-3">
+    <div class="card-wrap hard-bg hardProfile p-3">
         <img src="{{ url('assets/img/fg_hard.png') }}" alt="" class="rankedPointTerkini-bg">
         <div class="d-flex rankedPointTerkini-content">
             <div class="p-2">
@@ -51,12 +51,26 @@
         </div>
     </div>
 
-    <strong>
-        <a href="{{ route('playing-history') }}">{{ 'Riwayat Bermain' }}</a>
-    </strong>
-    <br>
+    <div class="row my-5 text-center">
+        <div class="col">
+            <div class="text-center">
+                <div class="bg-primary bg-gradient rounded-3 p-3">
+                    <div class="card-body">
+                        <p>Pantau performa Anda. Tingkatkan untuk hasil yang lebih optimal.</p>
+                        <br>
+                        <a href="{{ route('playing-history') }}">
+                            <button class="btn btn-warning w-50">
+                                <i class="bi bi-journal-medical"></i>&emsp;{{ 'Riwayat Bermain' }}
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-        <button class="btn btn-danger mt-5">
+        <button class="btn btn-danger px-3">
             <i class="bi bi-box-arrow-right"></i>&emsp;{{ __('Logout') }}
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

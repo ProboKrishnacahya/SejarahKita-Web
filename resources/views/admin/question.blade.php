@@ -17,10 +17,11 @@
             <li class="breadcrumb-item active" aria-current="page"><strong>Bank Soal</strong></li>
         </ol>
     </nav>
+
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">No</th>
+                <th scope="col" class="text-center">No</th>
                 <th scope="col">Level</th>
                 <th scope="col">Kalimat Pertanyaan</th>
                 <th scope="col">Kunci Jawaban</th>
@@ -41,21 +42,21 @@
                     <td colspan="5">
                         <div class="d-flex justify-content-center mb-1">
                             <a href="{{ route('question.show', $question->id_question) }}">
-                                <button class="btn btn-info me-3">
-                                    <i class="bi bi-box-arrow-up-right"></i>&emsp;Show
+                                <button class="btn btn-info me-4">
+                                    <i class="bi bi-box-arrow-up-right"></i>&emsp;Show Question
                                 </button>
                             </a>
                             <a href="{{ route('question.edit', $question->id_question) }}">
-                                <button class="btn btn-outline-warning">
-                                    <i class="bi bi-pencil"></i>&emsp;Edit
+                                <button class="btn btn-outline-warning me-1">
+                                    <i class="bi bi-pencil"></i>&emsp;Edit Question
                                 </button>
                             </a>
                             <form action="{{ route('question.destroy', $question->id_question) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn delete"
-                                    onclick="return confirm('Are you sure you want to delete the data?\nThis action cannot be undone!');">
-                                    <i class="bi bi-trash"></i>&emsp;Delete
+                                    onclick="return confirm('Are you sure want to delete the data?\nThis action cannot be undone!');">
+                                    <i class="bi bi-trash"></i>&emsp;Delete Question
                                 </button>
                             </form>
                         </div>

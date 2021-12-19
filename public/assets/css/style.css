@@ -515,6 +515,10 @@ select,
     color: var(--background) !important;
 }
 
+.anagram {
+    letter-spacing: .25rem;
+}
+
 .easyProfile {
     border-radius: 15px 15px 0px 0px !important;
 }
