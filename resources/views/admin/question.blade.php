@@ -18,13 +18,14 @@
         </ol>
     </nav>
 
-    <table class="table">
+    <table class="dataTables table py-3">
         <thead>
             <tr>
                 <th scope="col" class="text-center">No</th>
                 <th scope="col">Level</th>
                 <th scope="col">Kalimat Pertanyaan</th>
                 <th scope="col">Kunci Jawaban</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -36,19 +37,16 @@
                     <td>{{ $question->levels->jenis_level }}</td>
                     <td>{{ $question->pertanyaan_kalimat }}</td>
                     <td>{{ $question->kunci_jawaban }}</td>
-                </tr>
-                <tr>
-                <tr>
-                    <td colspan="5">
-                        <div class="d-flex justify-content-center mb-1">
+                    <td>
+                        <div class="d-flex justify-content-center">
                             <a href="{{ route('question.show', $question->id_question) }}">
-                                <button class="btn btn-info me-4">
-                                    <i class="bi bi-box-arrow-up-right"></i>&emsp;Show Question
+                                <button class="btn btn-info me-1">
+                                    <i class="bi bi-box-arrow-up-right"></i>
                                 </button>
                             </a>
                             <a href="{{ route('question.edit', $question->id_question) }}">
-                                <button class="btn btn-outline-warning me-1">
-                                    <i class="bi bi-pencil"></i>&emsp;Edit Question
+                                <button class="btn btn-outline-warning">
+                                    <i class="bi bi-pencil"></i>
                                 </button>
                             </a>
                             <form action="{{ route('question.destroy', $question->id_question) }}" method="POST">
@@ -56,16 +54,13 @@
                                 @method('DELETE')
                                 <button type="submit" class="btn delete"
                                     onclick="return confirm('Are you sure want to delete the data?\nThis action cannot be undone!');">
-                                    <i class="bi bi-trash"></i>&emsp;Delete Question
+                                    <i class="bi bi-trash"></i>
                                 </button>
                             </form>
                         </div>
                     </td>
                 </tr>
-                </tr>
             @endforeach
         </tbody>
     </table>
-
-    <i class="bi bi-arrow-up-circle-fill scrollToTopBtn fs-1" data-bs-toggle="tooltip" title="Scroll to Top Page"></i>
 @endsection

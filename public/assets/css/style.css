@@ -515,6 +515,10 @@ select,
     color: var(--background) !important;
 }
 
+.modal-content {
+    background-color: var(--card-secondary) !important;
+}
+
 .anagram {
     letter-spacing: .25rem;
 }

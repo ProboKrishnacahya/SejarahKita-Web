@@ -5,13 +5,13 @@
 @section('content')
     {{-- Countdown Timer untuk Redirect ke /playing-game --}}
     <a href="{{ URL::previous() }}">
-        <button class="btn btn-outline-danger mb-5 w-100">
+        <button class="btn btn-outline-danger my-5 w-100">
             <i class="bi bi-x-lg"></i>&emsp;Cancel
         </button>
     </a>
 
     <div class="text-center">
-        <h2>Ranked Mode</h2>
+        <h2>{{ ucfirst($level) }} Match</h2>
         <br>
         <span class="fs-3">GET READY</span>
         <h1 class="display-1 mt-5 mb-3">
@@ -40,6 +40,7 @@
         }
         countDown()
     </script>
-    {{-- Mengarahkan ke URL tujuan & mengatur waktu Countdown Timer --}}
-    {{-- <script src="{{ url('/assets/js') }}/countdown.js"></script> --}}
+
+    {{-- Menghilangkan tampilan Navigation Bar --}}
+    <script src="{{ url('/assets/js') }}/hideNavigationBar.js"></script>
 @endsection

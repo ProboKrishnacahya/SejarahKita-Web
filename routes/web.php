@@ -25,6 +25,8 @@ use App\Http\Controllers\StudentController;
 Route::resource('game', GameController::class);
 Route::get('countdown/{level}', [GameController::class, 'countdown'])->name('countdown');
 Route::get('playing-game/{level}', [GameController::class, 'playingGame'])->name('playingGame');
+Route::post('check-answer', [GameController::class, 'checkAnswer'])->name('checkAnswer');
+Route::post('exit-game', [GameController::class, 'exitGame'])->name('exitGame');
 
 //* Leaderboard
 Route::resource('leaderboard', LeaderboardController::class);

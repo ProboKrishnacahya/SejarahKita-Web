@@ -54,7 +54,7 @@
 
 <body class="d-flex flex-column h-100 text-white">
     {{-- Web's Header --}}
-    <nav class="navbar navbar-dark navbar-expand-lg py-3 user-select-none">
+    <nav class="navbar navbar-dark navbar-expand-lg py-3 user-select-none" id="hideHeader">
         <div class="container">
             <a class="navbar-brand" href="{{ route('user') }}" data-bs-toggle="tooltip" data-bs-placement="bottom"
                 title="Homepage">

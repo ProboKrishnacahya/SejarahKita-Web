@@ -1,8 +1,11 @@
-//* Show unsaved changes alert
+//* Show unsaved changes Alert
 // window.addEventListener("beforeunload", event => {
 //     event.preventDefault();
 //     event.returnValue = "";
 // });
+
+//* Password's & Confirm Password's input Visibility Toggle
+//? Show / Hide Password
 const togglePassword = document.querySelector('#togglePassword');
 const password = document.querySelector('#password');
 togglePassword.addEventListener('click', function (e) {
@@ -11,10 +14,11 @@ togglePassword.addEventListener('click', function (e) {
     this.classList.toggle('bi-eye');
 });
 
+//? Show / Hide Confirm Password
 const toggleConfirmPassword = document.querySelector('#toggleConfirmPassword');
 const confirmationPassword = document.querySelector('#password-confirm');
 toggleConfirmPassword.addEventListener('click', function (e) {
-    const type = confirmationPassword.getAttribute('type') === 'password-confirm' ? 'text' : 'password-confirm';
+    const type = confirmationPassword.getAttribute('type') === 'password' ? 'text' : 'password';
     confirmationPassword.setAttribute('type', type);
     this.classList.toggle('bi-eye');
 });
@@ -26,10 +30,10 @@ var rootElement = document.documentElement;
 function handleScroll() {
     var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
     if (rootElement.scrollTop / scrollTotal > 0.5) {
-        // Tampilkan Button jika scroll halaman > 50%
+        //? Tampilkan Button jika scroll halaman > 50%
         scrollToTopBtn.classList.add("showBtn");
     } else {
-        // Sembunyikan Button
+        //? Sembunyikan Button
         scrollToTopBtn.classList.remove("showBtn");
     }
 }

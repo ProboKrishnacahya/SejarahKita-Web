@@ -46,7 +46,8 @@ class Student extends Authenticatable
         return $this->hasMany(Leaderboard::class, 'id_student', 'id');
     }
 
-    public function students(){
+    public function students()
+    {
         return $this->hasOne(LogApps::class, 'id_user', 'id');
     }
 
@@ -69,11 +70,12 @@ class Student extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    //* Simpan perolehan skor Level Easy ke Playing History & akumulasi ke Leaderboard
     public function getEasyRankedPoint()
     {
         $playingHistory = DB::table('sej12_playing_history')
             ->where('id_student', $this->id)
-            ->where('id_level', 1)->get();
+            ->where('id_level', 2)->get();
 
         $count = 0;
         foreach ($playingHistory as $ph) {
@@ -81,12 +83,13 @@ class Student extends Authenticatable
         }
         return $count;
     }
-    
+
+    //* Simpan perolehan skor Level Hard ke Playing History & akumulasi ke Leaderboard
     public function getHardRankedPoint()
     {
         $playingHistory = DB::table('sej12_playing_history')
             ->where('id_student', $this->id)
-            ->where('id_level', 2)->get();
+            ->where('id_level', 3)->get();
 
         $count = 0;
         foreach ($playingHistory as $ph) {
