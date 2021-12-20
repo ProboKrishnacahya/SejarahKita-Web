@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-sm-6 align-self-center">
                         <img src="{{ url('assets/img/ill_profile.svg') }}" alt="Profile"
-                            class="profile mx-auto d-block mb-3 p-4">
+                            class="profile mx-auto d-block mt-1 mb-3 p-4">
                     </div>
                     <div class="col-sm-6 align-self-center">
                         <div class="row">

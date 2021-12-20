@@ -95,7 +95,7 @@ class GameController extends Controller
         return view('countdown', compact('level'));
     }
 
-    // Inisialisasi Countdown
+    //* Inisialisasi Countdown
     public function playingGame($level)
     {
         $match = [
@@ -107,13 +107,14 @@ class GameController extends Controller
         $getSoal = Question::where('id_level', $match[$level])->get()->random(1);
         $soal = $getSoal[0];
 
-        // Inisialisasi Session
+        //* Inisialisasi Session
         $data = [
             'level' => $level,
             'answeredQuestion' => [],
             'wrongAnswer' => 0
         ];
         Session::put('game', $data);
+
         return view('playingGame', compact('soal', 'level'));
     }
 
@@ -151,6 +152,7 @@ class GameController extends Controller
                 'created_at' => Carbon::now()
             ]);
             Session::forget('game');
+
             return redirect(url('game'));
         }
 
@@ -160,6 +162,7 @@ class GameController extends Controller
         $getSoal = Question::where('id_level', $match[$data['level']])->whereNotIn('id_question', $data['answeredQuestion'])->get()->random(1);
         $soal = $getSoal[0];
         $level = $data['level'];
+
         return view('playingGame', compact('soal', 'level'));
     }
 
@@ -193,6 +196,7 @@ class GameController extends Controller
     public function exitGame()
     {
         Session::forget('game');
+        
         return redirect(url('game'));
     }
 }

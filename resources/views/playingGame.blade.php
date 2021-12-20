@@ -4,14 +4,14 @@
 
 @section('content')
     <div class="d-flex">
+        {{-- Exit Game's Modal Confirmation --}}
         <div class="me-auto">
-            {{-- Exit Game's Modal Confirmation --}}
-            <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                <i class="bi bi-box-arrow-left"></i>&emsp;Keluar Game
+            <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdropExitGame">
+                <i class="bi bi-box-arrow-left"></i>&emsp;{{ 'Keluar Game' }}
             </button>
 
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal fade" id="staticBackdropExitGame" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -25,10 +25,11 @@
                         </div>
                         <div class="d-flex justify-content-between py-3">
                             <button type="button" class="btn btn-outline-warning ms-3" data-bs-dismiss="modal">
-                                <i class="bi bi-controller"></i>&emsp;Lanjutkan Game</button>
+                                <i class="bi bi-controller"></i>&emsp;{{ 'Lanjutkan Game' }}
+                            </button>
                             <a href="{{ route('game.index') }}">
                                 <button type="button" class="btn btn-danger me-3">
-                                    <i class="bi bi-box-arrow-left"></i>&emsp;Keluar Game
+                                    <i class="bi bi-box-arrow-left"></i>&emsp;{{ 'Keluar Game' }}
                                 </button>
                             </a>
                         </div>
@@ -37,25 +38,50 @@
             </div>
         </div>
 
-        {{-- Tampilkan Nyawa ataupun Button 'Lihat Jawaban' berdasarkan Match --}}
+        {{-- Tampilkan Button 'Lihat Jawaban' pada Casual Match --}}
         @if ($level == 'casual')
             <div class="ms-auto">
-                <button class="btn btn-link">
+                <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdropShowAnswer">
                     <i class="bi bi-lightbulb"></i>&emsp;{{ 'Lihat Jawaban' }}
                 </button>
+
+                <div class="modal fade" id="staticBackdropShowAnswer" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="d-inline">
+                                    <span class="fs-5" id="staticBackdropLabel">&#128071;</span>
+                                    <span class="fw-bold fs-5" id="staticBackdropLabel">{{ 'Ini Jawabannya' }}</span>
+                                </div>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h1 class="text-uppercase mt-3 mb-5">
+                                    {{ $soal->kunci_jawaban }}
+                                </h1>
+                            </div>
+                            <button type="button" class="btn btn-warning mx-auto mb-4 w-50" data-bs-dismiss="modal">
+                                <i class="bi bi-controller"></i>&emsp;{{ 'Lanjutkan Game' }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         @else
+            {{-- Tampilkan Nyawa pada Ranked Match dengan jumlah sesuai Level --}}
             @php
                 $nyawa = $level == 'easy' ? 5 : 3;
                 $wrong = Session::get('game')['wrongAnswer'];
             @endphp
 
+            {{-- Kurangi jumlah Nyawa setiap kali salah menjawab --}}
             <div class="ms-auto" id="nyawa">
                 <span class="fs-5">{{ 'Nyawa:' }}</span>&emsp;
                 @for ($i = 0; $i < $nyawa - $wrong; $i++)
                     <i class="bi bi-heart-fill text-danger icon-font"></i>
                 @endfor
-
             </div>
         @endif
     </div>

@@ -130,16 +130,12 @@
     {{-- Web's Footer --}}
     <footer class="navbar mt-auto user-select-none">
         <div class="container">
-            <div class="d-flex">
-                &copy; 2021<a href="{{ url('/') }}" data-bs-toggle="tooltip" title="Homepage">&nbsp;<span
-                        class="fw-bold">SejarahKita</span></a>
+            <div class="justify-content-start">
+                <span>&copy; 2021</span><a href="{{ url('/') }}" data-bs-toggle="tooltip"
+                    title="Homepage">&nbsp;<span class="fw-bold">SejarahKita</span></a>
             </div>
 
-            {{-- <div class="justify-content-center">
-                <q>Creating World Class Entrepreneurs</q>
-            </div> --}}
-
-            <ul class="justify-content-end list-unstyled d-flex pt-2 mb-1">
+            <ul class="justify-content-center list-unstyled d-flex pt-2 mb-1">
                 <li>
                     <a href="mailto:info@ciputra.ac.id" data-bs-toggle="tooltip" title="Email">
                         <i class="bi bi-envelope icon-font"></i>
