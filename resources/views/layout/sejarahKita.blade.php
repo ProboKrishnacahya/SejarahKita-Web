@@ -193,6 +193,7 @@
     {{-- External JavaScript --}}
     <script src="{{ url('/assets/js/script.js') }}"></script>
     <script src="{{ url('/assets/js/libraries.js') }}"></script>
+    <script src="{{ url('/assets/js/dataTables.js') }}"></script>
 </body>
 
 </html>
