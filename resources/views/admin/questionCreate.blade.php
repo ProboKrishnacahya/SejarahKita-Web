@@ -3,15 +3,15 @@
 @section('title', 'Bank Soal - Create Question')
 
 @section('content')
-    <div class="container">
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ url('admin/profile') }}">Profile</a></li>
-                <li class="breadcrumb-item"><a href="{{ url('admin/profile/question') }}">Bank Soal</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><strong>Tambah Pertanyaan</strong></li>
-            </ol>
-        </nav>
+    <nav class="bg-black rounded-3 mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb p-2">
+            <li class="breadcrumb-item"><a href="{{ url('admin/profile') }}">Profile</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('admin/profile/question') }}">Bank Soal</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><strong>Tambah Pertanyaan</strong></li>
+        </ol>
+    </nav>
 
+    <div class="container">
         <div class="row justify-content-center">
             <div class="card">
                 <form action="{{ route('question.store') }}" method="post" enctype="multipart/form-data">
@@ -60,21 +60,27 @@
                             <input type="text" class="form-control" name="kunci_jawaban" placeholder="Masukkan Jawaban"
                                 required>
                         </div>
-                        <div class="form-group">
-                            <label for="pertanyaan_path_gambar" class="form-label">Post Image</label>
-                            <br>
-                            <img id="output" class="mb-3 col-sm-5"/>
-                            <input class="form-control" type="file" id="imageInp" name="pertanyaan_path_gambar" onchange="loadFile(event)" required>
+                        <div class="form-group mt-4">
+                            <h5>
+                                <label for="pertanyaan_path_gambar" class="form-label">
+                                    <i class="bi bi-upload"></i>&emsp;{{ 'Upload Gambar' }}
+                                </label>
+                            </h5>
+                            <img id="output" class="question-img shadow-sm mb-3" />
+                            <input class="form-control" type="file" id="imageInp" name="pertanyaan_path_gambar"
+                                onchange="loadFile(event)" required>
                         </div>
                     </div>
             </div>
         </div>
     </div>
+
     <div class="d-grid">
         <button type="submit" class="btn btn-primary mt-5">
             <i class="bi bi-send"></i>&emsp;{{ 'Submit' }}
         </button>
     </div>
+
     @if ($errors->any())
         <div class="alert alert-danger mt-5 pt-3 justify-content-between">
             @foreach ($errors->all() as $error)<i
@@ -83,13 +89,7 @@
         </div>
     @endif
     </form>
-    <script>
-        var loadFile = function(event) {
-            var output = document.getElementById('output');
-            output.src = URL.createObjectURL(event.target.files[0]);
-            output.onload = function() {
-            URL.revokeObjectURL(output.src) // free memory
-            }
-        };
-    </script>
+
+    {{-- Tampilkan Preview Image & File Name nya setelah klik 'Pilih File' --}}
+    <script src="{{ url('/assets/js/questionImage.js') }}"></script>
 @endsection

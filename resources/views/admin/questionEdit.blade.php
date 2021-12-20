@@ -3,18 +3,19 @@
 @section('title', 'Bank Soal - Edit Question')
 
 @section('content')
-    <div class="container">
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ url('admin/profile') }}">Profile</a></li>
-                <li class="breadcrumb-item"><a href="{{ url('admin/profile/question') }}">Bank Soal</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><strong>Ubah Pertanyaan</strong></li>
-            </ol>
-        </nav>
+    <nav class="bg-black rounded-3 mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb p-2">
+            <li class="breadcrumb-item"><a href="{{ url('admin/profile') }}">Profile</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('admin/profile/question') }}">Bank Soal</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><strong>Ubah Pertanyaan</strong></li>
+        </ol>
+    </nav>
 
+    <div class="container">
         <div class="row justify-content-center">
             <div class="card">
-                <form action="{{ route('question.update', $questions->id_question) }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('question.update', $questions->id_question) }}" method="post"
+                    enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="_method" value="PATCH">
                     <div class="card-header text-center pb-3">
@@ -52,7 +53,8 @@
                                 </label>
                             </h5>
                             <textarea name="pertanyaan_kalimat" rows="5" class="form-control"
-                                placeholder="Masukkan Pertanyaan" required>{{ $questions->pertanyaan_kalimat }}</textarea>
+                                placeholder="Masukkan Pertanyaan"
+                                required>{{ $questions->pertanyaan_kalimat }}</textarea>
                         </div>
                         <div class="form-group">
                             <h5>
@@ -63,22 +65,29 @@
                             <input type="text" class="form-control" value="{{ $questions->kunci_jawaban }}"
                                 name="kunci_jawaban" placeholder="Masukkan Jawaban" required>
                         </div>
-                        <div class="form-group">
-                            <label for="pertanyaan_path_gambar" class="form-label">Post Image</label>
+                        <div class="form-group mt-4">
+                            <h5>
+                                <label for="pertanyaan_path_gambar" class="form-label">
+                                    <i class="bi bi-upload"></i>&emsp;{{ 'Upload Gambar' }}
+                                </label>
+                            </h5>
                             <input type="hidden" name="oldImage" value="{{ $questions->pertanyaan_path_gambar }}">
-                            <br>
-                            <img src="{{asset('storage/'.$questions->pertanyaan_path_gambar)}}" id="output" class="mb-3 col-sm-5"/>
-                            <input class="form-control" type="file" id="imageInp" name="pertanyaan_path_gambar" onchange="loadFile(event)">
+                            <img src="{{ asset('storage/' . $questions->pertanyaan_path_gambar) }}" id="output"
+                                class="question-img shadow-sm mb-3" />
+                            <input class="form-control" type="file" id="imageInp" name="pertanyaan_path_gambar"
+                                onchange="loadFile(event)">
                         </div>
                     </div>
             </div>
         </div>
     </div>
+
     <div class="d-grid">
         <button type="submit" class="btn btn-primary mt-5">
             <i class="bi bi-send"></i>&emsp;{{ 'Submit' }}
         </button>
     </div>
+
     @if ($errors->any())
         <div class="alert alert-danger mt-5 pt-3 justify-content-between">
             @foreach ($errors->all() as $error)<i
@@ -87,13 +96,7 @@
         </div>
     @endif
     </form>
-    <script>
-        var loadFile = function(event) {
-            var output = document.getElementById('output');
-            output.src = URL.createObjectURL(event.target.files[0]);
-            output.onload = function() {
-            URL.revokeObjectURL(output.src) // free memory
-            }
-        };
-    </script>
+
+    {{-- Tampilkan Preview Image & File Name nya setelah klik 'Pilih File' --}}
+    <script src="{{ url('/assets/js/questionImage.js') }}"></script>
 @endsection

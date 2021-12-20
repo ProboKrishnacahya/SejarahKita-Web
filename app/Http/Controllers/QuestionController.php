@@ -49,10 +49,8 @@ class QuestionController extends Controller
         Question::create([
             'id_level' => $request->id_level,
             'pertanyaan_kalimat' => $request->pertanyaan_kalimat,
-            'pertanyaan_path_gambar'=>$request->file('pertanyaan_path_gambar')->store('pertanyaan_path_gambar'),
-            // 'pertanyaan_path_gambar' => $request->pertanyaan_path_gambar
+            'pertanyaan_path_gambar' => $request->file('pertanyaan_path_gambar')->store('pertanyaan_path_gambar'),
             'kunci_jawaban' => $request->kunci_jawaban
-
         ]);
 
         return redirect(url('admin/profile/question'));
@@ -95,16 +93,17 @@ class QuestionController extends Controller
     public function update(Request $request, $id)
     {
         $questions = Question::findOrFail($id);
-        if($request->file('pertanyaan_path_gambar')){
-            if($request->oldImage){
+
+        if ($request->file('pertanyaan_path_gambar')) {
+            if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
         }
+
         $questions->update([
             'id_level' => $request->id_level,
             'pertanyaan_kalimat' => $request->pertanyaan_kalimat,
-            'pertanyaan_path_gambar'=>$request->file('pertanyaan_path_gambar')->store('pertanyaan_path_gambar'),
-            // 'pertanyaan_path_gambar' => $request->pertanyaan_path_gambar,
+            'pertanyaan_path_gambar' => $request->file('pertanyaan_path_gambar')->store('pertanyaan_path_gambar'),
             'kunci_jawaban' => $request->kunci_jawaban
         ]);
 
@@ -121,9 +120,11 @@ class QuestionController extends Controller
     {
         $questions = Question::findOrFail($id);
         $questions->delete();
-        if($questions->pertanyaan_path_gambar){
+
+        if ($questions->pertanyaan_path_gambar) {
             Storage::delete($questions->pertanyaan_path_gambar);
         }
+
         return redirect(url('admin/profile/question'));
     }
 }

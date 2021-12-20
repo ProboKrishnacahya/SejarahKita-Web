@@ -393,9 +393,22 @@ select:focus-visible {
     color: var(--text-primary);
 }
 
-.content-img {
+.showHide {
+    border-right: none !important;
+}
+
+.eye {
+    border-left: none !important;
+}
+
+.content-img,
+.question-img {
     max-width: 50%;
     max-height: 15rem;
+}
+
+.question-img {
+    border-radius: 5px;
 }
 
 .illustration-img {
@@ -424,12 +437,12 @@ select,
     cursor: pointer;
 }
 
-.showHide {
-    border-right: none !important;
-}
-
-.eye {
-    border-left: none !important;
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .carousel-inner {

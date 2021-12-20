@@ -1,22 +1,22 @@
 @extends('layout.sejarahKita')
 
-@section('title', 'Bank Soal')
+@section('title', 'Bank Soal - List of Questions')
 
 @section('content')
-    <div class="d-flex justify-content-end">
-        <a href="{{ route('question.create') }}">
-            <button class="btn btn-success mb-5">
-                <i class="bi bi-plus-lg"></i>&emsp;Create Question
-            </button>
-        </a>
-    </div>
-
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
+    <nav class="bg-black rounded-3 mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb p-2">
             <li class="breadcrumb-item"><a href="{{ url('admin/profile') }}">Profile</a></li>
             <li class="breadcrumb-item active" aria-current="page"><strong>Bank Soal</strong></li>
         </ol>
     </nav>
+
+    <div class="d-flex justify-content-end">
+        <a href="{{ route('question.create') }}">
+            <button class="btn btn-success mb-5">
+                <i class="bi bi-plus-lg"></i>&emsp;{{ 'Create Question' }}
+            </button>
+        </a>
+    </div>
 
     <table class="dataTables table py-3">
         <thead>
@@ -35,7 +35,7 @@
                     <td scope="row" class="fw-bold text-center">{{ $index }}</td>
                     @php $index++ @endphp
                     <td>{{ $question->levels->jenis_level }}</td>
-                    <td>{{ $question->pertanyaan_kalimat }}</td>
+                    <td><span class="truncate">{{ $question->pertanyaan_kalimat }}</span></td>
                     <td>{{ $question->kunci_jawaban }}</td>
                     <td>
                         <div class="d-flex justify-content-center">

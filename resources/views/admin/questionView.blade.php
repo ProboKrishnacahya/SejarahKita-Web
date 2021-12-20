@@ -3,8 +3,8 @@
 @section('title', 'Bank Soal - Question Details')
 
 @section('content')
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
+    <nav class="bg-black rounded-3 mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb p-2">
             <li class="breadcrumb-item"><a href="{{ url('admin/profile') }}">Profile</a></li>
             <li class="breadcrumb-item"><a href="{{ url('admin/profile/question') }}">Bank Soal</a></li>
             <li class="breadcrumb-item active" aria-current="page"><strong>Detail Soal</strong></li>
@@ -24,5 +24,7 @@
             </strong>
         </div>
     </div>
-    <img src="{{asset('storage/'.$question->pertanyaan_path_gambar)}}" id="output" class="mb-3 col-sm-5"/>
+
+    <img src="{{ asset('storage/' . $question->pertanyaan_path_gambar) }}" id="output" class="question-img mx-auto shadow-sm mt-5" />
+    <script src="{{ url('/assets/js/questionImage.js') }}"></script>
 @endsection
