@@ -24,4 +24,5 @@
             </strong>
         </div>
     </div>
+    <img src="{{asset('storage/'.$question->pertanyaan_path_gambar)}}" id="output" class="mb-3 col-sm-5"/>
 @endsection

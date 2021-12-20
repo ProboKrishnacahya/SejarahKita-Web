@@ -14,7 +14,7 @@
 
         <div class="row justify-content-center">
             <div class="card">
-                <form action="{{ route('question.update', $questions->id_question) }}" method="post">
+                <form action="{{ route('question.update', $questions->id_question) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="_method" value="PATCH">
                     <div class="card-header text-center pb-3">
@@ -63,6 +63,13 @@
                             <input type="text" class="form-control" value="{{ $questions->kunci_jawaban }}"
                                 name="kunci_jawaban" placeholder="Masukkan Jawaban" required>
                         </div>
+                        <div class="form-group">
+                            <label for="pertanyaan_path_gambar" class="form-label">Post Image</label>
+                            <input type="hidden" name="oldImage" value="{{ $questions->pertanyaan_path_gambar }}">
+                            <br>
+                            <img src="{{asset('storage/'.$questions->pertanyaan_path_gambar)}}" id="output" class="mb-3 col-sm-5"/>
+                            <input class="form-control" type="file" id="imageInp" name="pertanyaan_path_gambar" onchange="loadFile(event)">
+                        </div>
                     </div>
             </div>
         </div>
@@ -80,4 +87,13 @@
         </div>
     @endif
     </form>
+    <script>
+        var loadFile = function(event) {
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function() {
+            URL.revokeObjectURL(output.src) // free memory
+            }
+        };
+    </script>
 @endsection
