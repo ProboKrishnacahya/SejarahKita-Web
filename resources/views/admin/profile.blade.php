@@ -3,7 +3,7 @@
 @section('title', 'Profile - Admin')
 
 @section('content')
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <div class="row card justify-content-around">
             <div class="col">
                 <div class="row">
@@ -23,30 +23,32 @@
         </div>
     </div>
 
-    <div class="row my-5 text-center">
-        <div class="col-sm-6">
-            <div class="bg-primary bg-gradient rounded-3 p-3">
-                <div class="card-body">
-                    <p>Kumpulan Pertanyaan dan Kunci Jawaban.</p>
-                    <br>
-                    <a href="{{ url('admin/profile/question') }}">
-                        <button class="btn btn-warning w-50">
-                            <i class="bi bi-folder"></i>&emsp;{{ 'Bank Soal' }}
-                        </button>
-                    </a>
+    <div data-aos="fade-up">
+        <div class="row my-5 text-center">
+            <div class="col-sm-6">
+                <div class="bg-primary bg-gradient rounded-3 p-3">
+                    <div class="card-body">
+                        <p>Kumpulan Pertanyaan dan Kunci Jawaban.</p>
+                        <br>
+                        <a href="{{ url('admin/profile/question') }}">
+                            <button class="btn btn-warning w-50">
+                                <i class="bi bi-folder"></i>&emsp;{{ 'Bank Soal' }}
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="bg-success bg-gradient rounded-3 p-3">
-                <div class="card-body">
-                    <p>Pencatatan riwayat aktivitas di aplikasi.</p>
-                    <br>
-                    <a href="{{ url('admin/profile/log') }}">
-                        <button class="btn btn-warning w-50">
-                            <i class="bi bi-clock"></i>&emsp;{{ 'Log' }}
-                        </button>
-                    </a>
+            <div class="col-sm-6">
+                <div class="bg-success bg-gradient rounded-3 p-3">
+                    <div class="card-body">
+                        <p>Pencatatan riwayat aktivitas di aplikasi.</p>
+                        <br>
+                        <a href="{{ url('admin/profile/log') }}">
+                            <button class="btn btn-warning w-50">
+                                <i class="bi bi-clock"></i>&emsp;{{ 'Log' }}
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

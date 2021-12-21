@@ -5,6 +5,9 @@ $(document).ready(function () {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
 
+    //* Initialize Animate On Scroll
+    AOS.init();
+
     //* TypewriterJS - JS Library (Quote's Typewriting Effect)
     var typewriting = document.getElementById('typewriting');
     var typewriter = new Typewriter(typewriting, {

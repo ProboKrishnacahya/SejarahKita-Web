@@ -3,7 +3,7 @@
 @section('title', 'Bank Soal - Edit Question')
 
 @section('content')
-    <nav class="bg-black rounded-3 mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <nav class="bg-black rounded-3 mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" data-aos="fade-up">
         <ol class="breadcrumb p-2">
             <li class="breadcrumb-item"><a href="{{ url('admin/profile') }}">Profile</a></li>
             <li class="breadcrumb-item"><a href="{{ url('admin/profile/question') }}">Bank Soal</a></li>
@@ -11,7 +11,7 @@
         </ol>
     </nav>
 
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
             <div class="card">
                 <form action="{{ route('question.update', $questions->id_question) }}" method="post"
@@ -53,8 +53,13 @@
                                 </label>
                             </h5>
                             <textarea name="pertanyaan_kalimat" rows="5" class="form-control"
-                                placeholder="Masukkan Pertanyaan"
-                                required>{{ $questions->pertanyaan_kalimat }}</textarea>
+                                placeholder="Masukkan Pertanyaan" required
+                                onkeyup="countCharacters(this, 'characterLengthPertanyaan');">{{ $questions->pertanyaan_kalimat }}</textarea>
+                            <small class="d-flex mt-2">
+                                <div class="ms-auto">
+                                    <span id="characterLengthPertanyaan"></span>
+                                </div>
+                            </small>
                         </div>
                         <div class="form-group">
                             <h5>
@@ -63,7 +68,13 @@
                                 </label>
                             </h5>
                             <input type="text" class="form-control" value="{{ $questions->kunci_jawaban }}"
-                                name="kunci_jawaban" placeholder="Masukkan Jawaban" required>
+                                name="kunci_jawaban" placeholder="Masukkan Jawaban" required
+                                onkeyup="countCharacters(this, 'characterLengthJawaban');">
+                            <small class="d-flex mt-2">
+                                <div class="ms-auto">
+                                    <span id="characterLengthJawaban"></span>
+                                </div>
+                            </small>
                         </div>
                         <div class="form-group mt-4">
                             <h5>
@@ -98,5 +109,5 @@
     </form>
 
     {{-- Tampilkan Preview Image & File Name nya setelah klik 'Pilih File' --}}
-    <script src="{{ url('/assets/js/questionImage.js') }}"></script>
+    <script src="{{ url('/assets/js/imagePreview.js') }}"></script>
 @endsection

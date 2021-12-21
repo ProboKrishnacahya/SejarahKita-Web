@@ -3,7 +3,7 @@
 @section('title', 'Playing History')
 
 @section('content')
-    <nav class="bg-black rounded-3 mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <nav class="bg-black rounded-3 mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" data-aos="fade-up">
         <ol class="breadcrumb p-2">
             <li class="breadcrumb-item"><a href="{{ url('admin/profile') }}">Profile</a></li>
             <li class="breadcrumb-item active" aria-current="page"><strong>Riwayat Bermain</strong></li>
@@ -12,7 +12,7 @@
 
     @if ($user->playinghistories->count())
         @foreach ($user->playinghistories as $ph)
-            <div class="card illustration-card playingHistory mb-4">
+            <div class="card illustration-card playingHistory mb-4" data-aos="fade-up">
                 <div class="row">
                     <div class="col">
                         <div class="row">
@@ -33,9 +33,8 @@
                 </div>
             </div>
         @endforeach
-
     @else
-        <div class="text-center">
+        <div class="text-center" data-aos="fade-up">
             <img src="{{ url('assets/img/ill_empty.svg') }}" alt="No Data" class="content-img">
             <br>
             <span>Belum ada permainan yang diselesaikan. </span><strong>Ayo mulai bermain sekarang..</strong>

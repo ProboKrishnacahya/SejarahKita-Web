@@ -37,6 +37,9 @@
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.js"></script>
 
+    {{-- Cascading Style Sheets Library (Animate On Scroll) --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     {{-- Google Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,6 +193,9 @@
     <script src="{{ url('/assets/js/script.js') }}"></script>
     <script src="{{ url('/assets/js/libraries.js') }}"></script>
     <script src="{{ url('/assets/js/dataTables.js') }}"></script>
+
+    {{-- Cascading Style Sheets Library (Animate On Scroll) --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>

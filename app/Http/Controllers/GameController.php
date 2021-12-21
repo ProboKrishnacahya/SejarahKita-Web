@@ -113,6 +113,7 @@ class GameController extends Controller
             'answeredQuestion' => [],
             'wrongAnswer' => 0
         ];
+
         Session::put('game', $data);
 
         return view('playingGame', compact('soal', 'level'));
@@ -151,9 +152,16 @@ class GameController extends Controller
                 'skor' => $this->isRanked($idLevel) ? $scoreRanked : $scoreCasual,
                 'created_at' => Carbon::now()
             ]);
+
+            $result = [
+                'message' => $this->messageResult($soalSalah, $soalDikerjakan, $idLevel),
+                'skor' => $this->isRanked($idLevel) ? $scoreRanked : $scoreCasual,
+                'level' => $data['level']
+            ];
+
             Session::forget('game');
 
-            return redirect(url('game'));
+            return view('scoreResult', $result);
         }
 
         Session::forget('game');
@@ -177,26 +185,49 @@ class GameController extends Controller
 
     private function isGameOver($soalSalah, $soalDikerjakan, $level)
     {
-        //? Game Over Easy Match
+        //? Game Over - Easy Match
         if ($soalSalah >= 5 && $level == 2) {
             return true;
-            //? Game Over Hard Match
+            //? Game Over - Hard Match
         } else if ($soalSalah >= 3 && $level == 3) {
             return true;
-            //? Win Ranked Match
-        } else if ($soalDikerjakan == 20 && ($level == 3  || $level == 2)) {
+            //? Permainan Selesai - Ranked Match
+        } else if ($soalDikerjakan == 20 && ($level == 2 || $level == 3)) {
             return true;
-            //? Win Casual Match
+            //? Permainan Selesai - Casual Match
         } else if ($soalDikerjakan == 10 && $level == 1) {
             return true;
         }
         return false;
     }
 
+    private function messageResult($soalSalah, $soalDikerjakan, $level)
+    {
+        //? Game Over - Easy Match
+        if ($soalSalah >= 5 && $level == 2) {
+            return 'Game Over';
+            //? Game Over - Hard Match
+        } else if ($soalSalah >= 3 && $level == 3) {
+            return 'Game Over';
+            //? Permainan Selesai - Ranked Match
+        } else if ($soalDikerjakan == 20 && ($level == 2 || $level == 3)) {
+            return 'Permainan Selesai';
+            //? Permainan Selesai - Casual Match
+        } else if ($soalDikerjakan == 10 && $level == 1) {
+            return 'Permainan Selesai';
+        }
+        return false;
+    }
+
+    public function goToScoreResult()
+    {
+        return view('scoreResult');
+    }
+
     public function exitGame()
     {
         Session::forget('game');
-        
+
         return redirect(url('game'));
     }
 }

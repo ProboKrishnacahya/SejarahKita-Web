@@ -27,6 +27,7 @@ Route::get('countdown/{level}', [GameController::class, 'countdown'])->name('cou
 Route::get('playing-game/{level}', [GameController::class, 'playingGame'])->name('playingGame');
 Route::post('check-answer', [GameController::class, 'checkAnswer'])->name('checkAnswer');
 Route::post('exit-game', [GameController::class, 'exitGame'])->name('exitGame');
+Route::get('score-result', [GameController::class, 'exitGame'])->name('scoreResult');
 
 //* Leaderboard
 Route::resource('leaderboard', LeaderboardController::class);

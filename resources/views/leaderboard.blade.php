@@ -3,7 +3,7 @@
 @section('title', 'Leaderboard')
 
 @section('content')
-    <div class="card illustration-card justify-content-around">
+    <div class="card illustration-card justify-content-around" data-aos="fade-up">
         <div class="text-center mt-3">
             <p class="display-6">{{ 'Mainkan Gamenya,' }}</p>
             <div class="d-inline">
@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div class="card my-5 px-4 pb-4">
+    <div class="card my-5 px-4 pb-4" data-aos="fade-up">
         <div class="card-header d-flex align-items-center mb-3">
             <h4 class="easy-text me-auto user-select-none">Level Easy</h4>
             <div class="card-wrap easy-bg rounded-3 mb-2 px-3 pt-2">
@@ -53,7 +53,8 @@
                 </tr>
         </table>
     </div>
-    <div class="card mt-5 px-4 pb-4">
+    
+    <div class="card mt-5 px-4 pb-4" data-aos="fade-up">
         <div class="card-header d-flex align-items-center mb-3">
             <h4 class="hard-text me-auto user-select-none">Level Hard</h4>
             <div class="card-wrap hard-bg rounded-3 mb-2 px-3 pt-2">

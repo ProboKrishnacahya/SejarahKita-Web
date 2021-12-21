@@ -393,10 +393,6 @@ select:focus-visible {
     color: var(--text-primary);
 }
 
-.showHide {
-    border-right: none !important;
-}
-
 .eye {
     border-left: none !important;
 }

@@ -3,7 +3,7 @@
 @section('title', 'Game')
 
 @section('content')
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <div class="row card illustration-card justify-content-around px-5 py-4">
             <div class="col">
                 <div class="row">
@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <div class="container my-5">
+    <div class="container my-5" data-aos="fade-up">
         <div class="row card justify-content-around">
             <div class="col">
                 <div class="card-header text-center mt-3">
@@ -61,7 +61,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <div class="row card casual justify-content-around p-5">
             <div class="col">
                 <div class="row">

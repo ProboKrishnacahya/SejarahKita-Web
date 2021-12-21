@@ -3,7 +3,7 @@
 @section('title', 'Profile')
 
 @section('content')
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <div class="row card justify-content-around">
             <div class="col">
                 <div class="row">
@@ -27,31 +27,33 @@
         </div>
     </div>
 
-    <h3 class="mt-5 mb-4"><i class="bi bi-star"></i>&emsp;{{ 'Ranked Point Terkini' }}</h3>
-    <div class="card-wrap easy-bg easyProfile p-3">
-        <img src="{{ url('assets/img/fg_easy.png') }}" alt="" class="rankedPointTerkini-bg">
-        <div class="d-flex rankedPointTerkini-content">
-            <div class="p-2">
-                <span class="fs-1">Easy</span>
-            </div>
-            <div class="ms-auto p-2">
-                <span class="fs-1 fw-bold">{{ $user->getEasyRankedPoint() }} RP</span>
+    <div data-aos="fade-up">
+        <h3 class="mt-5 mb-4"><i class="bi bi-star"></i>&emsp;{{ 'Ranked Point Terkini' }}</h3>
+        <div class="card-wrap easy-bg easyProfile p-3">
+            <img src="{{ url('assets/img/fg_easy.png') }}" alt="" class="rankedPointTerkini-bg">
+            <div class="d-flex rankedPointTerkini-content">
+                <div class="p-2">
+                    <span class="fs-1">Easy</span>
+                </div>
+                <div class="ms-auto p-2">
+                    <span class="fs-1 fw-bold">{{ $user->getEasyRankedPoint() }} RP</span>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="card-wrap hard-bg hardProfile p-3">
-        <img src="{{ url('assets/img/fg_hard.png') }}" alt="" class="rankedPointTerkini-bg">
-        <div class="d-flex rankedPointTerkini-content">
-            <div class="p-2">
-                <span class="fs-1">Hard</span>
-            </div>
-            <div class="ms-auto p-2">
-                <span class="fs-1 fw-bold">{{ $user->getHardRankedPoint() }} RP</span>
+        <div class="card-wrap hard-bg hardProfile p-3">
+            <img src="{{ url('assets/img/fg_hard.png') }}" alt="" class="rankedPointTerkini-bg">
+            <div class="d-flex rankedPointTerkini-content">
+                <div class="p-2">
+                    <span class="fs-1">Hard</span>
+                </div>
+                <div class="ms-auto p-2">
+                    <span class="fs-1 fw-bold">{{ $user->getHardRankedPoint() }} RP</span>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="row my-5 text-center">
+    <div class="row my-5 text-center" data-aos="fade-up">
         <div class="col">
             <div class="text-center">
                 <div class="bg-primary bg-gradient rounded-3 p-3">
