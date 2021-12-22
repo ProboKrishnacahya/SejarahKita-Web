@@ -55,7 +55,7 @@
                             <textarea name="pertanyaan_kalimat" rows="5" class="form-control"
                                 placeholder="Masukkan Pertanyaan" required
                                 onkeyup="countCharacters(this, 'characterLengthPertanyaan');">{{ $questions->pertanyaan_kalimat }}</textarea>
-                            <small class="d-flex mt-2">
+                            <small class="d-flex text-white-50 mt-2">
                                 <div class="ms-auto">
                                     <span id="characterLengthPertanyaan"></span>
                                 </div>
@@ -70,7 +70,7 @@
                             <input type="text" class="form-control" value="{{ $questions->kunci_jawaban }}"
                                 name="kunci_jawaban" placeholder="Masukkan Jawaban" required
                                 onkeyup="countCharacters(this, 'characterLengthJawaban');">
-                            <small class="d-flex mt-2">
+                            <small class="d-flex text-white-50 mt-2">
                                 <div class="ms-auto">
                                     <span id="characterLengthJawaban"></span>
                                 </div>

@@ -95,11 +95,7 @@
             {{ str_shuffle($soal->kunci_jawaban) }}
         </span>
     </div>
-    <div class="text-center">
-        <span class="anagram badge nilai text-black fw-bold fs-1 text-uppercase mt-3 mb-5">
-            {{ $soal->kunci_jawaban }}
-        </span>
-    </div>
+
     <form action="{{ route('checkAnswer') }}" method="POST">
         @csrf
         <input type="hidden" name="id" value="{{ $soal->id_question }}">
@@ -110,7 +106,12 @@
                 </label>
             </h5>
             <input type="text" class="form-control text-uppercase" name="input_jawaban"
-                placeholder="Ketikkan Jawaban Disini" required>
+                placeholder="Ketikkan Jawaban Disini" required onkeyup="countCharacters(this, 'characterLengthGame');">
+            <small class="d-flex text-white-50 mt-2">
+                <div class="ms-auto">
+                    <span id="characterLengthGame"></span>
+                </div>
+            </small>
         </div>
 
         <div class="d-grid">

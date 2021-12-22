@@ -51,7 +51,7 @@
                             <textarea name="pertanyaan_kalimat" rows="5" class="form-control"
                                 placeholder="Masukkan Pertanyaan" required
                                 onkeyup="countCharacters(this, 'characterLengthPertanyaan');"></textarea>
-                            <small class="d-flex mt-2">
+                            <small class="d-flex text-white-50 mt-2">
                                 <div class="ms-auto">
                                     <span id="characterLengthPertanyaan"></span>
                                 </div>
@@ -65,7 +65,7 @@
                             </h5>
                             <input type="text" class="form-control" name="kunci_jawaban" placeholder="Masukkan Jawaban"
                                 required onkeyup="countCharacters(this, 'characterLengthJawaban');">
-                            <small class="d-flex mt-2">
+                            <small class="d-flex text-white-50 mt-2">
                                 <div class="ms-auto">
                                     <span id="characterLengthJawaban"></span>
                                 </div>
@@ -79,7 +79,7 @@
                             </h5>
                             <img id="output" class="question-img shadow-sm mb-3" />
                             <input class="form-control" type="file" id="imageInp" name="pertanyaan_path_gambar"
-                                onchange="loadFile(event)" required>
+                                onchange="loadFile(event)">
                         </div>
                     </div>
             </div>

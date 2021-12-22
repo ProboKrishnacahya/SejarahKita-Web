@@ -5,7 +5,7 @@
 @section('content')
     <nav class="bg-black rounded-3 mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" data-aos="fade-up">
         <ol class="breadcrumb p-2">
-            <li class="breadcrumb-item"><a href="{{ url('admin/profile') }}">Profile</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/profile') }}">Profile</a></li>
             <li class="breadcrumb-item active" aria-current="page"><strong>Riwayat Bermain</strong></li>
         </ol>
     </nav>

@@ -136,7 +136,7 @@
                                         <i class="bi bi-eye-slash" id="togglePassword"></i>
                                     </span>
                                 </div>
-                                <small class="d-flex mt-2">
+                                <small class="d-flex text-white-50 mt-2">
                                     <div>
                                         <span>8 s.d. 20 Karakter</span>
                                     </div>
@@ -166,7 +166,7 @@
                                             class="bi bi-eye-slash" id="toggleConfirmPassword"></i>
                                     </span>
                                 </div>
-                                <small class="d-flex mt-2">
+                                <small class="d-flex text-white-50 mt-2">
                                     <div>
                                         <span>8 s.d. 20 Karakter</span>
                                     </div>
