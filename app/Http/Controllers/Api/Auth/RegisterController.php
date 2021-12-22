@@ -47,6 +47,7 @@ class RegisterController extends Controller
             'birthyear' => $data['birthyear'],
             'role' => 'user',
             'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
         ]);
     }
 }

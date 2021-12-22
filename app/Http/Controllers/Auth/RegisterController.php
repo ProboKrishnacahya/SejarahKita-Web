@@ -88,7 +88,8 @@ class RegisterController extends Controller
             'city' => $data['city'],
             'birthyear' => $data['birthyear'],
             'role' => 'user',
-            'created_at' => Carbon::now()
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
     }
 }
