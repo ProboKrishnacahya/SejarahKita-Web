@@ -235,7 +235,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Pada tgl berapa Muso memproklamasikan Republik Soviet Indonesia?',
+            'pertanyaan_kalimat' => 'Pada tanggal berapa Muso memproklamasikan Republik Soviet Indonesia?',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => '18 September 1948',
             'created_at' => \Carbon\Carbon::now(),
@@ -244,7 +244,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Pada awal pemberontakan PKI membantai rakyat dan tentara dan kaum santri yang melihat sepak terjang PKI yang sangat membahayakan khususnya bagi?',
+            'pertanyaan_kalimat' => 'Pada awal pemberontakan PKI membantai rakyat dan tentara dan kaum Santri yang melihat sepak terjang PKI yang sangat membahayakan khususnya bagi..',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'NKRI',
             'created_at' => \Carbon\Carbon::now(),
@@ -289,7 +289,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Penolakan rencana pembentukan angkatan ke 5 yang dikemukakan oleh?',
+            'pertanyaan_kalimat' => 'Penolakan rencana pembentukan angkatan ke-5 yang dikemukakan oleh?',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'PKI',
             'created_at' => \Carbon\Carbon::now(),
@@ -298,7 +298,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Setelah pembantaian 7 jenderal dalam gerakan 30 september jasad dari jendral tersebut dimasukan ke dalam?',
+            'pertanyaan_kalimat' => 'Setelah pembantaian 7 jenderal dalam gerakan 30 September jasad dari jendral tersebut dimasukan ke dalam..',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'Lubang Buaya',
             'created_at' => \Carbon\Carbon::now(),
@@ -307,7 +307,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Gerakan yang terjadi tanggal 30 September 1965 menimbulkan perubahan yang besar pada keberlangsungan Negara Indonesia. Salah satu dampak yang timbul dari gerakan tersebut adalah Munculnya Trikora dari?',
+            'pertanyaan_kalimat' => 'Gerakan yang terjadi tanggal 30 September 1965 menimbulkan perubahan yang besar pada keberlangsungan Negara Indonesia. Salah satu dampak yang timbul dari gerakan tersebut adalah Munculnya Trikora dari..',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'Masyarakat',
             'created_at' => \Carbon\Carbon::now(),
@@ -316,7 +316,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Tujuan utama G30S/PKI adalah untuk menggulingkan pemerintahan?',
+            'pertanyaan_kalimat' => 'Tujuan utama G30S/PKI adalah untuk menggulingkan pemerintahan..',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'Soekarno',
             'created_at' => \Carbon\Carbon::now(),
@@ -380,7 +380,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, beliau memimpin pemberontakan rakyat Biak pada maret 1948 untuk melawan pemerintah Hindia Belanda?',
-            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/92NdHZDcKFPb4GmUwGDjH9xOgn8UY7g0OOGY51Mr.jpg',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Frans_Kaisiepo.jpeg',
             'kunci_jawaban' => 'Frans Kaisiepo',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -389,7 +389,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, Laksamana Madya TNI bertugas di angkatan laut pada dua zaman. Ia bertugas sejak masa Pendudukan Jepang dan masa kemerdekaan. Beliau wafat dalam pertempuran di Laut Aru tanggal 15 Januari 1962. Ia meninggal ketika melaksanakan operasi rahasia untuk menyusupkan sukarelawan ke Irian menggunakan KRI Macan Tutul?',
-            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/D1RYHUX2sc4BonhDjiIr672dNkWWXY5cuN8n60JA.jpg',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Yos_Sudarso.jpg',
             'kunci_jawaban' => 'Yos Sudarso',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -398,7 +398,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Tokoh intelektual karismatik yang terlibat dalam peristiwa-peristiwa penting dalam sejarah Indonesia. Menjadi proklamator kemerdekaan Indonesia bersama Mohammad Hatta pada tanggal 17 Agustus 1945?',
-            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/aUqKt8i1YFl3QARZ2g4KP6BJb95QQe9blkR7VvmB.jpg',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Soekarno.jpg',
             'kunci_jawaban' => 'Soekarno',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -407,7 +407,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Salah satu seorang pahlawan nasional yang berperan besar dalam proklamasi kemerdekaan Indonesia. Beliau bersama dengan Soekarno berperan penting dalam kemerdekaan republik Indonesia dari penjajahan Hindia Belanda dan kemudian memproklamasikan kemerdekaan Republik Indonesia pada tanggal 17 Agustus 1945?',
-            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/KFcL3Z2euQnljwIpwK8XMvsFP5uO2lG8xQlOzwhY.jpg',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Mohammad_Hatta.jpg',
             'kunci_jawaban' => 'Mohammad Hatta',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -416,7 +416,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Jenderal yang memimpin pasukan untuk mengusir Sekutu dari Ambarawa. Pada saat terjadi Agresi Militer Belanda II, Jenderal Sudirman memimpin langsung pasukannya bergerilya melawan Belanda?',
-            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/INlY0tqRgEt9IHNPJTCZNCsxnTBew1jkLlWBTSQz.jpg',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Soedirman.jpg',
             'kunci_jawaban' => 'Soedirman',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -741,7 +741,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, menyatakan Kesultanan Yogyakarta sebagai bagian dari RI (dalam Amanat 5 September 1945). Sebelumnya, Belanda menawarkan beliau menjadi Raja Jawa jika tidak bergabung dengan RI. Beliau adalah Sultan ...',
-            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/UaiDW5T5bysx7X2my0bDUtNRg6dZ5u2WVtfthAmM.jpg',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Hamengkubuwono_IX.jpg',
             'kunci_jawaban' => 'Hamengkubowono IX',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -750,7 +750,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, namun bukan dari kalangan tentara dan sipil melainkan tokoh ulama. Beliau mengumandangkan Resolusi Jihad di pertemuan wakil-wakil cabang NU (Jawa dan Madura) di Surabaya pada 22 Oktober 1945?',
-            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/XlcJaQPD40wkNt16qPJqJIRT51lBwZXwlAeSHniT.jpg',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Hasyim_Asyari.jpeg',
             'kunci_jawaban' => 'Hasyim Asyari',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -759,7 +759,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, Jenderal TNI (Purn.), Beliau lahir di Sumpiuh, Banyumas, Jawa Tengah, 10 Oktober 1907. Beliau juga dikenal sebagai tentara yang aktif di tiga zaman. Tokoh ini juga pernah menjadi Tentara Hindia Belanda (KNIL), pada masa pendudukan Jepang, dan pasca Indonesia merdeka beliau berperan dalam menumpas pemberontakan PKI?',
-            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/qmsOboMISVe3ekBULPRl2epAjVNNSAFIHh8bEtHr.jpg',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Gatot_Soebroto.jpg',
             'kunci_jawaban' => 'Gatot Soebroto',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -768,7 +768,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Dikenal sebagai seorang diplomat dan salah satu pemimpin Indonesia di perang kemerdekaan Indonesia. Beliau juga sangat berjasa dalam memperjuangkan pengakuan Indonesia di dunia melalui sejumlah perjanjian dan konferensi?',
-            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/0m9xQ9ulzKY9sLi7yvWCcM4SFJ09DXOWvuiqaT91.jpg',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Mohammad_Roem.jpg',
             'kunci_jawaban' => 'Mohammad Roem',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -777,7 +777,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Beliau lahir pada tanggal 19 Juni 1922 di Jenar, Purworejo, Jawa Tengah. Beliau mengawali karir militernya dengan pangkat Sersan dengan mengikuti pendidikan militer pada Dinas Topografi Militer di Malang dan secara lebih intensif di Bogor. Prestasi telah diraihnya di masa perang kemerdekaan. Beliau juga berhasil menyita senjata Jepang di Magelang. Setelah Tentara Keamanan Rakyat (TKR) terbentuk, Dia diangkat menjadi Komandan TKR Purwokerto?',
-            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/qZG5eM6m1GO53x5uiHSvG5H95dFGxHVkcJ3n28qu.png',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Ahmad_Yani.png',
             'kunci_jawaban' => 'Ahmad Yani',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -786,7 +786,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Lagu-lagu buatan beliau yang sarat dengan nilai-nilai perjuangan yang menggugah rasa kecintaan terhadap tanah air dan bangsa, antara lain Halo-Halo Bandung (1946) yang diciptakan ketika terjadi peristiwa Bandung Lautan Api, Selendang Sutera (1946) yang diciptakan pada saat revolusi kemerdekaan untuk membangkitkan semangat juang pada waktu itu dan Sepasang Mata Bola (1946) yang menggambarkan harapan rakyat untuk merdeka. Siapakah beliau?',
-            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/APWInbOuxDDsG0da8nHq9l500388z4HiJ6A2e7WO.jpg',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Ismail_Marzuki.jpg',
             'kunci_jawaban' => 'Ismail Marzuki',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -795,7 +795,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Tokoh ini membentuk Komite Nasional Indonesia di Siak, Tentara Keamanan Rakyat (TKR) dan Barisan Pemuda Republik. Ia juga segera mengadakan rapat umum di istana serta mengibarkan bendera Merah-Putih, dan mengajak raja-raja di Sumatera Timur lainnya agar turut memihak republik. Beliau adalah Sultan ….. II?',
-            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/LRO5XkmtM7ccfiS4O8CftCxvQIl6paKc2W2K1tdd.jpg',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Syarif_Kasim.jpeg',
             'kunci_jawaban' => 'Syarif Kasim',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
