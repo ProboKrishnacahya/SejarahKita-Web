@@ -18,7 +18,7 @@ class QuestionSeeder extends Seeder
         //* Casual
         DB::table('sej12_questions')->insert([
             'id_level' => 1,
-            'pertanyaan_kalimat' => 'Kelompok yang melancarkan propaganda anti pemerintah, memprovokasi para buruh untuk melakukan mogok kerja, dan melakukan pembunuhan - pembunuhan khususnya di madiun adalah kelompok..',
+            'pertanyaan_kalimat' => 'Kelompok yang melancarkan propaganda anti pemerintah, memprovokasi para buruh untuk melakukan mogok kerja, dan melakukan pembunuhan - pembunuhan khususnya di Madiun adalah kelompok..',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'Amir Muso',
             'created_at' => \Carbon\Carbon::now(),
@@ -316,7 +316,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Tujuan utama G30S PKI adalah untuk menggulingakn pemerintahan?',
+            'pertanyaan_kalimat' => 'Tujuan utama G30S/PKI adalah untuk menggulingkan pemerintahan?',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'Soekarno',
             'created_at' => \Carbon\Carbon::now(),
@@ -380,7 +380,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, beliau memimpin pemberontakan rakyat Biak pada maret 1948 untuk melawan pemerintah Hindia Belanda?',
-            'pertanyaan_path_gambar' => '-',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/92NdHZDcKFPb4GmUwGDjH9xOgn8UY7g0OOGY51Mr.jpg',
             'kunci_jawaban' => 'Frans Kaisiepo',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -389,7 +389,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, Laksamana Madya TNI bertugas di angkatan laut pada dua zaman. Ia bertugas sejak masa Pendudukan Jepang dan masa kemerdekaan. Beliau wafat dalam pertempuran di Laut Aru tanggal 15 Januari 1962. Ia meninggal ketika melaksanakan operasi rahasia untuk menyusupkan sukarelawan ke Irian menggunakan KRI Macan Tutul?',
-            'pertanyaan_path_gambar' => '-',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/D1RYHUX2sc4BonhDjiIr672dNkWWXY5cuN8n60JA.jpg',
             'kunci_jawaban' => 'Yos Sudarso',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -398,7 +398,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Tokoh intelektual karismatik yang terlibat dalam peristiwa-peristiwa penting dalam sejarah Indonesia. Menjadi proklamator kemerdekaan Indonesia bersama Mohammad Hatta pada tanggal 17 Agustus 1945?',
-            'pertanyaan_path_gambar' => '-',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/aUqKt8i1YFl3QARZ2g4KP6BJb95QQe9blkR7VvmB.jpg',
             'kunci_jawaban' => 'Soekarno',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -407,7 +407,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Salah satu seorang pahlawan nasional yang berperan besar dalam proklamasi kemerdekaan Indonesia. Beliau bersama dengan Soekarno berperan penting dalam kemerdekaan republik Indonesia dari penjajahan Hindia Belanda dan kemudian memproklamasikan kemerdekaan Republik Indonesia pada tanggal 17 Agustus 1945?',
-            'pertanyaan_path_gambar' => '-',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/KFcL3Z2euQnljwIpwK8XMvsFP5uO2lG8xQlOzwhY.jpg',
             'kunci_jawaban' => 'Mohammad Hatta',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -416,7 +416,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Jenderal yang memimpin pasukan untuk mengusir Sekutu dari Ambarawa. Pada saat terjadi Agresi Militer Belanda II, Jenderal Sudirman memimpin langsung pasukannya bergerilya melawan Belanda?',
-            'pertanyaan_path_gambar' => '-',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/INlY0tqRgEt9IHNPJTCZNCsxnTBew1jkLlWBTSQz.jpg',
             'kunci_jawaban' => 'Soedirman',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -550,7 +550,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Tokoh ini adalah perintis Revolusi Kemerdekaan Indonesia. Beliau juga dikenal sebagai salah satu tokoh dari organisasi Kaoem Betawi yang pertama kali menjadi anggota Dewan Rakyat di Hindia Belanda, yang mewakili kelompok pribumi. Gambar Beliau juga akan terpampang di uang rupiah baru pecahan Rp2.000 kertas. Beliau adalah Mohammad Hoesni?',
+            'pertanyaan_kalimat' => 'Tokoh ini adalah perintis Revolusi Kemerdekaan Indonesia. Beliau juga dikenal sebagai salah satu tokoh dari organisasi Kaoem Betawi yang pertama kali menjadi anggota Dewan Rakyat di Hindia Belanda, yang mewakili kelompok pribumi. Gambar Beliau juga akan terpampang di uang rupiah baru pecahan Rp2.000 kertas. Beliau adalah Mohammad Hoesni ...',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'Thamrin',
             'created_at' => \Carbon\Carbon::now(),
@@ -560,7 +560,7 @@ class QuestionSeeder extends Seeder
         //* Hard
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Peristiwa yang kelam dengan terenggutnya banyak nyawa terutama dari kaum ulama adalah peristiwa?',
+            'pertanyaan_kalimat' => 'Peristiwa yang kelam dengan terenggutnya banyak nyawa terutama dari kaum Ulama adalah peristiwa?',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'PKI 48',
             'created_at' => \Carbon\Carbon::now(),
@@ -589,7 +589,7 @@ class QuestionSeeder extends Seeder
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Gerakan yang tujuan utamanya untuk menurunkan (mengkudeta) presiden RI pertama, Soekarno agar dapat menguasai Indonesia dan mengubah Indonesia menjadi negara komunis?',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'G 30S PKI',
+            'kunci_jawaban' => 'G30S/PKI',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -650,7 +650,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Upaya pemerintah dilakukan melalui jalan kooperatif antara lain dengan membuka dialog antara M Hatta dengan kelompok?',
+            'pertanyaan_kalimat' => 'Upaya pemerintah dilakukan melalui jalan kooperatif antara lain dengan membuka dialog antara M. Hatta dengan kelompok?',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'Daud Beureuh',
             'created_at' => \Carbon\Carbon::now(),
@@ -740,8 +740,8 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, menyatakan Kesultanan Yogyakarta sebagai bagian dari RI (dalam Amanat 5 September 1945). Sebelumnya, Belanda menawarkan beliau menjadi Raja Jawa jika tidak bergabung dengan RI. Beliau adalah Sultan?',
-            'pertanyaan_path_gambar' => '-',
+            'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, menyatakan Kesultanan Yogyakarta sebagai bagian dari RI (dalam Amanat 5 September 1945). Sebelumnya, Belanda menawarkan beliau menjadi Raja Jawa jika tidak bergabung dengan RI. Beliau adalah Sultan ...',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/UaiDW5T5bysx7X2my0bDUtNRg6dZ5u2WVtfthAmM.jpg',
             'kunci_jawaban' => 'Hamengkubowono IX',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -750,7 +750,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, namun bukan dari kalangan tentara dan sipil melainkan tokoh ulama. Beliau mengumandangkan Resolusi Jihad di pertemuan wakil-wakil cabang NU (Jawa dan Madura) di Surabaya pada 22 Oktober 1945?',
-            'pertanyaan_path_gambar' => '-',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/XlcJaQPD40wkNt16qPJqJIRT51lBwZXwlAeSHniT.jpg',
             'kunci_jawaban' => 'Hasyim Asyari',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -759,7 +759,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, Jenderal TNI (Purn.), Beliau lahir di Sumpiuh, Banyumas, Jawa Tengah, 10 Oktober 1907. Beliau juga dikenal sebagai tentara yang aktif di tiga zaman. Tokoh ini juga pernah menjadi Tentara Hindia Belanda (KNIL), pada masa pendudukan Jepang, dan pasca Indonesia merdeka beliau berperan dalam menumpas pemberontakan PKI?',
-            'pertanyaan_path_gambar' => '-',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/qmsOboMISVe3ekBULPRl2epAjVNNSAFIHh8bEtHr.jpg',
             'kunci_jawaban' => 'Gatot Soebroto',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -768,7 +768,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Dikenal sebagai seorang diplomat dan salah satu pemimpin Indonesia di perang kemerdekaan Indonesia. Beliau juga sangat berjasa dalam memperjuangkan pengakuan Indonesia di dunia melalui sejumlah perjanjian dan konferensi?',
-            'pertanyaan_path_gambar' => '-',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/0m9xQ9ulzKY9sLi7yvWCcM4SFJ09DXOWvuiqaT91.jpg',
             'kunci_jawaban' => 'Mohammad Roem',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -777,7 +777,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Beliau lahir pada tanggal 19 Juni 1922 di Jenar, Purworejo, Jawa Tengah. Beliau mengawali karir militernya dengan pangkat Sersan dengan mengikuti pendidikan militer pada Dinas Topografi Militer di Malang dan secara lebih intensif di Bogor. Prestasi telah diraihnya di masa perang kemerdekaan. Beliau juga berhasil menyita senjata Jepang di Magelang. Setelah Tentara Keamanan Rakyat (TKR) terbentuk, Dia diangkat menjadi Komandan TKR Purwokerto?',
-            'pertanyaan_path_gambar' => '-',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/qZG5eM6m1GO53x5uiHSvG5H95dFGxHVkcJ3n28qu.png',
             'kunci_jawaban' => 'Ahmad Yani',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -786,7 +786,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Lagu-lagu buatan beliau yang sarat dengan nilai-nilai perjuangan yang menggugah rasa kecintaan terhadap tanah air dan bangsa, antara lain Halo-Halo Bandung (1946) yang diciptakan ketika terjadi peristiwa Bandung Lautan Api, Selendang Sutera (1946) yang diciptakan pada saat revolusi kemerdekaan untuk membangkitkan semangat juang pada waktu itu dan Sepasang Mata Bola (1946) yang menggambarkan harapan rakyat untuk merdeka. Siapakah beliau?',
-            'pertanyaan_path_gambar' => '-',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/APWInbOuxDDsG0da8nHq9l500388z4HiJ6A2e7WO.jpg',
             'kunci_jawaban' => 'Ismail Marzuki',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -795,7 +795,7 @@ class QuestionSeeder extends Seeder
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Tokoh ini membentuk Komite Nasional Indonesia di Siak, Tentara Keamanan Rakyat (TKR) dan Barisan Pemuda Republik. Ia juga segera mengadakan rapat umum di istana serta mengibarkan bendera Merah-Putih, dan mengajak raja-raja di Sumatera Timur lainnya agar turut memihak republik. Beliau adalah Sultan ….. II?',
-            'pertanyaan_path_gambar' => '-',
+            'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/LRO5XkmtM7ccfiS4O8CftCxvQIl6paKc2W2K1tdd.jpg',
             'kunci_jawaban' => 'Syarif Kasim',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -821,7 +821,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Tokoh ini adalah seorang anggota polisi Hindia Belanda sebelum Jepang masuk ke Indonesia. Namun jabatan ini bukan berarti melunturkan sikap nasionalismenya. Sejak tahun 1946 Beliau menjadi Ketua Partai Indonesia Merdeka (PIM). Ia lalu memimpin sebuah aksi protes yang didukung delegasi 12 Kepala Suku terhadap keinginan Belanda yang ingin memisahkan Papua dari Indonesia?',
+            'pertanyaan_kalimat' => 'Tokoh ini adalah seorang anggota polisi Hindia Belanda sebelum Jepang masuk ke Indonesia. Namun jabatan ini bukan berarti melunturkan sikap nasionalismenya. Sejak tahun 1946 Beliau menjadi Ketua Partai Indonesia Merdeka (PIM). Ia lalu memimpin sebuah aksi protes yang didukung delegasi 12 Kepala Suku terhadap keinginan Belanda yang ingin memisahkan Papua dari Indonesia ...',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'Marthen Indey',
             'created_at' => \Carbon\Carbon::now(),
@@ -830,7 +830,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Dalam upaya mempertahankan kemerdekaan Indonesia, Jenderal Soedirman walaupun dalam keadaan sakit tetap berjuang memimpin perang gerilya, dengan satu paru-paru yang berfungsi . Sikap yang ditunjukkan oleh tokoh nasional Jenderal Soedirman lebih mencerminkan nilai?',
+            'pertanyaan_kalimat' => 'Dalam upaya mempertahankan kemerdekaan Indonesia, Jenderal Soedirman walaupun dalam keadaan sakit tetap berjuang memimpin perang gerilya, dengan satu paru-paru yang berfungsi . Sikap yang ditunjukkan oleh tokoh nasional Jenderal Soedirman lebih mencerminkan nilai ...',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'Rela Berkorban',
             'created_at' => \Carbon\Carbon::now(),
@@ -839,7 +839,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Sebagai warga negara Indonesia kita kita harus dapat mengimplementasikan nilai nilai perjuangan para tokoh dalam mempertahankan keutuhan negara dan bangsa Indonesia dengan berupaya mengisi kemerdekaan sesuai dengan beban tugas, potensi dan kemampuan yang kita miliki. Hal ini mencerminkan nilai?',
+            'pertanyaan_kalimat' => 'Sebagai warga negara Indonesia kita kita harus dapat mengimplementasikan nilai nilai perjuangan para tokoh dalam mempertahankan keutuhan negara dan bangsa Indonesia dengan berupaya mengisi kemerdekaan sesuai dengan beban tugas, potensi dan kemampuan yang kita miliki. Hal ini mencerminkan nilai ...',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'Tanggung Jawab',
             'created_at' => \Carbon\Carbon::now(),
@@ -857,7 +857,7 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Pangeran ini berperan besar dalam memimpin Perang Jawa yang terjadi dalam kurun waktu lima tahun, yaitu pada tahun 1825 hingga 1830. Walaupun berakhir dengan kemenangan Belanda, Beliau sempat membuat Belanda mengalami kesulitan dan kerugian akibat gugurnya ribuan serdadu Belanda. Beliau adalah Pangeran?',
+            'pertanyaan_kalimat' => 'Pangeran ini berperan besar dalam memimpin Perang Jawa yang terjadi dalam kurun waktu lima tahun, yaitu pada tahun 1825 hingga 1830. Walaupun berakhir dengan kemenangan Belanda, Beliau sempat membuat Belanda mengalami kesulitan dan kerugian akibat gugurnya ribuan serdadu Belanda. Beliau adalah Pangeran ...',
             'pertanyaan_path_gambar' => '-',
             'kunci_jawaban' => 'Diponegoro',
             'created_at' => \Carbon\Carbon::now(),
