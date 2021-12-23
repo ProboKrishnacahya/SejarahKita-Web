@@ -253,15 +253,10 @@
         <div class="row">
             <div class="col-md-5">
                 <div>
+                    <img src="{{ url('assets/img/universitas_ciputra.png') }}" alt="Logo Universitas Ciputra"
+                        loading="lazy" class="content-img mb-3" />
                     <h2>Universitas Ciputra</h2>
                     <q>Creating World Class <strong>Entrepreneurs</strong></q>
-                    <br><br>
-                    <address>
-                        <a href="https://goo.gl/maps/kcKtWyQcjksTkcy18" target="_blank" rel="noopener noreferrer">
-                            <i
-                                class="bi bi-compass"></i>&emsp;{{ 'Citraland CBD Boulevard, Made, Kec. Sambikerep, Surabaya, Jawa Timur, 60219.' }}
-                        </a>
-                    </address>
                     <a href="https://www.uc.ac.id/" target="_blank" rel="noopener noreferrer">
                         <button class="btn btn-primary mt-5 px-3">
                             <i class="bi bi-globe2"></i>&emsp;{{ __('Kunjungi Situs Web UC') }}

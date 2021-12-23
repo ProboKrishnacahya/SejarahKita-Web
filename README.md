@@ -5,7 +5,7 @@
 Oleh Kelompok 11:
 <ul>    
     <li>
-        <a href="http://bit.ly/vanness-zhong-a">Vanness Zhong Anthony</a> (0706012010010) <a href="https://github.com/vanness7890">@vanness7890</a>
+        <a href="http://bit.ly/vanness-zhong-a">Vanness Zhong Anthony</a> (0706012010010) <a href="https://github.com/vannessza">@vannessza</a>
     </li>
     <li>
         <a href="http://bit.ly/nathanaelabel">Nathanael Abel Arianto</a> (0706012010029) <a href="https://github.com/nathanaelabel">@nathanaelabel</a>
