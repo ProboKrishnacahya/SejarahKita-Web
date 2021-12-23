@@ -11,7 +11,7 @@ class RegisterController extends Controller
 {
     public function register(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
         $this->validate($request, [
             'email' => 'required|email|unique:students,email',
             'password' => 'required|string|min:8|max:20|confirmed',
