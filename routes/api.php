@@ -31,6 +31,13 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::apiResource('leaderboards', LeaderboardController::class);
     Route::apiResource('levels', LevelController::class);
     Route::apiResource('questions', QuestionController::class);
+
+    Route::get('countdown/{level}', [QuestionController::class, 'countdown'])->name('countdown');
+    Route::get('playing-game/{level}', [QuestionController::class, 'playingGame'])->name('playingGame');
+    Route::post('check-answer', [QuestionController::class, 'checkAnswer'])->name('checkAnswer');
+    Route::post('exit-game', [QuestionController::class, 'exitGame'])->name('exitGame');
+    Route::get('score-result', [QuestionController::class, 'exitGame'])->name('scoreResult');
+
     Route::post('logout', [LoginController::class, 'logout']);
 });
 
