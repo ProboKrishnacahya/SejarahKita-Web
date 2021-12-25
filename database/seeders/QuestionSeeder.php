@@ -27,18 +27,18 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 1,
-            'pertanyaan_kalimat' => 'Pada tanggal berapa Peristiwa G30S PKI terjadi?',
+            'pertanyaan_kalimat' => 'Pada tahun berapa Peristiwa G30S PKI terjadi?',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => '30 September 1965',
+            'kunci_jawaban' => '1965',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('sej12_questions')->insert([
             'id_level' => 1,
-            'pertanyaan_kalimat' => 'PKI menyambut “Demokrasi Terpimpin” Sukarno dengan hangat dan anggapan bahwa dia mempunyai mandat untuk persekutuan Konsepsi yaitu antara Nasionalis, Agama dan Komunis yang dinamakan..',
+            'pertanyaan_kalimat' => 'PKI menyambut dengan hangat dan beranggapan bahwa Soekarno mempunyai mandat untuk persekutuan Konsepsi yaitu antara Nasionalis, Agama dan Komunis yang dinamakan NASAKOM pada era ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'NASAKOM',
+            'kunci_jawaban' => 'Demokrasi Terpimpin',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -81,9 +81,9 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 1,
-            'pertanyaan_kalimat' => 'Pemberontakan DI/TII di Sulawesi Selatan yang dipimpin Letnan Kolonel Kahar Muzakkar dilatarbelakangi perbedaan cara pandang antara pemerintah dengan Kahar Muzakar. Hal ini berkaitan dengan dukungan KGSS terhadap kebijakan..',
+            'pertanyaan_kalimat' => 'Pemberontakan DI/TII di Sulawesi Selatan yang dipimpin Letnan Kolonel Kahar Muzakkar dilatarbelakangi perbedaan cara pandang antara pemerintah dengan Kahar Muzakar. Hal ini berkaitan dengan dukungan KGSS terhadap kebijakan Rekonstruksi ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'Rera',
+            'kunci_jawaban' => 'Rasionalisasi',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -126,9 +126,9 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 1,
-            'pertanyaan_kalimat' => 'Nama organisasi semi militer yang dibentuk pada 3 April 1944 dengan tugas mengembalikan pemerintahan sipil dan hukum pemerintah kolonial Hindia Belanda selepas kapitulasi pasukan pendudukan Jepang di wilayah Hindia Belanda seusai Perang Dunia II yaitu Pasukan..',
+            'pertanyaan_kalimat' => 'Setelah Indonesia memproklamasikan kemerdekaan, Belanda lalu mendirikan Netherlands Indies Civil Administration (NICA) atau Pemerintahan Sipil Hindia Belanda untuk membentuk kembali pemerintahan Hindia Belanda dan menjadikan kembali Indonesia sebagai wilayah ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'NICA',
+            'kunci_jawaban' => 'Jajahan',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -171,9 +171,9 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 1,
-            'pertanyaan_kalimat' => 'Sebagai salah satu pahlawan wanita, sangat berjasa dalam memperjuangkan kesetaraan hak kaum perempuan semasa hidupnya. Latar belakang bangsawan tak membuatnya tunduk kepada para penguasa yang konservatif. Beliau adalah..',
+            'pertanyaan_kalimat' => 'Sebagai salah satu pahlawan wanita, sangat berjasa dalam memperjuangkan kesetaraan hak kaum perempuan semasa hidupnya. Latar belakang bangsawan tak membuatnya tunduk kepada para penguasa yang konservatif. Beliau adalah Raden Adjeng ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'R.A. Kartini',
+            'kunci_jawaban' => 'Kartini',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -235,9 +235,9 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Pada tanggal berapa Muso memproklamasikan Republik Soviet Indonesia?',
+            'pertanyaan_kalimat' => 'Pada tahun berapa Muso memproklamasikan Republik Soviet Indonesia?',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => '18 September 1948',
+            'kunci_jawaban' => '1948',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -246,7 +246,7 @@ class QuestionSeeder extends Seeder
             'id_level' => 2,
             'pertanyaan_kalimat' => 'Pada awal pemberontakan PKI membantai rakyat dan tentara dan kaum Santri yang melihat sepak terjang PKI yang sangat membahayakan khususnya bagi..',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'NKRI',
+            'kunci_jawaban' => 'Indonesia',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -262,9 +262,9 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Peristiwa yang biasanya disebut dengan Gerakan 30 September yang merupakan salah satu peristiwa pemberontakan komunis yang terjadi pada bulan September sesudah beberapa tahun Indonesia merdeka adalah peristiwa?',
+            'pertanyaan_kalimat' => 'Peristiwa yang disebut dengan Gerakan 30 September merupakan salah satu peristiwa ... komunis yang terjadi pada bulan September sesudah beberapa tahun Indonesia merdeka.',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'G30S/PKI',
+            'kunci_jawaban' => 'Pemberontakan',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -289,9 +289,9 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Penolakan rencana pembentukan angkatan ke-5 yang dikemukakan oleh?',
+            'pertanyaan_kalimat' => 'Rasa cinta tanah air adalah faktor pendorong yang sangat kuat bagi para tokoh pejuang dalam mempertahankan kemerdekaan. Nilai cinta tanah air yang ditunjukkan oleh para tokoh dapat menimbulkan semangat ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'PKI',
+            'kunci_jawaban' => 'Patriotisme',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -325,36 +325,36 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Setelah bergabung dengan Kartosuwiryo, Amir Fatah kemudian diangkat sebagai komandan pertempuran Jawa Tengah dengan pangkat Mayor Jenderal Tentara Islam Indonesia. Untuk menghancurkan gerakan ini, Januari 1950 dibentuk Komando?',
+            'pertanyaan_kalimat' => 'Setelah bergabung dengan Kartosuwiryo, Amir Fatah kemudian diangkat sebagai komandan pertempuran Jawa Tengah dengan pangkat Mayor Jenderal Tentara Islam Indonesia. Untuk menghancurkan gerakan ini, Januari 1950 dibentuk Komando ... Nusantara',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'Gita Bahana Nusantara',
+            'kunci_jawaban' => 'Gita Bahana',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Organisasi yang berjuang atas nama Umat Islam yang ada di seluruh Indonesia adalah gerakan?',
+            'pertanyaan_kalimat' => 'Organisasi yang berjuang atas nama Umat Islam yang ada di seluruh Indonesia adalah gerakan ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'DI/TII',
+            'kunci_jawaban' => 'Darul Islam',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Gerakan DI/TII yang terjadi di masing-masing daerah mempunyai latar belakang yang berbeda-beda namun pemberontakan ini mempunyai tujuan yang dengan mendirikan negara Islam Indonesia di?',
+            'pertanyaan_kalimat' => 'Pada tanggal 3 November 1945 diterbitkan maklumat pemerintah mengenai pendirian partai partai politik. Sebelum adanya maklumat pemerintah tanggal 3 November 1945, Indonesia merencanakan satu partai tunggal yaitu ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'NKRI',
+            'kunci_jawaban' => 'Partai Nasional Indonesia',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Pemberontakan yang menjadi tragedi politik dan ideologi nasional, tepatnya di masa perjuangan Republik Indonesia dalam mempertahankan kemerdekaan adalah?',
+            'pertanyaan_kalimat' => 'Terbentuknya Kabinet Sjahrir tanggal 14 November 1945 merupakan suatu bentuk penyelewengan pertama pemerintah RI terhadap UUD 1945. Sejak tanggal 14 November 1945 Indonesia menganut sistem pemerintahan ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'APRA',
+            'kunci_jawaban' => 'Parlementer',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -541,9 +541,9 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 2,
-            'pertanyaan_kalimat' => 'Dalam pelaksanaan kongres Pemuda Kedua pada 27-28 Oktober 1928, Beliau ikut terlibat. Untuk pertama kalinya ia memperdengarkan lagu Indonesia Raya dengan iringan gesekan biolanya di depan seluruh peserta kongres sebelum dibacakannya Putusan Kongres Pemuda yang dikenal sebagai Sumpah Pemuda. Siapakah tokoh ini?',
+            'pertanyaan_kalimat' => 'Dalam pelaksanaan kongres Pemuda Kedua pada 27-28 Oktober 1928, Beliau ikut terlibat. Untuk pertama kalinya ia memperdengarkan lagu Indonesia Raya dengan iringan gesekan biolanya di depan seluruh peserta kongres sebelum dibacakannya Putusan Kongres Pemuda yang dikenal sebagai Sumpah Pemuda. Beliau adalah Wage Rudolf ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'W.R. Supratman',
+            'kunci_jawaban' => 'Supratman',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -560,9 +560,9 @@ class QuestionSeeder extends Seeder
         //* Hard
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Peristiwa yang kelam dengan terenggutnya banyak nyawa terutama dari kaum Ulama adalah peristiwa?',
+            'pertanyaan_kalimat' => 'Peristiwa PKI 48 yang kelam dimana terenggutnya banyak nyawa terutama dari kaum ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'PKI 48',
+            'kunci_jawaban' => 'Ulama',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -587,9 +587,9 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Gerakan yang tujuan utamanya untuk menurunkan (mengkudeta) presiden RI pertama, Soekarno agar dapat menguasai Indonesia dan mengubah Indonesia menjadi negara komunis?',
+            'pertanyaan_kalimat' => 'Gerakan G30S/PKI yang tujuan utamanya untuk menurunkan presiden RI pertama, Soekarno agar dapat menguasai Indonesia dan mengubah Indonesia menjadi negara ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'G30S/PKI',
+            'kunci_jawaban' => 'Komunis',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -614,9 +614,9 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Kapankah dilaksanakannya rapat terakhir PKI?',
+            'pertanyaan_kalimat' => 'Naiknya Soeharto sebagai satu-satunya calon presiden RI dalam sidang umum MPR 1998, tidak dapat dipisahkan dari komposisi anggota DPR/MPR yang lebih mengarah pada unsur - unsur ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => '29 september 1965',
+            'kunci_jawaban' => 'Nepotisme',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -632,9 +632,9 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'NII juga dikenal dengan nama Darul Islam yang artinya adalah “Rumah Islam” adalah gerakan politik yang didirikan pada?',
+            'pertanyaan_kalimat' => 'NII juga dikenal dengan nama Darul Islam yang artinya adalah ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => '7 Agustus 1949',
+            'kunci_jawaban' => 'Rumah Islam',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -668,9 +668,9 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Upaya pemerintah dilakukan melalui jalan kooperatif antara lain dengan membuka dialog antara M Hatta dengan kelompok daud Beureuh dan selanjutnya ditindaklanjtuo dengan menyelenggarakan kerukunan Rakyat Aceh pada tanggal 17-28 Desember 1962 Hasil keputusan dalam musyawarah tersebut dituangkan dalam Keputusan Perdana Menteri RI No.1/ Misi/ 1959 tanggal?',
+            'pertanyaan_kalimat' => 'Perubahan yang dilakukan oleh pemerintahan militer Jepang di Indonesia, terutama tampak pada bidang ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => '26 Mei 1959',
+            'kunci_jawaban' => 'Keagamaan',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -679,7 +679,7 @@ class QuestionSeeder extends Seeder
             'id_level' => 3,
             'pertanyaan_kalimat' => 'Siapa pemimpin DI/TII Aceh?',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => 'Daud Beareuh',
+            'kunci_jawaban' => 'Daud Beureueh',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -713,36 +713,36 @@ class QuestionSeeder extends Seeder
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Pada tanggal berapa pemberontakan APRA terjadi?',
+            'pertanyaan_kalimat' => 'Setelah Indonesia memproklamasikan kemerdekaannya pada 17 Agustus 1945, berbagai peristiwa ingin merebut kembali kedaulatan Indonesia oleh penjajah pun terjadi. Belanda ingin kembali menguasai Indonesia setelah Jepang dikalahkan oleh ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => '23 Januari 1950',
+            'kunci_jawaban' => 'Sekutu',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Pada tanggal berapa peristiwa Andi Aziz terjadi?',
+            'pertanyaan_kalimat' => 'Pada tanggal 15 April 1950 peristiwa pemberontakan terjadi di Makassar, peristiwa apakah itu?',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => '15 April 1950',
+            'kunci_jawaban' => 'Andi Azis',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Pada tgl berapa PRRI berdiri?',
+            'pertanyaan_kalimat' => 'Peristiwa penculikan terhadap Soekarno dan Hatta oleh golongan muda yang terjadi pada 16 Agustus 1945 disebut peristiwa ...',
             'pertanyaan_path_gambar' => '-',
-            'kunci_jawaban' => '15 Februari 1958',
+            'kunci_jawaban' => 'Rengasdengklok',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('sej12_questions')->insert([
             'id_level' => 3,
-            'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, menyatakan Kesultanan Yogyakarta sebagai bagian dari RI (dalam Amanat 5 September 1945). Sebelumnya, Belanda menawarkan beliau menjadi Raja Jawa jika tidak bergabung dengan RI. Beliau adalah Sultan ...',
+            'pertanyaan_kalimat' => 'Tokoh pejuang yang berperan dalam mempertahankan NKRI, menyatakan Kesultanan Yogyakarta sebagai bagian dari RI (dalam Amanat 5 September 1945). Sebelumnya, Belanda menawarkan beliau menjadi Raja Jawa jika tidak bergabung dengan RI. Beliau adalah Sultan ... IX',
             'pertanyaan_path_gambar' => 'pertanyaan_path_gambar/Hamengkubuwono_IX.jpg',
-            'kunci_jawaban' => 'Hamengkubowono IX',
+            'kunci_jawaban' => 'Hamengkubowono',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
