@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Leaderboard;
 use App\Models\Question;
 use App\Models\Student;
+use App\Models\LogApps;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,7 +21,6 @@ class LeaderboardController extends Controller
         $active_leaderboard = "active";
         $user = Student::find(Auth::user()->id);
         $leaderboards = Leaderboard::all();
-
         return view('leaderboard', compact('active_leaderboard', 'user', 'leaderboards'));
     }
 

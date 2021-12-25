@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\LogApps;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -39,7 +40,7 @@ class HomeController extends Controller
     public function adminHome()
     {
         $user = Student::find(Auth::user()->id);
-
         return view('home', compact('user'));
     }
+
 }
