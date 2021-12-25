@@ -55,6 +55,15 @@ class LeaderboardController extends Controller
     {
         // Menunjukkan pertanyaan kepada student untuk dijawab
         $questions = Question::findOrFail($id);
+
+        LogApps::create([
+            "table" => "Leaderboard",
+            "id_user" => Auth::user()->id,
+            "log_path" => "LeaderboardController@show",
+            "log_desc" => "Show Leaderboard",
+            "log_ip" => "192.178.1.1",
+        ]);
+
         return view('questionView', compact('questions'));
     }
 

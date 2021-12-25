@@ -8,6 +8,7 @@ use App\Models\LogApps;
 use App\Providers\RouteServiceProvider;
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -91,6 +92,14 @@ class RegisterController extends Controller
             'role' => 'user',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
+        ]);
+
+        LogApps::create([
+            "table" => "Register",
+            "id_user" => Auth::user()->id,
+            "log_path" => "RegisterController@create",
+            "log_desc" => "Create Register",
+            "log_ip" => "192.178.1.1",
         ]);
     }
 }

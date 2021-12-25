@@ -49,6 +49,7 @@ class LevelController extends Controller
     public function show($id)
     {
         $levels = Level::findOrFail($id);
+        
         return view('levelView', compact('levels'));
     }
 

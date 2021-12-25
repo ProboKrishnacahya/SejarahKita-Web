@@ -53,7 +53,13 @@ class QuestionController extends Controller
             'pertanyaan_path_gambar' => $request->file('pertanyaan_path_gambar')->store('pertanyaan_path_gambar'),
             'kunci_jawaban' => $request->kunci_jawaban
         ]);
-
+        LogApps::create([
+            "table" => "Question",
+            "id_user" => Auth::user()->id,
+            "log_path" => "QuestionController@store",
+            "log_desc" => "Create Question",
+            "log_ip" => "192.178.1.1",
+        ]);
         return redirect(url('admin/profile/question'));
     }
 
@@ -66,7 +72,13 @@ class QuestionController extends Controller
     public function show($id)
     {
         $question = Question::findOrFail($id);
-
+        LogApps::create([
+            "table" => "Question",
+            "id_user" => Auth::user()->id,
+            "log_path" => "QuestionController@show",
+            "log_desc" => "Show Question",
+            "log_ip" => "192.178.1.1",
+        ]);
         return view('admin.questionView', compact('question'));
     }
 
@@ -108,6 +120,14 @@ class QuestionController extends Controller
             'kunci_jawaban' => $request->kunci_jawaban
         ]);
 
+        LogApps::create([
+            "table" => "Question",
+            "id_user" => Auth::user()->id,
+            "log_path" => "QuestionController@update",
+            "log_desc" => "Update Question",
+            "log_ip" => "192.178.1.1",
+        ]);
+
         return redirect(url('admin/profile/question'));
     }
 
@@ -120,6 +140,15 @@ class QuestionController extends Controller
     public function destroy($id)
     {
         $questions = Question::findOrFail($id);
+
+        LogApps::create([
+            "table" => "Question",
+            "id_user" => Auth::user()->id,
+            "log_path" => "QuestionController@destroy",
+            "log_desc" => "Delete Question",
+            "log_ip" => "192.178.1.1",
+        ]);
+
         $questions->delete();
 
         if ($questions->pertanyaan_path_gambar) {

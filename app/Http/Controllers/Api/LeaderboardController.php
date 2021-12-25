@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\LeaderboardResource;
 use App\Models\Leaderboard;
+use App\Models\LogApps;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class LeaderboardController extends Controller
@@ -55,6 +57,13 @@ class LeaderboardController extends Controller
     public function show($id)
     {
         $leaderboards = Leaderboard::findOrFail($id);
+        LogApps::create([
+            "table" => "Leaderboard",
+            "id_user" => Auth::user()->id,
+            "log_path" => "LeaderboardController@show",
+            "log_desc" => "Show Leaderboard",
+            "log_ip" => "192.178.1.1",
+        ]);
         return ['leaderboards' => LeaderboardResource::collection($leaderboards)];
     }
 
@@ -79,7 +88,7 @@ class LeaderboardController extends Controller
     public function update(Request $request, $id)
     {
         $leaderboards = Leaderboard::findOrFail($id);
-        
+
         $leaderboards->update([
             'id_student' => $request->id_student,
             'ranked_point' => $request->ranked_point

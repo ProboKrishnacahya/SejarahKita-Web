@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\StudentResource;
+use Illuminate\Support\Facades\Auth;
+use App\Models\LogApps;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -46,6 +48,14 @@ class StudentController extends Controller
             'school' => $request->school,
             'city' => $request->city,
             'birthyear' => $request->birthyear
+        ]);
+
+        LogApps::create([
+            "table" => "Student",
+            "id_user" => Auth::user()->id,
+            "log_path" => "StudentController@show",
+            "log_desc" => "Create Student",
+            "log_ip" => "192.178.1.1",
         ]);
 
         return ['message' => 'data has been saved'];
