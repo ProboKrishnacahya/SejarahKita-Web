@@ -172,11 +172,6 @@ class QuestionController extends Controller
         return false;
     }
 
-    // public function goToScoreResult()
-    // {
-    //     return view('scoreResult');
-    // }
-
     public function exitGame()
     {
         Session::forget('game');

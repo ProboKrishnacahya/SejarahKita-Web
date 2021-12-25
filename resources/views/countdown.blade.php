@@ -1,4 +1,4 @@
-@extends('layout.sejarahKita')
+@extends('layout.hideNavigationBar')
 
 @section('title', 'Countdown Timer')
 
@@ -42,7 +42,4 @@
         }
         countDown()
     </script>
-
-    {{-- Menghilangkan tampilan Navigation Bar --}}
-    <script src="{{ url('/assets/js') }}/hideNavigationBar.js"></script>
 @endsection

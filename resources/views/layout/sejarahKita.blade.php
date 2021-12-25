@@ -49,7 +49,7 @@
     <link rel="stylesheet" href="{{ url('assets/css/style.css') }}" type="text/css" />
 
     {{-- Tab Page Favicon --}}
-    <link rel="icon" href="{{ url('assets/img/favicon.png?v=2') }}" type="image/png" />
+    <link rel="icon" href="{{ url('assets/img/favicon.ico?v=2') }}" type="image/ico" />
 
     {{-- Tab Page Title --}}
     <title>@yield('title')</title>
@@ -57,11 +57,11 @@
 
 <body class="d-flex flex-column h-100 text-white">
     {{-- Web's Header --}}
-    <nav class="navbar navbar-dark navbar-expand-lg py-3 user-select-none" id="hideHeader">
+    <nav class="navbar navbar-dark navbar-expand-lg py-3 user-select-none">
         <div class="container">
             <a class="navbar-brand" href="{{ route('user') }}" data-bs-toggle="tooltip" data-bs-placement="bottom"
                 title="Homepage">
-                <img src="{{ url('assets/img/logo.png') }}" alt="Logo" class="nav-logo pe-3">
+                <img src="{{ url('assets/img/logo.svg') }}" alt="Logo" class="nav-logo pe-2">
                 <span class="nav-brand">SejarahKita</span>
             </a>
             <button class="navbar-toggler collapsed border-0" type="button" data-bs-toggle="collapse"

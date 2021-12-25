@@ -1,4 +1,4 @@
-@extends('layout.sejarahKita')
+@extends('layout.hideNavigationBar')
 
 @section('title', 'Play Game')
 
