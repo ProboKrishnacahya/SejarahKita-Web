@@ -14,7 +14,7 @@
     <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
             <div class="card">
-                <form action="{{ route('question.update', $questions->id_question) }}" method="post"
+                <form action="{{ route('question.update', $questions->id_question) }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="_method" value="PATCH">

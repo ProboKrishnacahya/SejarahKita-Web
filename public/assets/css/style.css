@@ -10,7 +10,7 @@ footer {
     background-color: var(--footer);
 }
 
-/** Blade Components */
+/** HyperText Markup Language - Blade Components & Library Tag */
 h1,
 h2,
 h3 {
@@ -86,6 +86,11 @@ iframe {
     border-radius: 5px;
 }
 
+lottie-player {
+    margin: auto;
+    object-fit: cover;
+}
+
 /** Pseudo-elements */
 ::-webkit-scrollbar {
     height: 0.625rem;
@@ -158,9 +163,10 @@ a:hover,
 }
 
 .btn-primary:hover,
-.nav-logo:hover,
+.navbar-brand:hover,
+.developer:hover,
 .scrollToTopBtn:hover {
-    filter: brightness(115%);
+    filter: brightness(115%) !important;
 }
 
 button:active,
@@ -384,10 +390,6 @@ select:focus-visible {
     color: var(--button-secondary) !important;
 }
 
-.dropdown-menu {
-    background-color: var(--card-secondary) !important;
-}
-
 .dropdown-item {
     font-weight: 600;
     color: var(--text-primary);
@@ -399,8 +401,8 @@ select:focus-visible {
 
 .content-img,
 .question-img {
-    max-width: 50%;
-    max-height: 15rem;
+    max-width: 50% !important;
+    max-height: 15rem !important;
 }
 
 .question-img {
@@ -431,6 +433,24 @@ select,
 .form-check-input,
 .form-check-label {
     cursor: pointer;
+}
+
+.middle,
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.middle {
+    width: 75% !important;
+
+}
+
+.center {
+    width: 100% !important;
+    padding: 0 5rem;
 }
 
 .truncate {
@@ -542,6 +562,10 @@ select,
 
 .profile {
     width: 30%;
+}
+
+.profile,
+.mascot {
     border-radius: 50%;
     border: solid 5px var(--button-secondary);
     background-color: var(--card-secondary);

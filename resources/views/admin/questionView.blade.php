@@ -24,10 +24,14 @@
             </strong>
         </div>
     </div>
-
-    <img src="{{ asset('storage/' . $question->pertanyaan_path_gambar) }}" id="output"
-        class="question-img mx-auto shadow-sm mt-4 mx-auto d-block" onclick="showImage()" data-aos="fade-up" />
-
+    <div class="mt-3 text-white-50" data-aos="fade-up">
+        @if ($question->pertanyaan_path_gambar == '-')
+            <i class="bi bi-info-circle"></i>&emsp;<span><strong>ID Question {{ $question->id_question }}</strong> ini tidak memiliki gambar.</span>
+        @else
+            <img src="{{ asset('storage/' . $question->pertanyaan_path_gambar) }}" id="output"
+                class="question-img mx-auto shadow-sm mb-4 mx-auto d-block" onclick="showImage()" />
+        @endif
+    </div>
     {{-- Tampilkan Preview Image & File Name nya setelah klik 'Pilih File' --}}
     <script src="{{ url('/assets/js/imagePreview.js') }}"></script>
 @endsection

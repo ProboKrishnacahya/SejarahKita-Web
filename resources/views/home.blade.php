@@ -3,8 +3,8 @@
 @section('title', 'SejarahKita')
 
 @section('content')
-    <div class="row mb-5 pb-5" data-aos="fade-up">
-        <div class="col-md-6 align-self-center">
+    <div class="row" data-aos="fade-up">
+        <div class="col-6 align-self-center">
             <div class="mb-5 pb-5">
                 <span class="fs-3">Mari Berlatih <strong>Sejarah Indonesia</strong></span>
                 <p class="fs-1">Bersama <a href="{{ url('/') }}"><span
@@ -23,11 +23,11 @@
             </a>
         </div>
 
-        <div class="col-md-2"></div>
+        <div class="col-2"></div>
 
-        <div class="col-md-4 d-none d-sm-block">
-            <img src="https://static.vecteezy.com/system/resources/previews/002/406/486/non_2x/an-intelligent-and-proud-owl-with-a-graduation-cap-free-vector.jpg"
-                alt="Jumbotron" loading="lazy" class="jumbotron-img" />
+        <div class="col-4 d-none d-sm-block">
+            <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_1LAwTY.json" background="transparent"
+                speed="0.75" style="width: 100%; height: auto;" class="mascot pe-3" loop autoplay></lottie-player>
         </div>
     </div>
 
@@ -123,8 +123,8 @@
         <div class="row row-cols-1 row-cols-md-4">
             <div class="col">
                 <div class="card">
-                    <img src="https://media-exp1.licdn.com/dms/image/C4E03AQF-u1y1m-rmxQ/profile-displayphoto-shrink_400_400/0/1632289194582?e=1645056000&v=beta&t=KLzww_viTRL6r4L1PuKI-A_OJ9T26hFRMgfW7dUckq8"
-                        alt="Vanness Zhong Anthony" loading="lazy" class="img-fluid mx-auto d-block rounded-circle p-2" />
+                    <img src="{{ url('assets/img/vanness_zhong_anthony.svg') }}" alt="Vanness Zhong Anthony"
+                        loading="lazy" class="developer img-fluid mx-auto d-block p-2" />
                     <strong class="text-center my-2">
                         <a href="https://www.linkedin.com/in/vanness-zhong-8aa102221/" target="_blank"
                             rel="noopener noreferrer">Vanness Zhong Anthony</a>
@@ -154,8 +154,8 @@
 
             <div class="col">
                 <div class="card">
-                    <img src="https://media-exp1.licdn.com/dms/image/C4E03AQEvAhmlXXmPPg/profile-displayphoto-shrink_400_400/0/1631694992395?e=1645056000&v=beta&t=f5ZHRs3raI1L5gye5ohgO7RSRAIhhHgp-nWSrdQHQug"
-                        alt="Nathanael Abel Arianto" loading="lazy" class="img-fluid mx-auto d-block rounded-circle p-2" />
+                    <img src="{{ url('assets/img/nathanael_abel_arianto.svg') }}" alt="Nathanael Abel Arianto"
+                        loading="lazy" class="developer img-fluid mx-auto d-block p-2" />
                     <strong class="text-center my-2">
                         <a href="https://www.linkedin.com/in/nathanael-abel-arianto-61aa73211/" target="_blank"
                             rel="noopener noreferrer">Nathanael Abel Arianto</a>
@@ -185,8 +185,8 @@
 
             <div class="col">
                 <div class="card">
-                    <img src="https://d33wubrfki0l68.cloudfront.net/13c862a9a09c29bfded6d7423940df84997e1d74/56952/assets/img/pk.png"
-                        alt="Probo Krishnacahya" loading="lazy" class="img-fluid mx-auto d-block p-2" />
+                    <img src="{{ url('assets/img/probo_krishnacahya.svg') }}" alt="Probo Krishnacahya" loading="lazy"
+                        class="developer img-fluid mx-auto d-block p-2" />
                     <strong class="text-center my-2">
                         <a href="https://www.linkedin.com/in/probo-krishnacahya/" target="_blank"
                             rel="noopener noreferrer">Probo Krishnacahya</a>
@@ -216,8 +216,8 @@
 
             <div class="col">
                 <div class="card">
-                    <img src="https://media-exp1.licdn.com/dms/image/C4E03AQE-Y9V0uVIyGQ/profile-displayphoto-shrink_400_400/0/1632552544258?e=1645056000&v=beta&t=ets_CSGRnaHxLoAahcgUyqc1mUBTXqOAjgPtCeagZ18"
-                        alt="Michael Chandra" loading="lazy" class="img-fluid mx-auto d-block rounded-circle p-2" />
+                    <img src="{{ url('assets/img/michael_chandra.svg') }}" alt="Michael Chandra" loading="lazy"
+                        class="developer img-fluid mx-auto d-block p-2" />
                     <strong class="text-center my-2">
                         <a href="https://www.linkedin.com/in/michael-chandra-330/" target="_blank"
                             rel="noopener noreferrer">Michael Chandra</a>

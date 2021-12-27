@@ -54,14 +54,17 @@
 
 <body class="d-flex flex-column h-100 text-white">
     {{-- Web's Content --}}
-    <main class="my-5 flex-shrink-0">
-        <div class="container">@yield('content')</div>
+    <main class=" flex-shrink-0">
+        <div class="my-5 container">@yield('content')</div>
     </main>
 
     {{-- External JavaScript --}}
     <script src="{{ url('/assets/js/script.js') }}"></script>
     <script src="{{ url('/assets/js/libraries.js') }}"></script>
     <script src="{{ url('/assets/js/dataTables.js') }}"></script>
+
+    {{-- JavaScript Object Notation Library (Lottie Animation) --}}
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 
 </html>

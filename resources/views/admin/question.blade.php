@@ -32,7 +32,13 @@
             @php $index = 1 @endphp
             @foreach ($questions as $question)
                 <tr>
-                    <td scope="row" class="fw-bold text-center">{{ $index }}</td>
+                    <td scope="row" class="fw-bold text-center">
+                        @if ($question->pertanyaan_path_gambar == '-')
+                            <span class="text-white">{{ $index }}</span>
+                        @else
+                            <span class="badge bg-primary fs-6">{{ $index }}</span>
+                        @endif
+                    </td>
                     @php $index++ @endphp
                     <td>{{ $question->levels->jenis_level }}</td>
                     <td><span class="truncate">{{ $question->pertanyaan_kalimat }}</span></td>

@@ -86,7 +86,16 @@
         @endif
     </div>
 
-    <div class="card illustration-card mt-5 p-4">
+    <div class="mt-5 mb-3">
+        @if ($soal->pertanyaan_path_gambar == '-')
+            <span></span>
+        @else
+            <img src="{{ asset('storage/' . $soal->pertanyaan_path_gambar) }}"
+                class="question-img mx-auto shadow-sm mx-auto d-block" />
+        @endif
+    </div>
+
+    <div class="card illustration-card p-4">
         {{ $soal->pertanyaan_kalimat }}
     </div>
 
@@ -120,7 +129,4 @@
             </button>
         </div>
     </form>
-
-    {{-- Menghilangkan tampilan Navigation Bar --}}
-    <script src="{{ url('/assets/js') }}/hideNavigationBar.js"></script>
 @endsection

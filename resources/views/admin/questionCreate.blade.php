@@ -14,7 +14,7 @@
     <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
             <div class="card">
-                <form action="{{ route('question.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('question.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card-header text-center pb-3">
                         <h2>Tambah Pertanyaan</h2>
