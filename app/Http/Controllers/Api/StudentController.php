@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Http\Resources\StudentResource;
-use Illuminate\Support\Facades\Auth;
 use App\Models\LogApps;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\StudentResource;
+use App\Http\Controllers\Auth\InternetProtocolAddressController;
 
 class StudentController extends Controller
 {
@@ -50,12 +51,13 @@ class StudentController extends Controller
             'birthyear' => $request->birthyear
         ]);
 
+        $ip = new InternetProtocolAddressController;
         LogApps::create([
-            "table" => "Student",
             "id_user" => Auth::user()->id,
+            "log_table" => "Students",
             "log_path" => "StudentController@show",
-            "log_desc" => "Create Student",
-            "log_ip" => "192.178.1.1",
+            "log_desc" => "Create new student",
+            "log_ip" => $ip->getIPAddress()
         ]);
 
         return ['message' => 'data has been saved'];

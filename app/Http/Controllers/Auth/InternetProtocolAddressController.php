@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class IPAdressController extends Controller
+class InternetProtocolAddressController extends Controller
 {
-    public function get_ip_address()
+    public function getIPAddress()
     {
         foreach (array('HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_FORWARDED', 'HTTP_X_CLUSTER_CLIENT_IP', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED', 'REMOTE_ADDR') as $key) {
             if (array_key_exists($key, $_SERVER) === true) {

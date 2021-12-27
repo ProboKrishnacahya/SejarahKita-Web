@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Http\Resources\PlayingHistoryResource;
-use App\Models\PlayingHistory;
 use App\Models\LogApps;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\PlayingHistory;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\PlayingHistoryResource;
+use App\Http\Controllers\Auth\InternetProtocolAddressController;
 
 class PlayingHistoryController extends Controller
 {
@@ -52,13 +53,16 @@ class PlayingHistoryController extends Controller
     public function show($id)
     {
         $playinghistories = PlayingHistory::findOrFail($id);
+
+        $ip = new InternetProtocolAddressController;
         LogApps::create([
-            "table" => "Playing History",
             "id_user" => Auth::user()->id,
+            "table" => "sej12_playing_history",
             "log_path" => "PlayingHistoryController@show",
             "log_desc" => "Show Playing History",
-            "log_ip" => "192.178.1.1",
+            "log_ip" => $ip->getIPAddress()
         ]);
+
         return ['playinghistories' => PlayingHistoryResource::collection($playinghistories)];
     }
 

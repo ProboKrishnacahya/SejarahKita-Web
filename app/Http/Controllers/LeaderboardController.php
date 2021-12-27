@@ -8,6 +8,7 @@ use App\Models\Student;
 use App\Models\LogApps;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\InternetProtocolAddressController;
 
 class LeaderboardController extends Controller
 {
@@ -21,6 +22,16 @@ class LeaderboardController extends Controller
         $active_leaderboard = "active";
         $user = Student::find(Auth::user()->id);
         $leaderboards = Leaderboard::all();
+
+        $ip = new InternetProtocolAddressController;
+        LogApps::create([
+            "id_user" => Auth::user()->id,
+            "log_table" => "sej12_leaderboard",
+            "log_path" => "LeaderboardController@show",
+            "log_desc" => "Index of Leaderboard",
+            "log_ip" =>  $ip->getIPAddress()
+        ]);
+
         return view('leaderboard', compact('active_leaderboard', 'user', 'leaderboards'));
     }
 
@@ -55,14 +66,6 @@ class LeaderboardController extends Controller
     {
         // Menunjukkan pertanyaan kepada student untuk dijawab
         $questions = Question::findOrFail($id);
-
-        LogApps::create([
-            "table" => "Leaderboard",
-            "id_user" => Auth::user()->id,
-            "log_path" => "LeaderboardController@show",
-            "log_desc" => "Show Leaderboard",
-            "log_ip" => "192.178.1.1",
-        ]);
 
         return view('questionView', compact('questions'));
     }

@@ -14,8 +14,8 @@ class LogApps extends Model
     protected $primaryKey = 'id_log';
 
     protected $fillable = [
-        'table',
         'id_user',
+        'log_table',
         'log_path',
         'log_desc',
         'log_ip'

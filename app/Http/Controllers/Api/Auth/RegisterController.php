@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Api\Auth;
 
-use App\Models\Student;
 use App\Models\LogApps;
+use App\Models\Student;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Controllers\Auth\InternetProtocolAddressController;
 
 class RegisterController extends Controller
 {
@@ -51,12 +52,14 @@ class RegisterController extends Controller
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
+
+        $ip = new InternetProtocolAddressController;
         LogApps::create([
-            "table" => "Register",
             "id_user" => Auth::user()->id,
+            "log_table" => "students",
             "log_path" => "RegisterController@create",
-            "log_desc" => "Create Register",
-            "log_ip" => "192.178.1.1",
+            "log_desc" => "Register new student",
+            "log_ip" => $ip->getIPAddress()
         ]);
     }
 }

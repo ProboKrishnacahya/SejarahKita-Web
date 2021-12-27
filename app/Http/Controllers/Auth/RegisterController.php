@@ -94,12 +94,13 @@ class RegisterController extends Controller
             'updated_at' => Carbon::now()
         ]);
 
+        $ip = new InternetProtocolAddressController;
         LogApps::create([
-            "table" => "Register",
             "id_user" => Auth::user()->id,
+            "log_table" => "students",
             "log_path" => "RegisterController@create",
-            "log_desc" => "Create Register",
-            "log_ip" => "192.178.1.1",
+            "log_desc" => "Register new student",
+            "log_ip" => $ip->getIPAddress()
         ]);
     }
 }

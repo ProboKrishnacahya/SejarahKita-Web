@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Level;
-use App\Models\Question;
 use App\Models\LogApps;
+use App\Models\Question;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Auth\InternetProtocolAddressController;
 
 //* Controller untuk melakukan CRUD yang hanya bisa diakses oleh Admin.
 
@@ -47,19 +49,23 @@ class QuestionController extends Controller
         // $this->validate($request,[
         //     'image'=>'image|file|max:1024'
         // ]);
+
         Question::create([
             'id_level' => $request->id_level,
             'pertanyaan_kalimat' => $request->pertanyaan_kalimat,
             'pertanyaan_path_gambar' => $request->file('pertanyaan_path_gambar')->store('pertanyaan_path_gambar'),
             'kunci_jawaban' => $request->kunci_jawaban
         ]);
+
+        $ip = new InternetProtocolAddressController;
         LogApps::create([
-            "table" => "Question",
             "id_user" => Auth::user()->id,
+            "log_table" => "sej12_question",
             "log_path" => "QuestionController@store",
-            "log_desc" => "Create Question",
-            "log_ip" => "192.178.1.1",
+            "log_desc" => "Create New Question",
+            "log_ip" => $ip->getIPAddress()
         ]);
+
         return redirect(url('admin/profile/question'));
     }
 
@@ -72,13 +78,16 @@ class QuestionController extends Controller
     public function show($id)
     {
         $question = Question::findOrFail($id);
+
+        $ip = new InternetProtocolAddressController;
         LogApps::create([
-            "table" => "Question",
             "id_user" => Auth::user()->id,
+            "log_table" => "sej12_question",
             "log_path" => "QuestionController@show",
-            "log_desc" => "Show Question",
-            "log_ip" => "192.178.1.1",
+            "log_desc" => "Show Details of id_question: " . $id,
+            "log_ip" => $ip->getIPAddress()
         ]);
+
         return view('admin.questionView', compact('question'));
     }
 
@@ -120,12 +129,13 @@ class QuestionController extends Controller
             'kunci_jawaban' => $request->kunci_jawaban
         ]);
 
+        $ip = new InternetProtocolAddressController;
         LogApps::create([
-            "table" => "Question",
             "id_user" => Auth::user()->id,
+            "log_table" => "sej12_question",
             "log_path" => "QuestionController@update",
-            "log_desc" => "Update Question",
-            "log_ip" => "192.178.1.1",
+            "log_desc" => "Update id_question: " . $id,
+            "log_ip" => $ip->getIPAddress()
         ]);
 
         return redirect(url('admin/profile/question'));
@@ -141,12 +151,13 @@ class QuestionController extends Controller
     {
         $questions = Question::findOrFail($id);
 
+        $ip = new InternetProtocolAddressController;
         LogApps::create([
-            "table" => "Question",
             "id_user" => Auth::user()->id,
+            "log_table" => "sej12_question",
             "log_path" => "QuestionController@destroy",
-            "log_desc" => "Delete Question",
-            "log_ip" => "192.178.1.1",
+            "log_desc" => "Delete id_question: " . $id,
+            "log_ip" => $ip->getIPAddress()
         ]);
 
         $questions->delete();

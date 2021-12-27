@@ -20,7 +20,7 @@ class GameController extends Controller
     public function index()
     {
         $active_game = "active";
-
+        
         return view('game', compact('active_game'));
     }
 

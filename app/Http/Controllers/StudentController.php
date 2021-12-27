@@ -21,14 +21,6 @@ class StudentController extends Controller
     {
         $user = Student::find(Auth::user()->id);
 
-        LogApps::create([
-            "table" => "Student",
-            "id_user" => Auth::user()->id,
-            "log_path" => "StudentController@show",
-            "log_desc" => "Show Student",
-            "log_ip" => "192.178.1.1",
-        ]);
-        
         return view('playingHistory', compact('user'));
     }
 

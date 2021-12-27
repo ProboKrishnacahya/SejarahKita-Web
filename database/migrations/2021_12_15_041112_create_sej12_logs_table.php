@@ -15,13 +15,13 @@ class CreateSej12LogsTable extends Migration
     {
         Schema::create('sej12_logs', function (Blueprint $table) {
             $table->id('id_log');
-            $table->string('table');
             $table->foreignId('id_user')
                 ->references('id')
                 ->on('students')
                 ->constrained()
                 ->cascadeOnDelete()
                 ->cascadeOnUpdate();
+            $table->string('log_table');
             $table->string('log_path');
             $table->text('log_desc');
             $table->string('log_ip');

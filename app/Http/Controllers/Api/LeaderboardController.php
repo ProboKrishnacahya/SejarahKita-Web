@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Http\Resources\LeaderboardResource;
-use App\Models\Leaderboard;
 use App\Models\LogApps;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Leaderboard;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\LeaderboardResource;
+use App\Http\Controllers\Auth\InternetProtocolAddressController;
 
 class LeaderboardController extends Controller
 {
@@ -19,6 +20,16 @@ class LeaderboardController extends Controller
     public function index()
     {
         $leaderboards = Leaderboard::all();
+
+        $ip = new InternetProtocolAddressController;
+        LogApps::create([
+            "id_user" => Auth::user()->id,
+            "log_table" => "sej12_leaderboard",
+            "log_path" => "LeaderboardController@show",
+            "log_desc" => "Index of Leaderboard",
+            "log_ip" =>  $ip->getIPAddress()
+        ]);
+
         return ['leaderboards' => LeaderboardResource::collection($leaderboards)];
     }
 
@@ -57,13 +68,7 @@ class LeaderboardController extends Controller
     public function show($id)
     {
         $leaderboards = Leaderboard::findOrFail($id);
-        LogApps::create([
-            "table" => "Leaderboard",
-            "id_user" => Auth::user()->id,
-            "log_path" => "LeaderboardController@show",
-            "log_desc" => "Show Leaderboard",
-            "log_ip" => "192.178.1.1",
-        ]);
+
         return ['leaderboards' => LeaderboardResource::collection($leaderboards)];
     }
 
