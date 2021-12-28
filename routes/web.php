@@ -42,6 +42,7 @@ Route::middleware(['auth'])->group(function () {
     Route::middleware(['admin'])->group(function () {
         Route::get('admin/profile', [AdminController::class, 'edit'])->name('admin.profile');
         Route::resource('admin/profile/question', QuestionController::class);
+        Route::get('admin/profile/log', [AdminController::class, 'show'])->name('admin.profile.log');
         Route::resource('level', LevelController::class);
         // Route::get('', [AdminController::class, 'index']);
     });
