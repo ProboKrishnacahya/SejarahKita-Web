@@ -42,8 +42,10 @@
                     <b>{{ $loop->iteration }}</b>
                 </td>
                 <td>
-                    {{ $mudah->id_student }}
+                    {{ $mudah->students->id_student }}
+                    {{ $mudah->students->username }}
                 </td>
+
                 <td>
                     {{ $mudah->skor }}
                 </td>
