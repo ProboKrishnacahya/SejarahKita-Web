@@ -53,4 +53,41 @@
         @endforeach
     </table>
 </div>
+
+<div class="card my-5 px-4 pb-4" data-aos="fade-up">
+    <div class="card-header d-flex align-items-center mb-3">
+        <h4 class="hard-text me-auto user-select-none">Level Hard</h4>
+        <div class="card-wrap hard-bg rounded-3 mb-2 px-3 pt-2">
+            <img src="{{ url('assets/img/fg_hard.png') }}" alt="" class="rankedPointTerkini-bg">
+            <div class="rankedPointTerkini-content">
+                    {{-- <h3>{{ $students->getEasyRankedPoint() }} RP</h3> --}}
+            </div>
+        </div>
+    </div>
+    <table class=" table py-3">
+        <thead class="text-black">
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Username</th>
+                <th scope="col">Ranked Point</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($hard as $susah)
+            <tr>
+                <td>
+                    <b>{{ $loop->iteration }}</b>
+                </td>
+                <td>
+                    {{ $susah->students->id_student }}
+                    {{ $susah->students->username }}
+                </td>
+
+                <td>
+                    {{ $susah->skor }}
+                </td>
+            </tr>
+        @endforeach
+    </table>
+</div>
 @endsection
