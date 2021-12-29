@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-100">
 
 <head>
-    {{-- HTML Meta Tags --}}
+    {{-- HyperText Markup Language Meta Tags --}}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
     <meta name="robots" content="home, follow" />
     <meta name="theme-color" content="#020E3A">
 
-    {{-- Laravel CSRF Token --}}
+    {{-- Laravel Framework CSRF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- Bootstrap Framework Content Delivery Network (Cascading Style Sheets, Icon Fonts, JavaScript Bundle with Popper) --}}
@@ -25,14 +25,12 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 
-    {{-- jQuery Content Delivery Network --}}
+    {{-- jQuery Library Content Delivery Network --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    {{-- jQuery Plugin (DataTables) --}}
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    {{-- jQuery Library's Plugin (DataTables) --}}
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.js"></script>
@@ -190,9 +188,9 @@
     </footer>
 
     {{-- External JavaScript --}}
-    <script src="{{ url('/assets/js/script.js') }}"></script>
-    <script src="{{ url('/assets/js/libraries.js') }}"></script>
-    <script src="{{ url('/assets/js/dataTables.js') }}"></script>
+    <script src="{{ url('/assets/js/script.js') }}" type="text/javascript"></script>
+    <script src="{{ url('/assets/js/libraries.js') }}" type="text/javascript"></script>
+    <script src="{{ url('/assets/js/dataTables.js') }}" type="text/javascript"></script>
 
     {{-- JavaScript Object Notation Library (Lottie Animation) --}}
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

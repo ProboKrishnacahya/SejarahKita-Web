@@ -61,19 +61,19 @@
     <div data-aos="fade-up">
         <div id="carouselExample" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active p-1"
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active p-0"
                     aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"
-                    class="p-1"></button>
+                    class="p-0"></button>
                 <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"
-                    class="p-1"></button>
+                    class="p-0"></button>
                 <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"
-                    class="p-1"></button>
+                    class="p-0"></button>
             </div>
             <div class="carousel-inner bg-dark">
                 <div class="card-header text-center fw-bold fs-5 py-4">{{ 'Cara Bermain' }}</div>
                 <div class="carousel-item py-3 active">
-                    <img src="{{ url('assets/img/logo.png') }}" alt="Carousel" loading="lazy"
+                    <img src="{{ url('assets/img/favicon.ico') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
                     <div class="carousel-caption">
                         <h5>First slide label</h5>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="carousel-item py-3">
-                    <img src="{{ url('assets/img/logo.png') }}" alt="Carousel" loading="lazy"
+                    <img src="{{ url('assets/img/favicon.ico') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
                     <div class="carousel-caption">
                         <h5>Second slide label</h5>
@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <div class="carousel-item py-3">
-                    <img src="{{ url('assets/img/logo.png') }}" alt="Carousel" loading="lazy"
+                    <img src="{{ url('assets/img/favicon.ico') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
                     <div class="carousel-caption">
                         <h5>Third slide label</h5>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <div class="carousel-item py-3">
-                    <img src="{{ url('assets/img/logo.png') }}" alt="Carousel" loading="lazy"
+                    <img src="{{ url('assets/img/favicon.ico') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
                     <div class="carousel-caption">
                         <h5>Fourth slide label</h5>

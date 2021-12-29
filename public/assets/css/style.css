@@ -301,8 +301,20 @@ select:focus-visible {
 }
 
 /** Selector (ID) */
-#togglePassword {
+#togglePassword,
+#toggleConfirmPassword {
     cursor: pointer;
+}
+
+#pills-easy-tab.active,
+#pills-hard-tab.active {
+    background-color: var(--button-secondary);
+    color: var(--text-secondary) !important;
+}
+
+#pills-easy-tab.nav-link:not(.active),
+#pills-hard-tab.nav-link:not(.active) {
+    color: var(--button-secondary) !important;
 }
 
 /** Selector (Class) */
@@ -314,6 +326,11 @@ select:focus-visible {
     font-size: larger;
     font-weight: bolder;
     color: var(--button-primary);
+}
+
+.dataTables_filter input {
+    padding: .275rem;
+    border-radius: 5px;
 }
 
 .scrollToTopBtn {

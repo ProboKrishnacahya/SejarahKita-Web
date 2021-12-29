@@ -109,5 +109,5 @@
     </form>
 
     {{-- Tampilkan Preview Image & File Name nya setelah klik 'Pilih File' --}}
-    <script src="{{ url('/assets/js/imagePreview.js') }}"></script>
+    <script src="{{ url('/assets/js/imagePreview.js') }}" type="text/javascript"></script>
 @endsection
