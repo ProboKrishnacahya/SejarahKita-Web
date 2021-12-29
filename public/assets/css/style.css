@@ -435,6 +435,11 @@ select:focus-visible {
     border-radius: 50%;
 }
 
+.static-card-img {
+    max-width: 50% !important;
+    max-height: 15rem !important;
+}
+
 .form-group {
     margin-bottom: 1rem;
 }

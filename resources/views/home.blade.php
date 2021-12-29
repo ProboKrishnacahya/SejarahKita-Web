@@ -69,40 +69,29 @@
                     class="p-0"></button>
                 <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"
                     class="p-0"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5"
+                    class="p-0"></button>
             </div>
-            <div class="carousel-inner bg-dark">
-                <div class="card-header text-center fw-bold fs-5 py-4">{{ 'Cara Bermain' }}</div>
+            <div class="carousel-inner">
                 <div class="carousel-item py-3 active">
+                    <img src="{{ url('assets/img/logo.svg') }}" alt="Carousel" loading="lazy"
+                        class="img-fluid mx-auto d-block" />
+                </div>
+                <div class="carousel-item py-3">
                     <img src="{{ url('assets/img/1_Home_Slider.png') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
-                    {{-- <div class="carousel-caption">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div> --}}
                 </div>
                 <div class="carousel-item py-3">
                     <img src="{{ url('assets/img/2_Home_Slider.png') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
-                    {{-- <div class="carousel-caption">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div> --}}
                 </div>
                 <div class="carousel-item py-3">
                     <img src="{{ url('assets/img/3_Home_Slider.png') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
-                    {{-- <div class="carousel-caption">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div> --}}
                 </div>
                 <div class="carousel-item py-3">
                     <img src="{{ url('assets/img/4_Home_Slider.png') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
-                    {{-- <div class="carousel-caption">
-                        <h5>Fourth slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div> --}}
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

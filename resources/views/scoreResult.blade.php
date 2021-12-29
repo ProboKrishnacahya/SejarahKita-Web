@@ -17,9 +17,11 @@
         </div>
 
         <div class="d-grid">
-            <button class="btn btn-primary w-50 mx-auto mt-5 mb-4">
-                <i class="bi bi-arrow-repeat"></i>&emsp;{{ 'Main Lagi' }}
-            </button>
+            <a href="{{ url('/game') }}">
+                <button class="btn btn-primary w-50 mx-auto mt-5 mb-4">
+                    <i class="bi bi-arrow-repeat"></i>&emsp;{{ 'Main Lagi' }}
+                </button>
+            </a>
             <a href="{{ url('/leaderboard') }}">
                 <button class="btn btn-link w-50">
                     <i class="bi bi-bar-chart"></i>&emsp;{{ 'Lihat Peringkat' }}

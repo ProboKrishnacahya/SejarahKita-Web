@@ -29,8 +29,8 @@ class LeaderboardController extends Controller
         ]);
 
         return view('leaderboard', [
-            "easy" => PlayingHistory::where('id_level', 2)->get()->sortByDesc('ranked_point')->take(5),
-            "hard" => PlayingHistory::where('id_level', 3)->get()->sortByDesc('ranked_point')->take(5),
+            "easy" => PlayingHistory::where('id_level', 2)->get()->sortByDesc('ranked_point'),
+            "hard" => PlayingHistory::where('id_level', 3)->get()->sortByDesc('ranked_point'),
             'active_leaderboard' => "active",
             compact('user', 'students', 'leaderboards')
         ]);
