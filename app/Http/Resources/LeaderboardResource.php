@@ -18,6 +18,8 @@ class LeaderboardResource extends JsonResource
 
         return [
             'id_leaderboard' => $this->id_leaderboard,
+            'id_student' => $this->id_student,
+            'id_level' => $this->id_level,
             'ranked_point' => $this->ranked_point
         ];
     }

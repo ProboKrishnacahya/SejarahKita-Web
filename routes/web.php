@@ -31,6 +31,8 @@ Route::get('score-result', [GameController::class, 'exitGame'])->name('scoreResu
 
 //* Leaderboard
 Route::resource('leaderboard', LeaderboardController::class);
+Route::get('get-easy', [LeaderboardController::class, 'getEasy'])->name('getEasy');
+Route::get('get-hard', [LeaderboardController::class, 'getHard'])->name('getHard');
 
 //* Home, Profile (Playing History & Question + Log)
 Auth::routes();

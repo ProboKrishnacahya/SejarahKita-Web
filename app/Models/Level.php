@@ -29,6 +29,6 @@ class Level extends Model
 
     public function leaderboards()
     {
-        return $this->belongsToMany(Leaderboard::class, 'sej12_leaderboards_levels', 'id_level', 'id_leaderboard');
+        return $this->hasMany(Leaderboard::class, 'id_level', 'id_level');
     }
 }
