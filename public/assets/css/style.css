@@ -436,8 +436,8 @@ select:focus-visible {
 }
 
 .static-card-img {
-    max-width: 50% !important;
-    max-height: 15rem !important;
+    max-width: 115% !important;
+    max-height: 55rem !important;
 }
 
 .form-group {

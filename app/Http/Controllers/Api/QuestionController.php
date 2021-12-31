@@ -122,9 +122,10 @@ class QuestionController extends Controller
         $soal = $getSoal[0];
         $level = $data['level'];
 
-        return response([
-            'message' => 'checkAnswer is working.'
-        ]);
+        // return response([
+        //     'message' => 'checkAnswer is working.'
+        // ]);
+        return view('playingGame', compact('soal', 'level'));
     }
 
     private function isRanked($level)
