@@ -76,7 +76,33 @@ class StudentSeeder extends Seeder
             'name' => 'John Doe',
             'school' => 'Sekolah Ciputra',
             'city' => 'Surabaya',
-            'birthyear' => '2000',
+            'birthyear' => '2003',
+            'role' => 'user',
+            'created_at' => \Carbon\Carbon::now(),
+            'email_verified_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('students')->insert([
+            'email' => 'willsmith@gmail.com',
+            'password' => Hash::make('12345678'),
+            'username' => 'willsmith',
+            'name' => 'Will Smith',
+            'school' => 'Sekolah Citra Berkat',
+            'city' => 'Jakarta',
+            'birthyear' => '2004',
+            'role' => 'user',
+            'created_at' => \Carbon\Carbon::now(),
+            'email_verified_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('students')->insert([
+            'email' => 'loremipsum@gmail.com',
+            'password' => Hash::make('12345678'),
+            'username' => 'loremipsum',
+            'name' => 'Lorem Ipsum',
+            'school' => 'Dolor Sit Amet',
+            'city' => 'Consectetur',
+            'birthyear' => '2005',
             'role' => 'user',
             'created_at' => \Carbon\Carbon::now(),
             'email_verified_at' => \Carbon\Carbon::now()

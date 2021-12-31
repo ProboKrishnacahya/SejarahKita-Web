@@ -3,17 +3,25 @@
 @section('title', 'Leaderboard')
 
 @section('content')
-    <div class="card illustration-card justify-content-around" data-aos="fade-up">
-        <div class="text-center mt-3">
-            <p class="display-6">{{ 'Mainkan Gamenya,' }}</p>
-            <div class="d-inline">
-                <span class="display-4 highlight">{{ 'Jadilah yang Terbaik' }}</span>
-                <span class="display-4">&#128077;</span>
+    <div class="container" data-aos="fade-up">
+        <div class="row card illustration-card justify-content-around px-5 py-5">
+            <div class="col">
+                <div class="row">
+                    <div class="col-sm-9 align-self-center">
+                        <div class="row">
+                            <p class="display-6">{{ 'Mainkan Gamenya,' }}</p>
+                            <div class="d-inline">
+                                <span class="display-4 highlight">{{ 'Jadilah yang Terbaik' }}</span>
+                                <span class="display-4">&#128077;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 align-self-center">
+                        <img src="{{ url('assets/img/ill_leaderboard.svg') }}" alt="Leaderboard"
+                            class="static-card-img mx-auto d-block">
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="d-flex mx-auto my-4 py-2">
-            <img src="{{ url('assets/img/ill_leaderboard.svg') }}" alt="Game" class="content-img">
-            <img src="{{ url('assets/img/ill_leaderboard.svg') }}" alt="Game" class="content-img">
         </div>
     </div>
 
