@@ -22,6 +22,7 @@ class LeaderboardController extends Controller
         $leaderboards = Leaderboard::all();
 
         $ip = new InternetProtocolAddressController;
+        
         LogApps::create([
             "id_user" => Auth::user()->id,
             "log_table" => "sej12_leaderboard",
@@ -53,6 +54,7 @@ class LeaderboardController extends Controller
     {
         Leaderboard::create([
             'id_student' => $request->id_student,
+            'id_level' =>$request->id_level,
             'ranked_point' => $request->ranked_point
         ]);
 
@@ -96,6 +98,7 @@ class LeaderboardController extends Controller
 
         $leaderboards->update([
             'id_student' => $request->id_student,
+            'id_level' =>$request->id_level,
             'ranked_point' => $request->ranked_point
         ]);
 

@@ -21,8 +21,17 @@ class CreateSej12LeaderboardsTable extends Migration
 
         Schema::table('sej12_leaderboards', function (Blueprint $table) {
             $table->foreignId('id_student')
+                ->after('id_leaderboard')
                 ->references('id')
                 ->on('students')
+                ->constrained()
+                ->cascadeOnDelete()
+                ->cascadeOnUpdate();
+
+            $table->foreignId('id_level')
+                ->after('id_student')
+                ->references('id_level')
+                ->on('sej12_levels')
                 ->constrained()
                 ->cascadeOnDelete()
                 ->cascadeOnUpdate();

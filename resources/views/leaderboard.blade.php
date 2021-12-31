@@ -48,7 +48,7 @@
                                 <td scope="row" class="fw-bold">{{ $index }}</td>
                                 @php $index++ @endphp
                                 <td>{{ $mudah->students->username }}</td>
-                                <td>{{ $mudah->skor }}</td>
+                                <td>{{ $mudah->ranked_point }}</td>
                             </tr>
                         @endforeach
                 </table>
@@ -74,7 +74,7 @@
                                 <td class="fw-bold">{{ $index }}</td>
                                 @php $index++ @endphp
                                 <td>{{ $sulit->students->username }}</td>
-                                <td>{{ $sulit->skor }}</td>
+                                <td>{{ $sulit->ranked_point }}</td>
                             </tr>
                         @endforeach
                 </table>

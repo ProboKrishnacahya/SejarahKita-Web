@@ -15,6 +15,7 @@ class Leaderboard extends Model
 
     protected $fillable = [
         'id_student',
+        'id_level',
         'ranked_point'
     ];
 
@@ -25,6 +26,6 @@ class Leaderboard extends Model
 
     public function levels()
     {
-        return $this->belongsToMany(Level::class, 'sej12_leaderboards_levels', 'id_leaderboard', 'id_level');
+        return $this->belongsTo(Level::class, 'id_level', 'id_level');
     }
 }

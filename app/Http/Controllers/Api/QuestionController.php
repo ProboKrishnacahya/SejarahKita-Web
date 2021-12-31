@@ -51,8 +51,10 @@ class QuestionController extends Controller
             'hard' => 3,
         ];
 
+        $temp = array();
         $getSoal = Question::where('id_level', $match[$level])->get()->random(1);
         $soal = $getSoal[0];
+        array_push($temp, $soal);
 
         //* Inisialisasi Session
         $data = [
@@ -60,12 +62,11 @@ class QuestionController extends Controller
             'answeredQuestion' => [],
             'wrongAnswer' => 0
         ];
+        array_push($temp, $data);
 
         Session::put('game', $data);
 
-        return response([
-            'message' => 'playingGame is working.'
-        ]);
+        return ['getSoal' => $temp];
     }
 
     public function checkAnswer(Request $request)

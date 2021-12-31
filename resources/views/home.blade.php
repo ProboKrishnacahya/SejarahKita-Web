@@ -74,7 +74,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item py-3 active">
-                    <img src="{{ url('assets/img/logo.svg') }}" alt="Carousel" loading="lazy"
+                    <img src="{{ url('assets/img/CaraBermain_Home_Slider_1920x1080.png') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
                 </div>
                 <div class="carousel-item py-3">
