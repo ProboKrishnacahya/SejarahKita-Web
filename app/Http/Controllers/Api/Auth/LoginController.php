@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Laravel\Passport\Client;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -29,7 +30,12 @@ class LoginController extends Controller
             'is_active' => '1',
         ];
 
-        $check = DB::table('students')->where('email', $request->email)->first();
+        // $check = DB::table('students')->where('email', $request->email)->first();
+
+        $check = DB::table('students')
+            ->where('email', $request->email)
+            // ->where('password', Hash::make($request->password))
+            ->first();
 
         if ($check->is_active == '1') {
             if ($check->is_login == '0') {
@@ -45,7 +51,18 @@ class LoginController extends Controller
                         'scope' => '*',
                     ]);
 
-                    return $response->json();
+                    // return $response->json();
+                    // return $response->json('token_type');
+
+                    $res = [
+                        'id' => Auth::id(),
+                        'token_type' => $response->json('token_type'),
+                        'access_token' => $response->json('access_token'),
+                        'expires_in' => $response->json('expires_in'),
+                        'refresh_token' => $response->json('refresh_token'),
+                    ];
+
+                    return $res;
                 } else {
                     return response([
                         'message' => 'Login Failed. Please Try Again Later.',

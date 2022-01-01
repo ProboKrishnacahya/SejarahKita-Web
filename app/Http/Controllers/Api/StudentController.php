@@ -108,4 +108,15 @@ class StudentController extends Controller
     {
         //
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function studentDetail($id)
+    {
+        $students = Student::find(['id' => $id]);
+        return ['students' => StudentResource::collection($students)];
+    }
 }
