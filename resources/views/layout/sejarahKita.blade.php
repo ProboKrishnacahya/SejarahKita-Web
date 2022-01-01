@@ -79,7 +79,8 @@
                     </li>
 
                     @if (Auth::user() != null)
-                        @if (Auth::user()->role == 'admin')
+                    
+                        @if (Auth::user()->roles->role == 'admin')
                             <li class="nav-item">
                                 <a class="nav-link menu-last-child" href="{{ route('admin.profile') }}"
                                     data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
@@ -91,7 +92,7 @@
                                     </svg>&emsp;{{ Auth::user()->username }}
                                 </a>
                             </li>
-                        @elseif (Auth::user()->role == 'user')
+                        @elseif (Auth::user()->roles->role == 'user')
                             <li class="nav-item">
                                 <a class="nav-link menu-last-child" href="{{ route('profile') }}"
                                     data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">

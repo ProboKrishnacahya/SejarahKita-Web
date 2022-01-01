@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Student;
 use App\Models\LogApps;
+use App\Models\Role;
 use App\Providers\RouteServiceProvider;
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -81,7 +82,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return Student::create([
+        $student = Student::create([
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'username' => $data['username'],
@@ -89,18 +90,24 @@ class RegisterController extends Controller
             'school' => $data['school'],
             'city' => $data['city'],
             'birthyear' => $data['birthyear'],
-            'role' => 'user',
+            // 'role' => 'user',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
 
+        Role::create([
+            'id_student' => Student::firstWhere('email', $data['email'])['id'],
+        ]);
+
         $ip = new InternetProtocolAddressController;
         LogApps::create([
-            "id_user" => Auth::user()->id,
+            "id_user" => Student::firstWhere('email', $data['email'])['id'],
             "log_table" => "students",
             "log_path" => "RegisterController@create",
             "log_desc" => "Register new student",
             "log_ip" => $ip->getIPAddress()
         ]);
+
+        return $student;
     }
 }

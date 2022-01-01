@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Auth\InternetProtocolAddressController;
+use App\Models\Role;
 
 class RegisterController extends Controller
 {
@@ -40,7 +41,7 @@ class RegisterController extends Controller
 
     private function newUser(array $data)
     {
-        return Student::create([
+        $student = Student::create([
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'username' => $data['username'],
@@ -48,18 +49,23 @@ class RegisterController extends Controller
             'school' => $data['school'],
             'city' => $data['city'],
             'birthyear' => $data['birthyear'],
-            'role' => 'user',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
+        Role::create([
+            'id_student' => Student::firstWhere('email', $data['email'])['id'],
+        ]);
+
         $ip = new InternetProtocolAddressController;
         LogApps::create([
-            "id_user" => Auth::user()->id,
+            "id_user" => Student::firstWhere('email', $data['email'])['id'],
             "log_table" => "students",
             "log_path" => "RegisterController@create",
             "log_desc" => "Register new student",
             "log_ip" => $ip->getIPAddress()
         ]);
+
+        return $student;
     }
 }

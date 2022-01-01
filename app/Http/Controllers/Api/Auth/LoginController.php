@@ -25,20 +25,20 @@ class LoginController extends Controller
         $user = [
             'email' => $request->email,
             'password' => $request->password,
-            'role' => 'user',
-            'is_login' => '0',
-            'is_active' => '1',
+            // 'role' => 'user',
+            // 'is_login' => '0',
+            // 'is_active' => '1',
         ];
 
         // $check = DB::table('students')->where('email', $request->email)->first();
 
-        $check = DB::table('students')
-            ->where('email', $request->email)
+        $check = Student::where('email', $request->email)
             // ->where('password', Hash::make($request->password))
+            ->get()
             ->first();
 
-        if ($check->is_active == '1') {
-            if ($check->is_login == '0') {
+        if ($check->roles['is_active'] == '1') {
+            if ($check->roles['is_login'] == '0') {
                 if (Auth::attempt($user)) {
                     $this->isLogin(Auth::id());
 
@@ -83,7 +83,7 @@ class LoginController extends Controller
     private function isLogin(int $id)
     {
         $user = Student::findorFail($id);
-        return $user->update([
+        return $user->roles()->update([
             'is_login' => '1',
         ]);
     }
@@ -114,7 +114,7 @@ class LoginController extends Controller
         $accessToken = Auth::user()->token();
         DB::table('oauth_refresh_tokens')->where('access_token_id', $accessToken->id)->update(['revoked' => true]);
 
-        $user->update([
+        $user->roles()->update([
             'is_login' => '0',
         ]);
 

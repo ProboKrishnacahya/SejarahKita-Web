@@ -23,10 +23,11 @@ class StudentSeeder extends Seeder
             'name' => 'Vanness Zhong Anthony',
             'school' => '',
             'city' => '',
-            'birthyear' => '',
-            'role' => 'admin',
+            'birthyear' => 0,
+            // 'role' => 'admin',
             'created_at' => \Carbon\Carbon::now(),
-            'email_verified_at' => \Carbon\Carbon::now()
+            'updated_at' => \Carbon\Carbon::now()
+            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('students')->insert([
@@ -36,10 +37,10 @@ class StudentSeeder extends Seeder
             'name' => 'Nathanael Abel Arianto',
             'school' => '',
             'city' => '',
-            'birthyear' => '',
-            'role' => 'admin',
+            'birthyear' => 0,
+            // 'role' => 'admin',
             'created_at' => \Carbon\Carbon::now(),
-            'email_verified_at' => \Carbon\Carbon::now()
+            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('students')->insert([
@@ -49,10 +50,11 @@ class StudentSeeder extends Seeder
             'name' => 'Probo Krishnacahya',
             'school' => '',
             'city' => '',
-            'birthyear' => '',
-            'role' => 'admin',
+            'birthyear' => 0,
+            // 'role' => 'admin',
             'created_at' => \Carbon\Carbon::now(),
-            'email_verified_at' => \Carbon\Carbon::now()
+            'updated_at' => \Carbon\Carbon::now()
+            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('students')->insert([
@@ -62,10 +64,11 @@ class StudentSeeder extends Seeder
             'name' => 'Michael Chandra',
             'school' => '',
             'city' => '',
-            'birthyear' => '',
-            'role' => 'admin',
+            'birthyear' => 0,
+            // 'role' => 'admin',
             'created_at' => \Carbon\Carbon::now(),
-            'email_verified_at' => \Carbon\Carbon::now()
+            'updated_at' => \Carbon\Carbon::now()
+            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
 
         // User account
@@ -76,10 +79,11 @@ class StudentSeeder extends Seeder
             'name' => 'John Doe',
             'school' => 'Sekolah Ciputra',
             'city' => 'Surabaya',
-            'birthyear' => '2003',
-            'role' => 'user',
+            'birthyear' => 2003,
+            // 'role' => 'user',
             'created_at' => \Carbon\Carbon::now(),
-            'email_verified_at' => \Carbon\Carbon::now()
+            'updated_at' => \Carbon\Carbon::now()
+            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('students')->insert([
@@ -89,10 +93,11 @@ class StudentSeeder extends Seeder
             'name' => 'Will Smith',
             'school' => 'Sekolah Citra Berkat',
             'city' => 'Jakarta',
-            'birthyear' => '2004',
-            'role' => 'user',
+            'birthyear' => 2004,
+            // 'role' => 'user',
             'created_at' => \Carbon\Carbon::now(),
-            'email_verified_at' => \Carbon\Carbon::now()
+            'updated_at' => \Carbon\Carbon::now()
+            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('students')->insert([
@@ -102,10 +107,11 @@ class StudentSeeder extends Seeder
             'name' => 'Lorem Ipsum',
             'school' => 'Dolor Sit Amet',
             'city' => 'Consectetur',
-            'birthyear' => '2005',
-            'role' => 'user',
+            'birthyear' => 2005,
+            // 'role' => 'user',
             'created_at' => \Carbon\Carbon::now(),
-            'email_verified_at' => \Carbon\Carbon::now()
+            'updated_at' => \Carbon\Carbon::now()
+            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
     }
 }

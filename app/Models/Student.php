@@ -31,9 +31,9 @@ class Student extends Authenticatable
         'school',
         'city',
         'birthyear',
-        'role',
-        'is_login',
-        'is_active'
+        // 'role',
+        // 'is_login',
+        // 'is_active'
     ];
 
     public function playingHistories()
@@ -46,9 +46,14 @@ class Student extends Authenticatable
         return $this->hasMany(Leaderboard::class, 'id_student', 'id');
     }
 
-    public function students()
+    public function logs()
     {
         return $this->hasOne(LogApps::class, 'id_user', 'id');
+    }
+
+    public function roles()
+    {
+        return $this->hasOne(Role::class, 'id_student', 'id');
     }
 
     /**
