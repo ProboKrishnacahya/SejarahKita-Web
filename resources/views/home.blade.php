@@ -5,14 +5,14 @@
 @section('content')
     <div class="row" data-aos="fade-up">
         <div class="col-6 align-self-center">
-            <div class="mb-5 pb-5">
+            <div class="mb-5 pb-3">
                 <span class="fs-3">Mari Berlatih <strong>Sejarah Indonesia</strong></span>
                 <p class="fs-1">Bersama <a href="{{ url('/') }}"><span
                             class="fw-bold fs-1">SejarahKita</span></a></p>
                 <p id="typewriting"></p>
             </div>
             <a href="{{ url('game') }}">
-                <button class="btn btn-lg btn-primary me-3">
+                <button class="btn btn-lg btn-primary shadow-sm me-3">
                     <i class="bi bi-controller"></i>&emsp;{{ __('Mulai Permainan') }}
                 </button>
             </a>
@@ -31,30 +31,110 @@
         </div>
     </div>
 
-    <div class="card illustration-card my-5" data-aos="fade-up">
-        <div class="card-header text-center fw-bold fs-5 pb-3">{{ 'Tentang SejarahKita' }}</div>
-        <div class="card-body pb-1">
-            <p><strong>SejarahKita</strong> adalah Aplikasi tentang Game Edukasi berupa Anagram dengan topik mata
-                pelajaran Sejarah Indonesia Kelas 12 yang berfokus pada bab-bab berikut:</p>
-            <ul class="square">
-                <li>Perjuangan Bangsa Indonesia dalam Menghadapi Ancaman Disintegrasi dari Ideologi, Kepentingan, dan Sistem
-                    Pemerintahan.
-                </li>
-                <li>Peran dan Nilai-nilai Perjuangan Tokoh Nasional serta Tokoh Daerah dalam Mempertahankan Keutuhan Negara
-                    dan Bangsa Indonesia pada Masa 1945–1965.
-                </li>
-            </ul>
+    <div class="my-5" data-aos="fade-up">
+        <div class="row">
+            <div class="col-5 align-self-center">
+                <img src="{{ url('assets/img/ill_tentara.png') }}" alt="Tentara" loading="lazy" class="tentara-img" />
+            </div>
+            <div class="col-7 align-self-center">
+                <p class="fs-4 mb-5"><strong>SejarahKita</strong> adalah Game Edukasi berupa Anagram dengan topik mata pelajaran Sejarah Indonesia Kelas 12 (XII).
+                </p>
+                <div class="d-flex">
+                    <div class="bg-primary bg-gradient rounded-3 w-50 p-3 me-2">
+                        <div class="text-center">
+                            <i class="bi bi-check-circle fs-4"></i>
+                        </div>
+                        <br>
+                        {{ 'Perjuangan Bangsa Indonesia dalam Menghadapi Ancaman Disintegrasi dari Ideologi, Kepentingan, dan Sistem Pemerintahan.' }}
+                    </div>
+                    <div class="bg-success bg-gradient rounded-3 w-50 p-3 ms-2">
+                        <div class="text-center">
+                            <i class="bi bi-check-circle fs-4"></i>
+                        </div>
+                        <br>
+                        {{ 'Peran dan Nilai-nilai Perjuangan Tokoh Nasional serta Tokoh Daerah dalam Mempertahankan Keutuhan Negara dan Bangsa Indonesia pada Masa 1945–1965.' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            <p>Terdapat 2 mode permainan, yaitu</p>
-            <ol>
-                <li>Casual</li>
-                <li>Ranked (memiliki 2 pilihan level yang setiap perolehan Ranked Point nya diakumulasi pada masing-masing
-                    Leaderboard):</li>
-                <ul>
-                    <li>Easy</li>
-                    <li>Hard</li>
-                </ul>
-            </ol>
+    <div class="container my-5" data-aos="fade-up">
+        <div class="row justify-content-around">
+            <div class="col">
+                <div class="text-center mt-3">
+                    <h4>{{ 'Terdapat 2 Mode Permainan' }}</h4>
+                </div>
+                <div class="row justify-content-around text-center mt-5">
+                    <h5>{{ 'Ranked Mode' }}</h5>
+                    <p>{{ 'Perolehan skor diakumulasi ke Leaderboard masing-masing level' }}</p>
+
+                    <div class="col-md-5 align-self-center rounded-3 easy-bg shadow-sm py-4 mt-1">
+                        <div class="text-center">
+                            <h4>{{ 'Level Easy' }}</h4>
+                            <br>
+                            <div class="d-flex justify-content-center">
+                                <div class="row gap-3">
+                                    <div class="col bg-dark rounded-3 px-4 py-3">
+                                        <i class="bi bi-patch-question-fill text-info fs-1"></i>
+                                        <br>
+                                        <span><strong>20</strong> Nomor Soal</span>
+                                    </div>
+                                    <div class="col bg-dark rounded-3 px-4 py-3">
+                                        <i class="bi bi-suit-heart-fill text-danger fs-1"></i>
+                                        <br>
+                                        <span><strong>5</strong> Nyawa</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 align-self-center rounded-3 hard-bg shadow-sm py-4 mt-1">
+                        <div class="text-center">
+                            <h4>{{ 'Level Hard' }}</h4>
+                            <br>
+                            <div class="d-flex justify-content-center">
+                                <div class="row gap-3">
+                                    <div class="col bg-dark rounded-3 px-4 py-3">
+                                        <i class="bi bi-patch-question-fill text-info fs-1"></i>
+                                        <br>
+                                        <span><strong>20</strong> Nomor Soal</span>
+                                    </div>
+                                    <div class="col bg-dark rounded-3 px-4 py-3">
+                                        <i class="bi bi-suit-heart-fill text-danger fs-1"></i>
+                                        <br>
+                                        <span><strong>3</strong> Nyawa</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <h5>{{ 'Casual Mode' }}</h5>
+                    <p>{{ 'Berlatih untuk siap bermain Ranked Mode' }}</p>
+                </div>
+                
+                <div class="casual casual-text rounded-3 text-center text-center shadow-sm w-50 mx-auto p-4">
+                    <h4>{{ 'Casual' }}</h2>
+                        <br>
+                        <div class="d-flex justify-content-center">
+                            <div class="row gap-3 text-white">
+                                <div class="col illustration-card rounded-3 px-4 py-3">
+                                    <i class="bi bi-patch-question-fill text-info fs-1"></i>
+                                    <br>
+                                    <span><strong>10</strong> Nomor Soal</span>
+                                </div>
+                                <div class="col illustration-card rounded-3 px-4 py-3">
+                                    <i class="bi bi-suit-heart-fill text-danger fs-1"></i>
+                                    <br>
+                                    <span><strong>0</strong> Nyawa</span>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -73,24 +153,24 @@
                     class="p-0"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item py-3 active">
-                    <img src="{{ url('assets/img/CaraBermain_Home_Slider_1920x1080.png') }}" alt="Carousel" loading="lazy"
+                <div class="carousel-item active">
+                    <img src="{{ url('assets/img/img_carousel_page1.png') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
                 </div>
-                <div class="carousel-item py-3">
-                    <img src="{{ url('assets/img/1_Home_Slider.png') }}" alt="Carousel" loading="lazy"
+                <div class="carousel-item">
+                    <img src="{{ url('assets/img/img_carousel_page2.png') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
                 </div>
-                <div class="carousel-item py-3">
-                    <img src="{{ url('assets/img/2_Home_Slider.png') }}" alt="Carousel" loading="lazy"
+                <div class="carousel-item">
+                    <img src="{{ url('assets/img/img_carousel_page3.png') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
                 </div>
-                <div class="carousel-item py-3">
-                    <img src="{{ url('assets/img/3_Home_Slider.png') }}" alt="Carousel" loading="lazy"
+                <div class="carousel-item">
+                    <img src="{{ url('assets/img/img_carousel_page4.png') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
                 </div>
-                <div class="carousel-item py-3">
-                    <img src="{{ url('assets/img/4_Home_Slider.png') }}" alt="Carousel" loading="lazy"
+                <div class="carousel-item">
+                    <img src="{{ url('assets/img/img_carousel_page5.png') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
                 </div>
             </div>
@@ -237,32 +317,35 @@
     </div>
 
     <div data-aos="fade-up">
-        <p class="fw-bold fs-5 text-center">Tentang Universitas Ciputra</p>
-        <br>
-        <div class="row">
-            <div class="col-md-5">
-                <div>
-                    <img src="{{ url('assets/img/universitas_ciputra.png') }}" alt="Logo Universitas Ciputra"
-                        loading="lazy" class="content-img mb-3" />
-                    <h2>Universitas Ciputra</h2>
-                    <q>Creating World Class <strong>Entrepreneurs</strong></q>
-                    <a href="https://www.uc.ac.id/" target="_blank" rel="noopener noreferrer">
-                        <button class="btn btn-primary mt-5 px-3">
-                            <i class="bi bi-globe2"></i>&emsp;{{ __('Kunjungi Situs Web UC') }}
-                        </button>
-                    </a>
+        <div class="card illustration-card my-5" data-aos="fade-up">
+            <div class="card-header text-center fw-bold fs-5 pb-3">{{ 'Tentang Universitas Ciputra' }}</div>
+            <div class="card-body px-0 py-3">
+                <div class="row">
+                    <div class="col-md-5 align-self-center text-center">
+                        <div>
+                            <img src="{{ url('assets/img/universitas_ciputra.png') }}" alt="Logo Universitas Ciputra"
+                                loading="lazy" class="content-img mb-3" />
+                            <h2>Universitas Ciputra</h2>
+                            <q>Creating World Class <strong>Entrepreneurs</strong></q>
+                            <a href="https://www.uc.ac.id/" target="_blank" rel="noopener noreferrer">
+                                <button class="btn btn-primary shadow-sm mt-5 px-3">
+                                    <i class="bi bi-globe2"></i>&emsp;{{ __('Kunjungi Situs Web UC') }}
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.2300803124476!2d112.62941291424833!3d-7.285587194741468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fde455555555%3A0xd7e2611ae591f046!2sUniversitas%20Ciputra%20Surabaya!5e1!3m2!1sid!2sid!4v1639550236501!5m2!1sid!2sid"
+                            width="1440" height="1080" style="border:0;" allowfullscreen="" loading="lazy"
+                            class="shadow-sm"></iframe>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-7">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.2300803124476!2d112.62941291424833!3d-7.285587194741468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fde455555555%3A0xd7e2611ae591f046!2sUniversitas%20Ciputra%20Surabaya!5e1!3m2!1sid!2sid!4v1639550236501!5m2!1sid!2sid"
-                    width="1440" height="1080" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
         </div>
-    </div>
 
-    <i class="bi bi-arrow-up-circle-fill scrollToTopBtn fs-1" data-bs-toggle="tooltip" title="Scroll to Top Page"></i>
+        <i class="bi bi-arrow-up-circle-fill scrollToTopBtn fs-1" data-bs-toggle="tooltip" title="Scroll to Top Page"></i>
 
-    {{-- JS Library (TypewriterJS) --}}
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-@endsection
+        {{-- JavaScript Library (TypewriterJS) --}}
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    @endsection

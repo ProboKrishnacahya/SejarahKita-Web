@@ -94,7 +94,7 @@
     </div>
 
     <div class="d-grid">
-        <button type="submit" class="btn btn-primary mt-5">
+        <button type="submit" class="btn btn-primary shadow-sm mt-5">
             <i class="bi bi-send"></i>&emsp;{{ 'Submit' }}
         </button>
     </div>

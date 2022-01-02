@@ -38,7 +38,7 @@
                             <img src="{{ url('assets/img/ill_nyawa5.svg') }}" alt="Nyawa Easy"
                                 class="content-img mx-auto d-block">
                             <a href="{{ route('countdown', ['level'=>'easy']) }}">
-                                <button class="btn btn-warning fs-4">
+                                <button class="btn btn-warning fs-4 shadow-sm">
                                     <i class="bi bi-controller"></i>&emsp;{{ 'Main Sekarang' }}
                                 </button>
                             </a>
@@ -50,7 +50,7 @@
                             <img src="{{ url('assets/img/ill_nyawa3.svg') }}" alt="Nyawa Hard"
                                 class="content-img mx-auto d-block">
                             <a href="{{ route('countdown', ['level'=>'hard']) }}">
-                                <button class="btn btn-warning fs-4">
+                                <button class="btn btn-warning fs-4 shadow-sm">
                                     <i class="bi bi-controller"></i>&emsp;{{ 'Main Sekarang' }}
                                 </button>
                             </a>
@@ -62,7 +62,7 @@
     </div>
 
     <div class="container" data-aos="fade-up">
-        <div class="row card casual justify-content-around p-5">
+        <div class="row card casual shadow-sm justify-content-around p-5">
             <div class="col">
                 <div class="row">
                     <div class="col-sm-6 align-self-center">
@@ -71,7 +71,7 @@
                             <p>{{ 'Bermain dengan santai tanpa pengaruhi Ranked Point mu' }}</p>
                             <div class="container">
                                 <a href="{{ route('countdown', ['level'=>'casual']) }}">
-                                    <button class="btn btn-warning fs-4 mt-5">
+                                    <button class="btn btn-warning fs-4 shadow-sm mt-5">
                                         <i class="bi bi-controller"></i>&emsp;{{ 'Main Sekarang' }}
                                     </button>
                                 </a>

@@ -6,7 +6,7 @@
     <div class="d-flex">
         {{-- Exit Game's Modal Confirmation --}}
         <div class="me-auto">
-            <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdropExitGame">
+            <button class="btn btn-outline-danger shadow-sm" data-bs-toggle="modal" data-bs-target="#staticBackdropExitGame">
                 <i class="bi bi-box-arrow-left"></i>&emsp;{{ 'Keluar Game' }}
             </button>
 
@@ -28,7 +28,7 @@
                                 <i class="bi bi-controller"></i>&emsp;{{ 'Lanjutkan Game' }}
                             </button>
                             <a href="{{ route('game.index') }}">
-                                <button type="button" class="btn btn-danger me-3">
+                                <button type="button" class="btn btn-danger shadow-sm me-3">
                                     <i class="bi bi-box-arrow-left"></i>&emsp;{{ 'Keluar Game' }}
                                 </button>
                             </a>
@@ -62,7 +62,8 @@
                                     {{ $soal->kunci_jawaban }}
                                 </h1>
                             </div>
-                            <button type="button" class="btn btn-warning mx-auto mb-4 w-50" data-bs-dismiss="modal">
+                            <button type="button" class="btn btn-warning mx-auto shadow-sm w-50 mb-4"
+                                data-bs-dismiss="modal">
                                 <i class="bi bi-controller"></i>&emsp;{{ 'Lanjutkan Game' }}
                             </button>
                         </div>
@@ -80,7 +81,7 @@
             <div class="ms-auto" id="nyawa">
                 <span class="fs-5">{{ 'Nyawa:' }}</span>&emsp;
                 @for ($i = 0; $i < $nyawa - $wrong; $i++)
-                    <i class="bi bi-heart-fill text-danger icon-font"></i>
+                    <i class="bi bi-suit-heart-fill text-danger icon-font"></i>
                 @endfor
             </div>
         @endif
@@ -130,7 +131,7 @@
         </div>
 
         <div class="d-grid">
-            <button type="submit" class="btn btn-primary mt-5">
+            <button type="submit" class="btn btn-primary shadow-sm mt-5">
                 <i class="bi bi-check-lg"></i>&emsp;{{ 'Jawab' }}
             </button>
         </div>

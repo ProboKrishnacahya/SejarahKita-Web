@@ -3,6 +3,10 @@
 @section('title', 'Profile')
 
 @section('content')
+    <div class="mb-1" data-aos="fade-up">
+        <p class="fs-4">Halo, <span class="fw-bold fs-4">{{ Auth::user()->name }}</span>&ensp;&#128075;</p>
+    </div>
+
     <div class="container" data-aos="fade-up">
         <div class="row card justify-content-around">
             <div class="col">
@@ -10,7 +14,8 @@
                     <div class="col-sm-6 align-self-center">
                         <img src="{{ url('assets/img/ill_profile.svg') }}" alt="Profile"
                             class="profile mx-auto d-block mb-3 p-4">
-                        <div class="badge bg-secondary fs-6 fw-normal d-block my-3 p-3">Register: {{ $createdAt }}</div>
+                        <div class="badge bg-dark border border-2 border-info rounded-3 fs-6 fw-normal d-block my-3 p-3">
+                            Register: {{ $createdAt }}</div>
                     </div>
                     <div class="col-sm-6 align-self-center">
                         <div class="row">
@@ -58,10 +63,10 @@
             <div class="text-center">
                 <div class="bg-primary bg-gradient rounded-3 p-3">
                     <div class="card-body">
-                        <p>Pantau performa Anda. Tingkatkan untuk hasil yang lebih optimal.</p>
+                        <p>Pantau performamu. Tingkatkan untuk hasil yang lebih optimal.</p>
                         <br>
                         <a href="{{ route('playing-history') }}">
-                            <button class="btn btn-warning w-50">
+                            <button class="btn btn-warning w-50 shadow-sm">
                                 <i class="bi bi-journal-medical"></i>&emsp;{{ 'Riwayat Bermain' }}
                             </button>
                         </a>
@@ -72,7 +77,7 @@
     </div>
 
     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-        <button class="btn btn-danger px-3">
+        <button class="btn btn-danger px-3 shadow-sm">
             <i class="bi bi-box-arrow-right"></i>&emsp;{{ __('Logout') }}
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

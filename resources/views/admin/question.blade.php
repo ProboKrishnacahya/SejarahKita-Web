@@ -12,7 +12,7 @@
 
     <div class="d-flex justify-content-end">
         <a href="{{ route('question.create') }}">
-            <button class="btn btn-success mb-5">
+            <button class="btn btn-success shadow-sm mb-5">
                 <i class="bi bi-plus-lg"></i>&emsp;{{ 'Create Question' }}
             </button>
         </a>

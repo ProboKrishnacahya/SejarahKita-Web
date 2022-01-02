@@ -8,18 +8,18 @@ $(document).ready(function () {
     //* Initialize Animate On Scroll
     AOS.init();
 
-    //* TypewriterJS - JS Library (Quote's Typewriting Effect)
+    //* TypewriterJS (Quote's Typewriting Effect)
     var typewriting = document.getElementById('typewriting');
     var typewriter = new Typewriter(typewriting, {
-        delay: '50',
+        delay: 50,
         loop: !0,
         devMode: !0,
         cursorClassName: 'typeCursor'
     });
-    typewriter.typeString('"Bangsa yang besar adalah bangsa yang menghormati jasa pahlawannya."').pauseFor(3000).deleteAll()
-        .typeString('"Bebek berjalan berbondong-bondong, akan tetapi burung elang terbang sendirian."').pauseFor(3000).deleteAll()
-        .typeString('"Beri aku 1.000 orang tua, niscaya akan kucabut semeru dari akarnya. Beri aku 10 pemuda niscaya akan kuguncangkan dunia."').pauseFor(3000).deleteAll()
-        .typeString('"Gantungkan cita-cita mu setinggi langit! Bermimpilah setinggi langit. Jika engkau jatuh, engkau akan jatuh di antara bintang-bintang."').pauseFor(3000).deleteAll()
-        .typeString('"Barangsiapa ingin mutiara, harus berani terjun di lautan yang dalam."').pauseFor(3000).deleteAll()
+    typewriter.typeString('"Bangsa yang besar adalah bangsa yang menghormati jasa pahlawannya."<br>-Dr. (H.C.) Ir. H. Soekarno').pauseFor(3000).deleteAll(30)
+        .typeString('"Tak ada harta pusaka yang sama berharganya dengan kejujuran."<br>-Dr. (H.C.) Drs. H. Mohammad Hatta').pauseFor(3000).deleteAll(30)
+        .typeString('"Terkadang, kesulitan harus kamu rasakan terlebih dulu sebelum kebahagiaan yang sempurna datang kepadamu."<br>-Raden Adjeng Kartini').pauseFor(3000).deleteAll(30)
+        .typeString('"Kegagalan hanya terjadi bila kita menyerah."<br>-Prof. Dr. Ing. H. Bacharuddin Jusuf Habibie, FREng').pauseFor(3000).deleteAll(30)
+        .typeString('"Jika kalian ingin menjadi pemimpin besar, menulislah seperti wartawan dan bicaralah seperti orator."<br>-Raden Hadji Oemar Said Tjokroaminoto').pauseFor(3000).deleteAll(30)
         .start();
 });

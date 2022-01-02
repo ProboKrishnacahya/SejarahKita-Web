@@ -440,6 +440,10 @@ select:focus-visible {
     max-height: 55rem !important;
 }
 
+.tentara-img {
+    max-width: 60% !important;
+}
+
 .form-group {
     margin-bottom: 1rem;
 }

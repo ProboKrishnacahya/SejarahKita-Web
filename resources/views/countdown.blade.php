@@ -6,7 +6,7 @@
     {{-- Countdown Timer untuk Redirect ke /playing-game --}}
     <div class="middle">
         <a href="{{ URL::previous() }}">
-            <button class="btn btn-outline-danger mb-5 w-100">
+            <button class="btn btn-outline-danger w-100 shadow-sm mb-5">
                 <i class="bi bi-x-lg"></i>&emsp;Cancel
             </button>
         </a>
@@ -20,7 +20,7 @@
                 <div id="start"></div>
             </h1>
 
-            <div class="progress">
+            <div class="progress shadow-sm">
                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100"
                     aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
             </div>
