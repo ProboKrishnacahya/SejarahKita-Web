@@ -39,7 +39,13 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('score-result', [QuestionController::class, 'exitGame'])->name('scoreResult');
 
     Route::post('logout', [LoginController::class, 'logout']);
+
     Route::get('student-detail/{id}', [StudentController::class, 'studentDetail']);
+
+    Route::post('submit-score', [PlayingHistoryController::class, 'store']);
+
+    Route::get('leaderboards-easy', [LeaderboardController::class, 'indexEasy']);
+    Route::get('leaderboards-hard', [LeaderboardController::class, 'indexHard']);
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

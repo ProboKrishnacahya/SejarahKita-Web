@@ -40,7 +40,15 @@
                         @endif
                     </td>
                     @php $index++ @endphp
-                    <td>{{ $question->levels->jenis_level }}</td>
+                    <td>
+                        @if ($question->levels->jenis_level == 'Casual')
+                            <strong class="badge casual fs-6">{{ $question->levels->jenis_level }}</strong>
+                        @elseif ($question->levels->jenis_level == 'Easy')
+                            <strong class="badge easy-bg fs-6">{{ $question->levels->jenis_level }}</strong>
+                        @else
+                            <strong class="badge hard-bg fs-6">{{ $question->levels->jenis_level }}</strong>
+                        @endif
+                    </td>
                     <td><span class="truncate">{{ $question->pertanyaan_kalimat }}</span></td>
                     <td>{{ $question->kunci_jawaban }}</td>
                     <td>

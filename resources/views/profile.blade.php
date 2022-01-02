@@ -36,7 +36,7 @@
                     <span class="fs-1">Easy</span>
                 </div>
                 <div class="ms-auto p-2">
-                    <span class="fs-1 fw-bold">{{ $user->getEasyRankedPoint() }} RP</span>
+                    <span class="fs-1 fw-bold">{{ $user->getEasyRankedPoint() . ' RP' }}</span>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
                     <span class="fs-1">Hard</span>
                 </div>
                 <div class="ms-auto p-2">
-                    <span class="fs-1 fw-bold">{{ $user->getHardRankedPoint() }} RP</span>
+                    <span class="fs-1 fw-bold">{{ $user->getHardRankedPoint() . ' RP' }}</span>
                 </div>
             </div>
         </div>

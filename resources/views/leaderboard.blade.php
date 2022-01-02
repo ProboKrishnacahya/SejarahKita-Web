@@ -55,8 +55,14 @@
                             <tr>
                                 <td scope="row" class="fw-bold">{{ $index }}</td>
                                 @php $index++ @endphp
-                                <td>{{ $mudah->students->username }}</td>
-                                <td>{{ $mudah->ranked_point }}</td>
+                                @if ($index == 2 || $index == 3 || $index == 4)
+                                    <td>
+                                        <strong class="badge easy-bg fs-6">{{ $mudah->students->username }}</strong>
+                                    </td>
+                                @else
+                                    <td>{{ $mudah->students->username }}</td>
+                                @endif
+                                <td>{{ $mudah->ranked_point . ' RP' }}</td>
                             </tr>
                         @endforeach
                 </table>
@@ -81,8 +87,14 @@
                             <tr>
                                 <td class="fw-bold">{{ $index }}</td>
                                 @php $index++ @endphp
-                                <td>{{ $sulit->students->username }}</td>
-                                <td>{{ $sulit->ranked_point }}</td>
+                                @if ($index == 2 || $index == 3 || $index == 4)
+                                    <td>
+                                        <strong class="badge hard-bg fs-6">{{ $sulit->students->username }}</strong>
+                                    </td>
+                                @else
+                                    <td>{{ $sulit->students->username }}</td>
+                                @endif
+                                <td>{{ $sulit->ranked_point . ' RP' }} </td>
                             </tr>
                         @endforeach
                 </table>

@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Resources\PlayingHistoryResource;
 use App\Http\Controllers\Auth\InternetProtocolAddressController;
+use App\Models\Leaderboard;
 
 class PlayingHistoryController extends Controller
 {
@@ -41,7 +42,10 @@ class PlayingHistoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        PlayingHistory::create($request->all());
+        Leaderboard::create($request->all());
+
+        return response()->json(['pesan' => 'Data berhasil masuk', 'status' => true]);
     }
 
     /**
