@@ -40,12 +40,13 @@ Route::group(['middleware' => 'auth:api'], function () {
 
     Route::post('logout', [LoginController::class, 'logout']);
 
-    Route::get('student-detail/{id}', [StudentController::class, 'studentDetail']);
-
     Route::post('submit-score', [PlayingHistoryController::class, 'store']);
 
     Route::get('leaderboards-easy', [LeaderboardController::class, 'indexEasy']);
     Route::get('leaderboards-hard', [LeaderboardController::class, 'indexHard']);
+
+    Route::get('student-detail/{id}', [StudentController::class, 'studentDetail']);
+    Route::get('playing-history/{id}', [PlayingHistoryController::class, 'riwayatBermain']);
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

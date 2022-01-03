@@ -103,4 +103,15 @@ class PlayingHistoryController extends Controller
     {
         //
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function riwayatBermain($id)
+    {
+        $playinghistories = PlayingHistory::all()->where('id_student', $id);
+        return ['playinghistories' => PlayingHistoryResource::collection($playinghistories)];
+    }
 }
