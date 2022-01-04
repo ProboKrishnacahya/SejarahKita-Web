@@ -9,6 +9,7 @@ use App\Models\Role;
 use App\Providers\RouteServiceProvider;
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -96,7 +97,7 @@ class RegisterController extends Controller
         ]);
 
         Role::create([
-            'id_student' => Student::firstWhere('email', $data['email'])['id'],
+            'id_student' => $student->id
         ]);
 
         $ip = new InternetProtocolAddressController;
@@ -109,5 +110,14 @@ class RegisterController extends Controller
         ]);
 
         return $student;
+    }
+
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        $this->create($request->all());
+
+        return redirect('login');
     }
 }

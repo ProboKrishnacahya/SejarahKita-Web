@@ -126,11 +126,10 @@ class LeaderboardController extends Controller
             FROM sej12_leaderboards
             WHERE sej12_leaderboards.id_level = 2
             GROUP BY sej12_leaderboards.id_student, sej12_leaderboards.id_level
-            ORDER BY sej12_leaderboards.id_student'
+            ORDER BY sej12_leaderboards.ranked_point DESC'
         );
 
         $ip = new InternetProtocolAddressController;
-
         LogApps::create([
             "id_user" => Auth::user()->id,
             "log_table" => "sej12_leaderboard",
@@ -149,11 +148,10 @@ class LeaderboardController extends Controller
             FROM sej12_leaderboards
             WHERE sej12_leaderboards.id_level = 3
             GROUP BY sej12_leaderboards.id_student, sej12_leaderboards.id_level
-            ORDER BY sej12_leaderboards.id_student'
+            ORDER BY sej12_leaderboards.ranked_point DESC'
         );
 
         $ip = new InternetProtocolAddressController;
-
         LogApps::create([
             "id_user" => Auth::user()->id,
             "log_table" => "sej12_leaderboard",

@@ -401,6 +401,11 @@ select:focus-visible {
     max-height: 3rem;
 }
 
+.auth-logo {
+    max-width: 50%;
+    max-height: 10rem;
+}
+
 .nav-link.active {
     font-weight: 800 !important;
     border-bottom: 2px solid var(--button-secondary) !important;
