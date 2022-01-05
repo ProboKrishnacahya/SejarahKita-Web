@@ -151,6 +151,8 @@
                     class="p-0"></button>
                 <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5"
                     class="p-0"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="5" aria-label="Slide 6"
+                    class="p-0"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -171,6 +173,10 @@
                 </div>
                 <div class="carousel-item">
                     <img src="{{ url('assets/img/img_carousel_page5.png') }}" alt="Carousel" loading="lazy"
+                        class="img-fluid mx-auto d-block" />
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url('assets/img/img_carousel_page6.png') }}" alt="Carousel" loading="lazy"
                         class="img-fluid mx-auto d-block" />
                 </div>
             </div>

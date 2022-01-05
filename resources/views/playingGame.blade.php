@@ -38,14 +38,14 @@
             </div>
         </div>
 
-        <div class="mx-auto">
+        {{-- <div class="mx-auto">
             <audio loop id="audio-player">
                 <source src="{{ url('assets/audio/sound.mp3') }}" type="audio/mpeg">
             </audio>
             <button onclick="togglePlay()" class="btn btn-link border-0">
             <i class="bi bi-volume-up fs-3"></i>
             </button>
-        </div>
+        </div> --}}
 
         {{-- Tampilkan Button 'Lihat Jawaban' pada Casual Match --}}
         @if ($level == 'casual')
