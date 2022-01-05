@@ -8,7 +8,7 @@
             <div class="col">
                 <div class="row">
                     <div class="col-sm-6 align-self-center">
-                        <div class="row">
+                        <div class="row belajarseru-card">
                             <p class="display-6">{{ 'Belajar Jadi' }}</p>
                             <div class="d-inline">
                                 <span class="display-4 highlight">{{ 'Lebih Seru' }}</span>
@@ -32,7 +32,7 @@
                     <p>{{ 'Menangkan permainan dan dapatkan Ranked Point' }}</p>
                 </div>
                 <div class="row justify-content-around text-center my-5">
-                    <div class="col-md-5 align-self-center rounded-3 easy-bg shadow-sm py-5">
+                    <div class="col-md-5 align-self-center rounded-3 easy-bg shadow-sm py-5 easy-card">
                         <div class="row text-center">
                             <h3>{{ 'Easy' }}</h3>
                             <img src="{{ url('assets/img/ill_nyawa5.svg') }}" alt="Nyawa Easy"
@@ -44,7 +44,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-5 align-self-center rounded-3 hard-bg shadow-sm py-5">
+                    <div class="col-md-5 align-self-center rounded-3 hard-bg shadow-sm py-5 hard-card">
                         <div class="row text-center">
                             <h3>{{ 'Hard' }}</h3>
                             <img src="{{ url('assets/img/ill_nyawa3.svg') }}" alt="Nyawa Hard"
@@ -66,7 +66,7 @@
             <div class="col">
                 <div class="row">
                     <div class="col-sm-6 align-self-center">
-                        <div class="row casual-text">
+                        <div class="row casual-text casual-card">
                             <h2>{{ 'Casual Mode' }}</h2>
                             <p>{{ 'Bermain dengan santai tanpa pengaruhi Ranked Point mu' }}</p>
                             <div class="container">
@@ -78,9 +78,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 align-self-center">
+                    <div class="col-sm-6 align-self-center d-none d-sm-block">
                         <img src="{{ url('assets/img/ill_casual.svg') }}" alt="Casual"
                             class="content-img mx-auto d-block mb-2 p-2">
+                    </div>
+                    <div class="text-center container">
+                        
                     </div>
                 </div>
             </div>

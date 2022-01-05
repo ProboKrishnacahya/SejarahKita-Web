@@ -609,3 +609,20 @@ select,
 
 /*! MOBILE VIEW */
 
+@media only screen and (max-width: 600px){
+    .casual-card{
+        text-align: center;
+    }
+}
+.easy-card {
+    margin-bottom: 30px;
+}
+
+.hard-card {
+    margin-bottom: 30px;
+}
+
+.belajarseru-card {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
