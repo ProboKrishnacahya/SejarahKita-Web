@@ -119,8 +119,6 @@ class LeaderboardController extends Controller
 
     public function indexEasy()
     {
-        // $leaderboards = Leaderboard::select()->where(['id_level' => 2, 'id_student' => Auth::user()->id])->get();
-
         $leaderboards = DB::select(
             'SELECT sej12_leaderboards.id_student, sej12_leaderboards.id_level, SUM(sej12_leaderboards.ranked_point) AS ranked_point
             FROM sej12_leaderboards

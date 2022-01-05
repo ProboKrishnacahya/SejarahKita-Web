@@ -22,6 +22,8 @@ class LeaderboardController extends Controller
      */
     public function index()
     {
+        $students = Student::all();
+
         $ip = new InternetProtocolAddressController;
         LogApps::create([
             "id_user" => Auth::user()->id,
@@ -32,9 +34,10 @@ class LeaderboardController extends Controller
         ]);
 
         return view('leaderboard', [
-            "easy" => Leaderboard::getEasyLeaderboard(),
-            "hard" => Leaderboard::getHardLeaderboard(),
-            'active_leaderboard' => "active"
+            "easy" => Leaderboard::getLeaderboardEasy(),
+            "hard" => Leaderboard::getLeaderboardHard(),
+            'active_leaderboard' => "active",
+            compact('students')
         ]);
     }
 

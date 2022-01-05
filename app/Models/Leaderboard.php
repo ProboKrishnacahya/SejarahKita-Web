@@ -34,12 +34,19 @@ class Leaderboard extends Model
 
     public static function getLeaderboardEasy()
     {
+        //Select nama tabel.nama kolom, SUM -> akumulasi jumlah skor , AS agar menjadi ranked_point
+
+        //FROM nama tabel (menggabungkan leaderboard dan student)
+
+        // WHERE memisahkan level (id-level easy = 2), (id-level hard = 3)
+
+        // ORDER BY untuk sorting (DESC = Besar ke kecil , ASC = kecil ke besar)
         $leaderboards = DB::select(
-            'SELECT sej12_leaderboards.id_student, sej12_leaderboards.id_level, SUM(sej12_leaderboards.ranked_point) AS ranked_point
-        FROM sej12_leaderboards
-        WHERE sej12_leaderboards.id_level = 2
-        GROUP BY sej12_leaderboards.id_student, sej12_leaderboards.id_level
-        ORDER BY sej12_leaderboards.ranked_point DESC'
+        'SELECT students.username, sej12_leaderboards.id_level, SUM(sej12_leaderboards.ranked_point) AS ranked_point
+        FROM sej12_leaderboards , students
+        WHERE sej12_leaderboards.id_level = 2 AND students.id = sej12_leaderboards.id_student
+        GROUP BY students.username, sej12_leaderboards.id_level
+        ORDER BY ranked_point DESC'
         );
 
         return $leaderboards;
@@ -48,11 +55,11 @@ class Leaderboard extends Model
     public static function getLeaderboardHard()
     {
         $leaderboards = DB::select(
-            'SELECT sej12_leaderboards.id_student, sej12_leaderboards.id_level, SUM(sej12_leaderboards.ranked_point) AS ranked_point
-        FROM sej12_leaderboards
-        WHERE sej12_leaderboards.id_level = 3
-        GROUP BY sej12_leaderboards.id_student, sej12_leaderboards.id_level
-        ORDER BY sej12_leaderboards.ranked_point DESC'
+        'SELECT students.username, sej12_leaderboards.id_level, SUM(sej12_leaderboards.ranked_point) AS ranked_point
+        FROM sej12_leaderboards , students
+        WHERE sej12_leaderboards.id_level = 3 and students.id = sej12_leaderboards.id_student
+        GROUP BY students.username, sej12_leaderboards.id_level
+        ORDER BY ranked_point DESC'
         );
 
         return $leaderboards;
