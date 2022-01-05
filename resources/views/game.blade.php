@@ -82,9 +82,6 @@
                         <img src="{{ url('assets/img/ill_casual.svg') }}" alt="Casual"
                             class="content-img mx-auto d-block mb-2 p-2">
                     </div>
-                    <div class="text-center container">
-                        
-                    </div>
                 </div>
             </div>
         </div>
