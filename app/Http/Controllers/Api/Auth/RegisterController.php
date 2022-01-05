@@ -62,7 +62,7 @@ class RegisterController extends Controller
             "id_user" => Student::firstWhere('email', $data['email'])['id'],
             "log_table" => "students",
             "log_path" => "RegisterController@create",
-            "log_desc" => "Register new student",
+            "log_desc" => "Register New Student",
             "log_ip" => $ip->getIPAddress()
         ]);
 

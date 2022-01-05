@@ -38,10 +38,26 @@
             </div>
         </div>
 
+        <div class="mx-auto">
+            <audio loop id="audio-player">
+                <source src="{{ url('assets/audio/sound.mp3') }}" type="audio/mpeg">
+            </audio>
+            <button onclick="togglePlay()" class="btn btn-link border-0">
+            <i class="bi bi-volume-up fs-3"></i>
+            </button>
+        </div>
+
         {{-- Tampilkan Button 'Lihat Jawaban' pada Casual Match --}}
         @if ($level == 'casual')
+            <script>
+                function lihatJawaban() {
+                    let kunci = document.getElementById('lihatJawaban')
+                    kunci.setAttribute('value', '1')
+                }
+            </script>
             <div class="ms-auto">
-                <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdropShowAnswer">
+                <button onclick="lihatJawaban()" class="btn btn-link border-0" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdropShowAnswer">
                     <i class="bi bi-lightbulb"></i>&emsp;{{ 'Lihat Jawaban' }}
                 </button>
 
@@ -115,6 +131,7 @@
     <form action="{{ route('checkAnswer') }}" method="POST">
         @csrf
         <input type="hidden" name="id" value="{{ $soal->id_question }}">
+        <input type="hidden" name="lihatJawaban" id="lihatJawaban" value="0">
         <div class="form-group">
             <h5>
                 <label for="input_jawaban">

@@ -57,10 +57,10 @@
                                 @php $index++ @endphp
                                 @if ($index == 2 || $index == 3 || $index == 4)
                                     <td>
-                                        <strong class="badge easy-bg fs-6">{{ $mudah->students->username }}</strong>
+                                        <strong class="badge easy-bg fs-6">{{ $mudah->username }}</strong>
                                     </td>
                                 @else
-                                    <td>{{ $mudah->students->username }}</td>
+                                    <td>{{ $mudah->username }}</td>
                                 @endif
                                 <td>{{ $mudah->ranked_point . ' RP' }}</td>
                             </tr>
@@ -89,10 +89,10 @@
                                 @php $index++ @endphp
                                 @if ($index == 2 || $index == 3 || $index == 4)
                                     <td>
-                                        <strong class="badge hard-bg fs-6">{{ $sulit->students->username }}</strong>
+                                        <strong class="badge hard-bg fs-6">{{ $sulit->username }}</strong>
                                     </td>
                                 @else
-                                    <td>{{ $sulit->students->username }}</td>
+                                    <td>{{ $sulit->username }}</td>
                                 @endif
                                 <td>{{ $sulit->ranked_point . ' RP' }} </td>
                             </tr>

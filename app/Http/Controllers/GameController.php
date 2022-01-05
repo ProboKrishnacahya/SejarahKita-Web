@@ -20,7 +20,7 @@ class GameController extends Controller
     public function index()
     {
         $active_game = "active";
-        
+
         return view('game', compact('active_game'));
     }
 
@@ -105,6 +105,7 @@ class GameController extends Controller
             'hard' => 3,
         ];
 
+        //? Lakukan pengacakan 'id_question' dari table 'sej12_questions' berdasarkan match yang dimainkan
         $getSoal = Question::where('id_level', $match[$level])->get()->random(1);
         $soal = $getSoal[0];
 
@@ -115,6 +116,7 @@ class GameController extends Controller
             'wrongAnswer' => 0
         ];
 
+        //? Simpan data ke dalam session
         Session::put('game', $data);
 
         return view('playingGame', compact('soal', 'level'));
@@ -130,11 +132,17 @@ class GameController extends Controller
 
         $jawaban = $request->input_jawaban;
         $id = $request->id;
+        $lihatJawaban = $request->lihatJawaban;
         $data = Session::get('game');
         $idLevel = $match[$data['level']];
 
         $soal = Question::find($id);
-        if (strtoupper($jawaban) == strtoupper($soal->kunci_jawaban)) {
+        //? Jika klik Button 'Lihat Jawaban'
+        if ($lihatJawaban == '1') {
+            array_push($data['answeredQuestion'], $id);
+            $data['wrongAnswer']++;
+        //? Membuat input jawaban maupun kunci jawaban menjadi uppercase
+        } else if (strtoupper($jawaban) == strtoupper($soal->kunci_jawaban)) {
             array_push($data['answeredQuestion'], $id);
         } else {
             array_push($data['answeredQuestion'], $id);
@@ -150,7 +158,15 @@ class GameController extends Controller
             DB::table('sej12_playing_history')->insert([
                 'id_student' => Auth::user()->id,
                 'id_level' => $idLevel,
+                //? Jika Ranked Mode, maka lakukan kalkulasi skor menggunakan $scoreRanked. Tapi jika Casual Mode, maka lakukan kalkulasi skor menggunakan $scoreCasual.
                 'skor' => $this->isRanked($idLevel) ? $scoreRanked : $scoreCasual,
+                'created_at' => Carbon::now()
+            ]);
+
+            DB::table('sej12_leaderboards')->insert([
+                'id_student' => Auth::user()->id,
+                'id_level' => $idLevel,
+                'ranked_point' => $this->isRanked($idLevel) ? $scoreRanked : $scoreCasual,
                 'created_at' => Carbon::now()
             ]);
 
@@ -168,6 +184,7 @@ class GameController extends Controller
         Session::forget('game');
         Session::put('game', $data);
 
+        //? Mencegah agar pertanyaan yang telah dijawab tidak ditampilkan kembali
         $getSoal = Question::where('id_level', $match[$data['level']])->whereNotIn('id_question', $data['answeredQuestion'])->get()->random(1);
         $soal = $getSoal[0];
         $level = $data['level'];

@@ -3,8 +3,8 @@
 @section('title', 'Register')
 
 @section('content')
-    <div class="text-center">
-        <img src="{{ url('assets/img/logo.svg') }}" alt="Logo" class="auth-logo">
+    <div class="text-center mb-5">
+        <img src="{{ url('assets/img/logo-bordered.svg') }}" alt="Logo" class="auth-logo" loading="lazy">
     </div>
 
     <div class="row" data-aos="fade-up">
@@ -147,7 +147,8 @@
                                     <div class="ms-auto">
                                         <span id="characterLengthPassword"></span>
                                     </div>
-                                </small> @error('password')
+                                </small>
+                                @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -184,7 +185,7 @@
             </div>
 
             <div class="d-grid">
-                <button type="submit" class="btn btn-primary mt-5 mb-3">
+                <button type="submit" class="btn btn-primary mt-4 mb-3">
                     <i class="bi bi-person-plus"></i>&emsp;{{ __('Register') }}
                 </button>
                 <p class="text-center">Sudah punya akun?

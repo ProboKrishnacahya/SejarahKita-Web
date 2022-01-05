@@ -21,6 +21,7 @@ use App\Http\Controllers\Api\StudentController;
 |
 */
 
+//* Register, Login, Logout
 Route::post('register', [RegisterController::class, 'register'])->name('register');
 Route::post('login', [LoginController::class, 'login']);
 Route::post('refresh', [LoginController::class, 'refresh']);
@@ -32,20 +33,24 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::apiResource('levels', LevelController::class);
     Route::apiResource('questions', QuestionController::class);
 
-    Route::get('countdown/{level}', [QuestionController::class, 'countdown'])->name('countdown');
-    Route::get('playing-game/{level}', [QuestionController::class, 'playingGame'])->name('playingGame');
-    Route::post('check-answer', [QuestionController::class, 'checkAnswer'])->name('checkAnswer');
-    Route::post('exit-game', [QuestionController::class, 'exitGame'])->name('exitGame');
-    Route::get('score-result', [QuestionController::class, 'exitGame'])->name('scoreResult');
+    // Route::get('countdown/{level}', [QuestionController::class, 'countdown'])->name('countdown');
+    // Route::get('playing-game/{level}', [QuestionController::class, 'playingGame'])->name('playingGame');
+    // Route::post('check-answer', [QuestionController::class, 'checkAnswer'])->name('checkAnswer');
+    // Route::post('exit-game', [QuestionController::class, 'exitGame'])->name('exitGame');
+    // Route::get('score-result', [QuestionController::class, 'exitGame'])->name('scoreResult');
 
     Route::post('logout', [LoginController::class, 'logout']);
 
+    //* Score Result
     Route::post('submit-score', [PlayingHistoryController::class, 'store']);
 
+    //* Leaderboard - Level Easy & Hard
     Route::get('leaderboards-easy', [LeaderboardController::class, 'indexEasy']);
     Route::get('leaderboards-hard', [LeaderboardController::class, 'indexHard']);
 
+    //* Profile (Identitas, Ranked Point Terkini, Playing History) berdasarkan Student yang sedang login
     Route::get('student-detail/{id}', [StudentController::class, 'studentDetail']);
+    Route::get('ranked-point-terkini/{id}', [PlayingHistoryController::class, 'rankedPointTerkini']);
     Route::get('playing-history/{id}', [PlayingHistoryController::class, 'riwayatBermain']);
 });
 

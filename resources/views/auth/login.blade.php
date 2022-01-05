@@ -3,8 +3,8 @@
 @section('title', 'Login')
 
 @section('content')
-    <div class="text-center">
-        <img src="{{ url('assets/img/logo.svg') }}" alt="Logo" class="auth-logo">
+    <div class="text-center mb-5">
+        <img src="{{ url('assets/img/logo-bordered.svg') }}" alt="Logo" class="auth-logo" loading="lazy">
     </div>
 
     <div class="row" data-aos="fade-up">
@@ -77,7 +77,7 @@
 
                         <div class="text-end">
                             @if (Route::has('password.request'))
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-link border-0 px-0" href="{{ route('password.request') }}">
                                     <strong>{{ __('Lupa Password?') }}</strong>
                                 </a>
                             @endif
@@ -86,7 +86,7 @@
             </div>
 
             <div class="d-grid">
-                <button type="submit" class="btn btn-primary mt-5 mb-3">
+                <button type="submit" class="btn btn-primary mt-4 mb-3">
                     <i class="bi bi-box-arrow-in-right"></i>&emsp;{{ __('Login') }}
                 </button>
                 <p class="text-center">Belum punya akun?

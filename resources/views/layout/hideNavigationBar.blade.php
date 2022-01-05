@@ -53,7 +53,9 @@
 <body class="d-flex flex-column h-100 text-white">
     {{-- Web's Content --}}
     <main class=" flex-shrink-0">
-        <div class="my-5 container">@yield('content')</div>
+        <div class="my-5 container">
+            @yield('content')
+        </div>
     </main>
 
     {{-- External JavaScript --}}

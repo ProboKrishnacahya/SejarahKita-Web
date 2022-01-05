@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers\Api\Auth;
 
-use App\Http\Controllers\Controller;
+use App\Models\LogApps;
 use App\Models\Student;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Http;
 use Laravel\Passport\Client;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
+use App\Http\Controllers\Auth\InternetProtocolAddressController;
 
 class LoginController extends Controller
 {
@@ -83,6 +85,16 @@ class LoginController extends Controller
     private function isLogin(int $id)
     {
         $user = Student::findorFail($id);
+
+        $ip = new InternetProtocolAddressController;
+        LogApps::create([
+            "id_user" => $user->id,
+            "log_table" => "students",
+            "log_path" => "LoginController@index",
+            "log_desc" => "Login to Mobile App",
+            "log_ip" => $ip->getIPAddress()
+        ]);
+
         return $user->roles()->update([
             'is_login' => '1',
         ]);

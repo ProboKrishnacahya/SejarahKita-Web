@@ -23,6 +23,22 @@ toggleConfirmPassword.addEventListener('click', function (e) {
     this.classList.toggle('bi-eye');
 });
 
+//* Audio Player
+var audioElement = document.getElementById("audio-player");
+
+function togglePlayPause() {
+    if (audioElement.paused) {
+        audioElement.play();
+    } else {
+        audioElement.pause();
+    }
+};
+
+//* <input> & <textarea> Characters Counter
+function countCharacters(object, id) {
+    document.getElementById(id).innerHTML = "(" + object.value.length + ")";
+}
+
 //* Scroll to Top Page's Button
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
 var rootElement = document.documentElement;
@@ -47,8 +63,3 @@ function scrollToTop() {
 
 scrollToTopBtn.addEventListener("click", scrollToTop);
 document.addEventListener("scroll", handleScroll);
-
-//* <input> & <textarea> Characters Counter
-function countCharacters(object, id) {
-    document.getElementById(id).innerHTML = "(" + object.value.length + ")";
-}
