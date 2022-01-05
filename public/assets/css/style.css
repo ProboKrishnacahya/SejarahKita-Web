@@ -613,6 +613,14 @@ select,
     .casual-card{
         text-align: center;
     }
+
+    .casualmode-card {
+        width: 100%;
+    }
+
+    .up-button{
+        margin-bottom: 20px;
+    }
 }
 .easy-card {
     margin-bottom: 30px;
@@ -625,4 +633,8 @@ select,
 .belajarseru-card {
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.casualmode-card {
+    width: 50%;
 }

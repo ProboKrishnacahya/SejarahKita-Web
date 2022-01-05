@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="row" data-aos="fade-up">
-        <div class="col-6 align-self-center">
+        <div class="col-sm-6 align-self-center">
             <div class="mb-5 pb-3">
                 <span class="fs-3">Mari Berlatih <strong>Sejarah Indonesia</strong></span>
                 <p class="fs-1">Bersama <a href="{{ url('/') }}"><span
@@ -25,7 +25,7 @@
 
         <div class="col-2"></div>
 
-        <div class="col-4 d-none d-sm-block">
+        <div class="col-sm-4 d-none d-sm-block">
             <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_1LAwTY.json" background="transparent"
                 speed="0.75" style="width: 100%; height: auto;" class="mascot pe-3" loop autoplay></lottie-player>
         </div>
@@ -33,7 +33,7 @@
 
     <div class="my-5" data-aos="fade-up">
         <div class="row">
-            <div class="col-5 align-self-center">
+            <div class="col-5 align-self-center d-none d-sm-block">
                 <img src="{{ url('assets/img/ill_tentara.png') }}" alt="Tentara" loading="lazy" class="tentara-img" />
             </div>
             <div class="col-7 align-self-center">
@@ -69,7 +69,7 @@
                     <h5>{{ 'Ranked Mode' }}</h5>
                     <p>{{ 'Perolehan skor diakumulasi ke Leaderboard masing-masing level' }}</p>
 
-                    <div class="col-md-5 align-self-center rounded-3 easy-bg shadow-sm py-4 mt-1">
+                    <div class="col-md-5 align-self-center rounded-3 easy-bg shadow-sm py-4 mt-3">
                         <div class="text-center">
                             <h4>{{ 'Level Easy' }}</h4>
                             <br>
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5 align-self-center rounded-3 hard-bg shadow-sm py-4 mt-1">
+                    <div class="col-md-5 align-self-center rounded-3 hard-bg shadow-sm py-4 mt-3">
                         <div class="text-center">
                             <h4>{{ 'Level Hard' }}</h4>
                             <br>
@@ -116,7 +116,7 @@
                     <p>{{ 'Berlatih untuk siap bermain Ranked Mode' }}</p>
                 </div>
                 
-                <div class="casual casual-text rounded-3 text-center text-center shadow-sm w-50 mx-auto p-4">
+                <div class="casual casual-text rounded-3 text-center shadow-sm mx-auto p-4 casualmode-card">
                     <h4>{{ 'Casual' }}</h2>
                         <br>
                         <div class="d-flex justify-content-center">
