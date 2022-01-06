@@ -16,9 +16,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->call(function () {
-            DB::table('sej12_logs')->delete();
-        })->everyFiveMinutes();
+        // $schedule->command('delete-records')->everyMinute();
     }
 
     /**

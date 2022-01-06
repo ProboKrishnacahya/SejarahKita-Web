@@ -109,17 +109,6 @@ class PlayingHistoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function rankedPointTerkini($id)
-    {
-        $rankedPointTerkini = PlayingHistory::all()->where('id_student', $id);
-        return ['rankedPointTerkini' => PlayingHistoryResource::collection($rankedPointTerkini)];
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function riwayatBermain($id)
     {
         $playinghistories = PlayingHistory::all()->where('id_student', $id);

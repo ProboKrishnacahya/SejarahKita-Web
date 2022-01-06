@@ -142,8 +142,10 @@ class GameController extends Controller
             array_push($data['answeredQuestion'], $id);
             $data['wrongAnswer']++;
         //? Membuat input jawaban maupun kunci jawaban menjadi uppercase
+        //? Jika jawabannya benar
         } else if (strtoupper($jawaban) == strtoupper($soal->kunci_jawaban)) {
             array_push($data['answeredQuestion'], $id);
+        //? Jika jawabannya salah
         } else {
             array_push($data['answeredQuestion'], $id);
             $data['wrongAnswer']++;
@@ -151,6 +153,7 @@ class GameController extends Controller
 
         $soalDikerjakan = sizeof($data['answeredQuestion']);
         $soalSalah = $data['wrongAnswer'];
+        //? Kalkulasi skor
         $scoreRanked = ($soalDikerjakan - $soalSalah) * 5;
         $scoreCasual = ($soalDikerjakan - $soalSalah) * 10;
 

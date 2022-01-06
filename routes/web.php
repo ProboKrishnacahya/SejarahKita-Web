@@ -46,12 +46,10 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('admin/profile/question', QuestionController::class);
         Route::get('admin/profile/log', [AdminController::class, 'show'])->name('admin.profile.log');
         Route::resource('level', LevelController::class);
-        // Route::get('', [AdminController::class, 'index']);
     });
 
     Route::middleware(['user'])->group(function () {
         Route::get('profile', [StudentController::class, 'edit'])->name('profile');
         Route::get('playing-history', [StudentController::class, 'show'])->name('playing-history');
-        // Route::get('', [StudentController::class, 'index'])->name('user');
     });
 });

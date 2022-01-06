@@ -1,9 +1,3 @@
-//* Show unsaved changes Alert
-// window.addEventListener("beforeunload", event => {
-//     event.preventDefault();
-//     event.returnValue = "";
-// });
-
 //* Password's & Confirm Password's input Visibility Toggle
 //? Show / Hide Password
 const togglePassword = document.querySelector('#togglePassword');
