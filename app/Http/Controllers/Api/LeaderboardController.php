@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Resources\LeaderboardResource;
 use App\Http\Controllers\Auth\InternetProtocolAddressController;
+use App\Models\Student;
 
 class LeaderboardController extends Controller
 {
@@ -119,12 +120,13 @@ class LeaderboardController extends Controller
 
     public function indexEasy()
     {
+        $students = Student::all('username', 'id');
         $leaderboards = DB::select(
             'SELECT sej12_leaderboards.id_student, sej12_leaderboards.id_level, SUM(sej12_leaderboards.ranked_point) AS ranked_point
             FROM sej12_leaderboards
             WHERE sej12_leaderboards.id_level = 2
             GROUP BY sej12_leaderboards.id_student, sej12_leaderboards.id_level
-            ORDER BY sej12_leaderboards.ranked_point DESC'
+            ORDER BY ranked_point DESC'
         );
 
         $ip = new InternetProtocolAddressController;
@@ -136,17 +138,22 @@ class LeaderboardController extends Controller
             "log_ip" =>  $ip->getIPAddress()
         ]);
 
-        return ['leaderboards' => LeaderboardResource::collection(Leaderboard::hydrate($leaderboards))];
+        //tanpa Hydrate : errornya ==> "message": "Call to undefined method stdClass::toArray()"
+        return [
+            'leaderboards' => LeaderboardResource::collection(Leaderboard::hydrate($leaderboards)),
+            'students' => $students
+        ];
     }
 
     public function indexHard()
     {
+        $students = Student::all('username', 'id');
         $leaderboards = DB::select(
             'SELECT sej12_leaderboards.id_student, sej12_leaderboards.id_level, SUM(sej12_leaderboards.ranked_point) AS ranked_point
             FROM sej12_leaderboards
             WHERE sej12_leaderboards.id_level = 3
             GROUP BY sej12_leaderboards.id_student, sej12_leaderboards.id_level
-            ORDER BY sej12_leaderboards.ranked_point DESC'
+            ORDER BY ranked_point DESC'
         );
 
         $ip = new InternetProtocolAddressController;
@@ -158,6 +165,33 @@ class LeaderboardController extends Controller
             "log_ip" =>  $ip->getIPAddress()
         ]);
 
-        return ['leaderboards' => LeaderboardResource::collection(Leaderboard::hydrate($leaderboards))];
+        return [
+            'leaderboards' => LeaderboardResource::collection(Leaderboard::hydrate($leaderboards)),
+            'students' => $students
+        ];
+    }
+
+    public function rankedPointTerkini($id)
+    {
+        $easy = DB::select(
+            'SELECT SUM(ranked_point) AS ranked_point
+            FROM sej12_leaderboards
+            WHERE id_student = ' . $id . ' AND id_level = 2
+            GROUP BY id_student
+            ORDER BY id_leaderboard DESC'
+        );
+
+        $hard = DB::select(
+            'SELECT SUM(ranked_point) AS ranked_point
+            FROM sej12_leaderboards
+            WHERE id_student = ' . $id . ' AND id_level = 3
+            GROUP BY id_student
+            ORDER BY id_leaderboard DESC'
+        );
+
+        return [
+            'easy' => $easy,
+            'hard' => $hard
+        ];
     }
 }
