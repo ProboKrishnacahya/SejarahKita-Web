@@ -17,7 +17,7 @@ class LeaderboardSeeder extends Seeder
         DB::table('sej12_leaderboards')->insert([
             'id_student' => 5,
             'id_level' => 2,
-            'ranked_point' => 100,
+            'ranked_point' => 90,
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -33,7 +33,7 @@ class LeaderboardSeeder extends Seeder
         DB::table('sej12_leaderboards')->insert([
             'id_student' => 6,
             'id_level' => 2,
-            'ranked_point' => 87,
+            'ranked_point' => 85,
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -41,7 +41,7 @@ class LeaderboardSeeder extends Seeder
         DB::table('sej12_leaderboards')->insert([
             'id_student' => 6,
             'id_level' => 3,
-            'ranked_point' => 93,
+            'ranked_point' => 90,
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -57,7 +57,7 @@ class LeaderboardSeeder extends Seeder
         DB::table('sej12_leaderboards')->insert([
             'id_student' => 5,
             'id_level' => 3,
-            'ranked_point' => 71,
+            'ranked_point' => 85,
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);

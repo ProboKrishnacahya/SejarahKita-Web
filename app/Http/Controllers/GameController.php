@@ -141,11 +141,11 @@ class GameController extends Controller
         if ($lihatJawaban == '1') {
             array_push($data['answeredQuestion'], $id);
             $data['wrongAnswer']++;
-        //? Membuat input jawaban maupun kunci jawaban menjadi uppercase
-        //? Jika jawabannya benar
+            //? Membuat input jawaban maupun kunci jawaban menjadi uppercase
+            //? Jika jawabannya benar
         } else if (strtoupper($jawaban) == strtoupper($soal->kunci_jawaban)) {
             array_push($data['answeredQuestion'], $id);
-        //? Jika jawabannya salah
+            //? Jika jawabannya salah
         } else {
             array_push($data['answeredQuestion'], $id);
             $data['wrongAnswer']++;
@@ -158,21 +158,22 @@ class GameController extends Controller
         $scoreCasual = ($soalDikerjakan - $soalSalah) * 10;
 
         if ($this->isGameOver($soalSalah, $soalDikerjakan, $idLevel)) {
-            DB::table('sej12_playing_history')->insert([
-                'id_student' => Auth::user()->id,
-                'id_level' => $idLevel,
-                //? Jika Ranked Mode, maka lakukan kalkulasi skor menggunakan $scoreRanked. Tapi jika Casual Mode, maka lakukan kalkulasi skor menggunakan $scoreCasual.
-                'skor' => $this->isRanked($idLevel) ? $scoreRanked : $scoreCasual,
-                'created_at' => Carbon::now()
-            ]);
+            if (Auth::user()->roles->role == 'user') {
+                DB::table('sej12_playing_history')->insert([
+                    'id_student' => Auth::user()->id,
+                    'id_level' => $idLevel,
+                    //? Jika Ranked Mode, maka lakukan kalkulasi skor menggunakan $scoreRanked. Tapi jika Casual Mode, maka lakukan kalkulasi skor menggunakan $scoreCasual.
+                    'skor' => $this->isRanked($idLevel) ? $scoreRanked : $scoreCasual,
+                    'created_at' => Carbon::now()
+                ]);
 
-            DB::table('sej12_leaderboards')->insert([
-                'id_student' => Auth::user()->id,
-                'id_level' => $idLevel,
-                'ranked_point' => $this->isRanked($idLevel) ? $scoreRanked : $scoreCasual,
-                'created_at' => Carbon::now()
-            ]);
-
+                DB::table('sej12_leaderboards')->insert([
+                    'id_student' => Auth::user()->id,
+                    'id_level' => $idLevel,
+                    'ranked_point' => $this->isRanked($idLevel) ? $scoreRanked : $scoreCasual,
+                    'created_at' => Carbon::now()
+                ]);
+            }
             $result = [
                 'message' => $this->messageResult($soalSalah, $soalDikerjakan, $idLevel),
                 'skor' => $this->isRanked($idLevel) ? $scoreRanked : $scoreCasual,

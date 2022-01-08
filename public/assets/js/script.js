@@ -17,43 +17,15 @@ toggleConfirmPassword.addEventListener('click', function (e) {
     this.classList.toggle('bi-eye');
 });
 
-//* Audio Player
-var audioElement = document.getElementById("audio-player");
-
-function togglePlayPause() {
-    if (audioElement.paused) {
-        audioElement.play();
-    } else {
-        audioElement.pause();
-    }
-};
-
 //* <input> & <textarea> Characters Counter
 function countCharacters(object, id) {
     document.getElementById(id).innerHTML = "(" + object.value.length + ")";
 }
 
 //* Scroll to Top Page's Button
-var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
-var rootElement = document.documentElement;
+var mybutton = document.getElementById("myBtn");
 
-function handleScroll() {
-    var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-    if (rootElement.scrollTop / scrollTotal > 0.5) {
-        //? Tampilkan Button jika scroll halaman > 50%
-        scrollToTopBtn.classList.add("showBtn");
-    } else {
-        //? Sembunyikan Button
-        scrollToTopBtn.classList.remove("showBtn");
-    }
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
-
-function scrollToTop() {
-    rootElement.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-
-scrollToTopBtn.addEventListener("click", scrollToTop);
-document.addEventListener("scroll", handleScroll);

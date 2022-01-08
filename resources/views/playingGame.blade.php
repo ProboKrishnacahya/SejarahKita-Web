@@ -3,9 +3,9 @@
 @section('title', 'Play Game')
 
 @section('content')
-    <div class="d-flex">
+    <div class="d-flex exit-nyawa">
         {{-- Exit Game's Modal Confirmation --}}
-        <div class="me-auto">
+        <div class="me-auto btn-exit">
             <button class="btn btn-outline-danger shadow-sm" data-bs-toggle="modal" data-bs-target="#staticBackdropExitGame">
                 <i class="bi bi-box-arrow-left"></i>&emsp;{{ 'Keluar Game' }}
             </button>
@@ -38,24 +38,9 @@
             </div>
         </div>
 
-        {{-- <div class="mx-auto">
-            <audio loop id="audio-player">
-                <source src="{{ url('assets/audio/sound.mp3') }}" type="audio/mpeg">
-            </audio>
-            <button onclick="togglePlay()" class="btn btn-link border-0">
-            <i class="bi bi-volume-up fs-3"></i>
-            </button>
-        </div> --}}
-
         {{-- Tampilkan Button 'Lihat Jawaban' pada Casual Match --}}
         @if ($level == 'casual')
-            <script>
-                function lihatJawaban() {
-                    let kunci = document.getElementById('lihatJawaban')
-                    kunci.setAttribute('value', '1')
-                }
-            </script>
-            <div class="ms-auto">
+            <div class="ms-auto btn-lihatjawaban">
                 <button onclick="lihatJawaban()" class="btn btn-link border-0" data-bs-toggle="modal"
                     data-bs-target="#staticBackdropShowAnswer">
                     <i class="bi bi-lightbulb"></i>&emsp;{{ 'Lihat Jawaban' }}
@@ -94,7 +79,7 @@
             @endphp
 
             {{-- Kurangi jumlah Nyawa setiap kali salah menjawab --}}
-            <div class="ms-auto" id="nyawa">
+            <div class="ms-auto img-nyawa" id="nyawa">
                 <span class="fs-5">{{ 'Nyawa:' }}</span>&emsp;
                 @for ($i = 0; $i < $nyawa - $wrong; $i++)
                     <i class="bi bi-suit-heart-fill text-danger icon-font"></i>
@@ -116,13 +101,13 @@
         {{ $soal->pertanyaan_kalimat }}
     </div>
 
-    <div class="text-center">
+    <div class="card anagram-game p-0 text-center">
         <span class="anagram badge nilai text-black fw-bold fs-1 text-uppercase mt-3 mb-5">
             {{ str_shuffle($soal->kunci_jawaban) }}
         </span>
     </div>
 
-    {{-- <div class="text-center">
+    {{-- <div class="card anagram-game p-0 text-center">
         <span class="anagram badge nilai text-black fw-bold fs-1 text-uppercase mt-3 mb-5">
             {{$soal->kunci_jawaban }}
         </span>
@@ -153,4 +138,7 @@
             </button>
         </div>
     </form>
+
+    {{-- Button 'Lihat Jawaban' pada Casual Match --}}
+    <script src="{{ url('/assets/js/playingGame.js') }}" type="text/javascript"></script>
 @endsection

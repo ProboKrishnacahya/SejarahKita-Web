@@ -46,14 +46,14 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        // $this->validate($request,[
-        //     'image'=>'image|file|max:1024'
-        // ]);
+        $this->validate($request, [
+            'pertanyaan_path_gambar' => 'image|mimes:jpg,jpeg,png,svg,gif|file'
+        ]);
 
         Question::create([
             'id_level' => $request->id_level,
             'pertanyaan_kalimat' => $request->pertanyaan_kalimat,
-            'pertanyaan_path_gambar' => $request->file('pertanyaan_path_gambar')->store('pertanyaan_path_gambar'),
+            'pertanyaan_path_gambar' => $request->pertanyaan_path_gambar != null ? $request->file('pertanyaan_path_gambar')->store('pertanyaan_path_gambar') : null,
             'kunci_jawaban' => $request->kunci_jawaban
         ]);
 
@@ -114,6 +114,10 @@ class QuestionController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'pertanyaan_path_gambar' => 'image|mimes:jpg,jpeg,png,svg,gif|file'
+        ]);
+
         $questions = Question::findOrFail($id);
 
         if ($request->file('pertanyaan_path_gambar')) {
@@ -125,7 +129,7 @@ class QuestionController extends Controller
         $questions->update([
             'id_level' => $request->id_level,
             'pertanyaan_kalimat' => $request->pertanyaan_kalimat,
-            'pertanyaan_path_gambar' => $request->file('pertanyaan_path_gambar')->store('pertanyaan_path_gambar'),
+            'pertanyaan_path_gambar' => $request->pertanyaan_path_gambar != null ? $request->file('pertanyaan_path_gambar')->store('pertanyaan_path_gambar') : null,
             'kunci_jawaban' => $request->kunci_jawaban
         ]);
 

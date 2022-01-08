@@ -3,7 +3,7 @@
 /** Page Structures */
 body {
     font-family: var(--font-primary) !important;
-    background: var(--background) url(../img/bg.svg) fixed center / cover no-repeat;
+    background: var(--background) url(../img/bg-desktop.svg) fixed center / cover no-repeat;
 }
 
 footer {
@@ -334,21 +334,14 @@ select:focus-visible {
 }
 
 .scrollToTopBtn {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    z-index: 100;
-    opacity: 0;
-    padding: .5rem .75rem;
-    transform: translateY(100px);
+    float: right;
+    top: 20px;
+    bottom: 0;
+    right: 0;
+    z-index: 100 !important;
     transition: all .5s ease;
     border-radius: 5px;
     color: var(--button-secondary);
-}
-
-.showBtn {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .icon-font {
@@ -525,10 +518,6 @@ select,
     color: var(--highlight);
 }
 
-.square {
-    list-style-type: square;
-}
-
 .rankedPointTerkini-bg {
     opacity: 0.7;
     position: absolute;
@@ -583,6 +572,11 @@ select,
     letter-spacing: .25rem;
 }
 
+.anagram-game {
+    background-color: transparent !important;
+    border: none !important;
+}
+
 .easyProfile {
     border-radius: 15px 15px 0px 0px !important;
 }
@@ -609,32 +603,79 @@ select,
 
 /*! MOBILE VIEW */
 
-@media only screen and (max-width: 600px){
-    .casual-card{
+@media only screen and (max-width: 600px) {
+    body {
+        background: var(--background) url(../img/bg-mobile.svg) fixed center / cover no-repeat;
+    }
+
+    .casual-card {
+        text-align: center;
+    }
+
+    .up-button {
+        margin-bottom: 1.25rem;
+    }
+
+    .btn-cta-home,
+    .ranked-level {
+        display: grid !important;
+        gap: 1rem;
+    }
+
+    .btn-cta-home {
+        place-items: center !important;
+    }
+
+    .btn-cta-primary-home {
+        margin: 0 .25rem 0 0 !important;
+    }
+
+    .iframe-home {
+        margin-top: 2rem;
+    }
+
+    .developer,
+    .dashboard-card {
+        gap: 1rem;
+    }
+
+    .belajarseru-card {
+        margin: 1.875rem 0 1.875rem 0;
         text-align: center;
     }
 
     .casualmode-card {
-        width: 100%;
+        width: 50%;
     }
 
-    .up-button{
-        margin-bottom: 20px;
+    .mainkangamenya-card {
+        margin: 1.875rem 0 1.875rem 0;
+        text-align: center;
     }
-}
-.easy-card {
-    margin-bottom: 30px;
-}
 
-.hard-card {
-    margin-bottom: 30px;
-}
+    .exit-nyawa {
+        display: grid !important;
+        margin: 0 !important;
+    }
 
-.belajarseru-card {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+    .btn-exit,
+    .btn-lihatjawaban {
+        display: grid !important;
+        width: 100% !important;
+    }
 
-.casualmode-card {
-    width: 50%;
+    .btn-lihatjawaban {
+        margin-top: 2rem;
+    }
+
+    .img-nyawa {
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    .btn-playinghistory,
+    .btn-banksoal,
+    .btn-log {
+        width: 100% !important;
+    }
 }

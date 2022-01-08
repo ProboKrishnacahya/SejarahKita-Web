@@ -33,7 +33,7 @@
             @foreach ($questions as $question)
                 <tr>
                     <td scope="row" class="fw-bold text-center">
-                        @if ($question->pertanyaan_path_gambar == '-')
+                        @if ($question->pertanyaan_path_gambar == '-' || $question->pertanyaan_path_gambar == null)
                             <span class="text-white">{{ $index }}</span>
                         @else
                             <span class="badge bg-primary fs-6">{{ $index }}</span>

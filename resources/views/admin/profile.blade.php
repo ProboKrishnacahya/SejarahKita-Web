@@ -29,15 +29,14 @@
         </div>
     </div>
 
-    <div data-aos="fade-up">
-        <div class="row my-5 text-center">
+        <div class="row my-5 text-center dashboard-card" data-aos="fade-up">
             <div class="col-sm-6">
                 <div class="bg-primary bg-gradient rounded-3 p-3">
                     <div class="card-body">
                         <p>Kumpulan Pertanyaan dan Kunci Jawaban.</p>
                         <br>
                         <a href="{{ url('admin/profile/question') }}">
-                            <button class="btn btn-warning w-50 shadow-sm">
+                            <button class="btn btn-warning btn-banksoal w-50 shadow-sm">
                                 <i class="bi bi-folder"></i>&emsp;{{ 'Bank Soal' }}
                             </button>
                         </a>
@@ -50,7 +49,7 @@
                         <p>Pencatatan Riwayat Aktivitas di Aplikasi.</p>
                         <br>
                         <a href="{{ url('admin/profile/log') }}">
-                            <button class="btn btn-warning w-50 shadow-sm">
+                            <button class="btn btn-warning btn-log w-50 shadow-sm">
                                 <i class="bi bi-clock"></i>&emsp;{{ 'Log' }}
                             </button>
                         </a>
@@ -58,7 +57,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
         <button class="btn btn-danger px-3 shadow-sm">

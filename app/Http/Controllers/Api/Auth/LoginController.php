@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Auth;
 
+use Carbon\Carbon;
 use App\Models\LogApps;
 use App\Models\Student;
 use Illuminate\Http\Request;
@@ -95,8 +96,20 @@ class LoginController extends Controller
             "log_ip" => $ip->getIPAddress()
         ]);
 
+        $user->roles()->update([
+            'is_login' => '1',
+            'last_login' => Carbon::now()
+        ]);
+
+        if ($user->roles->first_login == null) {
+            $user->roles()->update([
+                'first_login' => Carbon::now(),
+            ]);
+        }
+
         return $user->roles()->update([
             'is_login' => '1',
+            'last_login' => Carbon::now()
         ]);
     }
 

@@ -24,6 +24,8 @@ class CreateSej12RolesTable extends Migration
             $table->string('role')->default('user');
             $table->enum('is_login', ['0','1'])->default('0');
             $table->enum('is_active', ['0','1'])->default('1');
+            $table->timestamp('first_login')->nullable();
+            $table->timestamp('last_login')->nullable();
             $table->timestamps();
         });
     }

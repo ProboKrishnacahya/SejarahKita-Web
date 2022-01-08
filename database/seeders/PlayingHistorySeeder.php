@@ -25,7 +25,7 @@ class PlayingHistorySeeder extends Seeder
         DB::table('sej12_playing_history')->insert([
             'id_student' => 5,
             'id_level' => 2,
-            'skor' => 92,
+            'skor' => 90,
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -34,6 +34,54 @@ class PlayingHistorySeeder extends Seeder
             'id_student' => 5,
             'id_level' => 3,
             'skor' => 85,
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('sej12_playing_history')->insert([
+            'id_student' => 6,
+            'id_level' => 1,
+            'skor' => 60,
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('sej12_playing_history')->insert([
+            'id_student' => 6,
+            'id_level' => 2,
+            'skor' => 85,
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('sej12_playing_history')->insert([
+            'id_student' => 6,
+            'id_level' => 3,
+            'skor' => 90,
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('sej12_playing_history')->insert([
+            'id_student' => 7,
+            'id_level' => 1,
+            'skor' => 80,
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('sej12_playing_history')->insert([
+            'id_student' => 7,
+            'id_level' => 2,
+            'skor' => 95,
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('sej12_playing_history')->insert([
+            'id_student' => 7,
+            'id_level' => 3,
+            'skor' => 75,
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);

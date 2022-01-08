@@ -79,7 +79,6 @@
                     </li>
 
                     @if (Auth::user() != null)
-
                         @if (Auth::user()->roles->role == 'admin')
                             <li class="nav-item">
                                 <a class="nav-link menu-last-child" href="{{ route('admin.profile') }}"
@@ -105,19 +104,6 @@
                                 </a>
                             </li>
                         @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle menu-last-child" data-bs-toggle="dropdown" role="button"
-                                aria-expanded="false">Authentication</a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                    <a class="dropdown-item" href="{{ route('login') }}">Login</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{{ route('register') }}">Register</a>
-                                </li>
-                            </ul>
-                        </li>
                     @endif
                 </ul>
             </div>
@@ -132,13 +118,11 @@
     </main>
 
     {{-- Web's Footer --}}
-    <footer class="navbar mt-auto user-select-none text-center">
-            <div class=" mx-auto">
-                 
-            <span>&copy; 2021</span><a href="{{ url('/') }}" data-bs-toggle="tooltip"
-                title="Homepage">&nbsp;<span class="fw-bold">SejarahKita</span></a>
-                        
-            </div>
+    <footer class="navbar text-center py-3 mt-auto user-select-none">
+        <div class="mx-auto">
+            <span>&copy; 2021</span><a href="{{ url('/') }}" data-bs-toggle="tooltip" title="Homepage">&nbsp;<span
+                    class="fw-bold">SejarahKita</span></a>
+        </div>
     </footer>
 
     {{-- External JavaScript --}}
@@ -154,7 +138,3 @@
 </body>
 
 </html>
-
-
-
-

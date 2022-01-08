@@ -66,7 +66,7 @@
                         <p>Pantau performamu. Tingkatkan untuk hasil yang lebih optimal.</p>
                         <br>
                         <a href="{{ route('playing-history') }}">
-                            <button class="btn btn-warning w-50 shadow-sm">
+                            <button class="btn btn-warning w-50 btn-playinghistory shadow-sm">
                                 <i class="bi bi-journal-medical"></i>&emsp;{{ 'Riwayat Bermain' }}
                             </button>
                         </a>

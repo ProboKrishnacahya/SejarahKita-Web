@@ -25,7 +25,7 @@
                         <div class="form-group mt-2">
                             <h5>
                                 <label for="id_level">
-                                    <i class="bi bi-tag"></i>&emsp;{{ 'Kategori Pertanyaan' }}
+                                    <i class="bi bi-tag"></i>&emsp;{{ 'Kategori Pertanyaan*' }}
                                 </label>
                             </h5>
                             <div class="d-flex">
@@ -49,7 +49,7 @@
                         <div class="form-group my-4">
                             <h5>
                                 <label for="pertanyaan_kalimat">
-                                    <i class="bi bi-patch-question"></i>&emsp;{{ 'Isi Pertanyaan' }}
+                                    <i class="bi bi-patch-question"></i>&emsp;{{ 'Isi Pertanyaan*' }}
                                 </label>
                             </h5>
                             <textarea name="pertanyaan_kalimat" rows="5" class="form-control"
@@ -64,7 +64,7 @@
                         <div class="form-group">
                             <h5>
                                 <label for="kunci_jawaban">
-                                    <i class="bi bi-bookmark-check"></i>&emsp;{{ 'Jawaban' }}
+                                    <i class="bi bi-bookmark-check"></i>&emsp;{{ 'Jawaban*' }}
                                 </label>
                             </h5>
                             <input type="text" class="form-control" value="{{ $questions->kunci_jawaban }}"
@@ -82,12 +82,16 @@
                                     <i class="bi bi-upload"></i>&emsp;{{ 'Upload Gambar' }}
                                 </label>
                             </h5>
-                            <input type="hidden" name="oldImage" value="{{ $questions->pertanyaan_path_gambar }}">
+                            <input type="hidden" name="pertanyaan_path_gambar"
+                                value="{{ $questions->pertanyaan_path_gambar }}">
                             <img src="{{ asset('storage/' . $questions->pertanyaan_path_gambar) }}" id="output"
                                 class="question-img shadow-sm mb-3" />
                             <input class="form-control" type="file" id="imageInp" name="pertanyaan_path_gambar"
                                 onchange="loadFile(event)">
                         </div>
+                        <small class="text-white-50">
+                            <strong>{{ '*) Wajib diisi' }}</strong>
+                        </small>
                     </div>
             </div>
         </div>
@@ -100,10 +104,14 @@
     </div>
 
     @if ($errors->any())
-        <div class="alert alert-danger mt-5 pt-3 justify-content-between">
-            @foreach ($errors->all() as $error)<i
-                    class="bi bi-exclamation-circle"></i>&emsp;{{ $error }}
-            @endforeach
+        <div class="alert alert-danger justify-content-between pb-0 mt-5">
+            <ul class="list-unstyled">
+                @foreach ($errors->all() as $error)
+                    <li>
+                        <i class="bi bi-exclamation-circle"></i>&emsp;{{ $error }}
+                    </li>
+                @endforeach
+            </ul>
         </div>
     @endif
     </form>

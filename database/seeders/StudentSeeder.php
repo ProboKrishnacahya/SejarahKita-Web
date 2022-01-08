@@ -15,7 +15,7 @@ class StudentSeeder extends Seeder
      */
     public function run()
     {
-        // Admin account
+        //* Admin account
         DB::table('students')->insert([
             'email' => 'vanthony@student.ciputra.ac.id',
             'password' => Hash::make('va123456'),
@@ -24,10 +24,8 @@ class StudentSeeder extends Seeder
             'school' => '',
             'city' => '',
             'birthyear' => 0,
-            // 'role' => 'admin',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
-            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('students')->insert([
@@ -38,9 +36,7 @@ class StudentSeeder extends Seeder
             'school' => '',
             'city' => '',
             'birthyear' => 0,
-            // 'role' => 'admin',
             'created_at' => \Carbon\Carbon::now(),
-            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('students')->insert([
@@ -51,10 +47,8 @@ class StudentSeeder extends Seeder
             'school' => '',
             'city' => '',
             'birthyear' => 0,
-            // 'role' => 'admin',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
-            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('students')->insert([
@@ -65,25 +59,21 @@ class StudentSeeder extends Seeder
             'school' => '',
             'city' => '',
             'birthyear' => 0,
-            // 'role' => 'admin',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
-            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
 
-        // User account
+        //* User account
         DB::table('students')->insert([
             'email' => 'johndoe@gmail.com',
             'password' => Hash::make('12345678'),
-            'username' => 'johndoe01',
+            'username' => 'johndoe',
             'name' => 'John Doe',
-            'school' => 'Sekolah Ciputra',
+            'school' => 'Ciputra',
             'city' => 'Surabaya',
-            'birthyear' => 2003,
-            // 'role' => 'user',
+            'birthyear' => 2004,
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
-            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('students')->insert([
@@ -91,27 +81,23 @@ class StudentSeeder extends Seeder
             'password' => Hash::make('12345678'),
             'username' => 'willsmith',
             'name' => 'Will Smith',
-            'school' => 'Sekolah Citra Berkat',
-            'city' => 'Jakarta',
+            'school' => 'Citra Berkat',
+            'city' => 'Surabaya',
             'birthyear' => 2004,
-            // 'role' => 'user',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
-            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
 
         DB::table('students')->insert([
-            'email' => 'loremipsum@gmail.com',
+            'email' => 'jamesappleseed@gmail.com',
             'password' => Hash::make('12345678'),
-            'username' => 'loremipsum',
-            'name' => 'Lorem Ipsum',
-            'school' => 'Dolor Sit Amet',
-            'city' => 'Consectetur',
+            'username' => 'jamesapple',
+            'name' => 'James Appleseed',
+            'school' => 'Citra Kasih',
+            'city' => 'Surabaya',
             'birthyear' => 2005,
-            // 'role' => 'user',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
-            // 'email_verified_at' => \Carbon\Carbon::now()
         ]);
     }
 }

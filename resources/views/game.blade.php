@@ -31,8 +31,8 @@
                     <h2>{{ 'Ranked Mode' }}</h2>
                     <p>{{ 'Menangkan permainan dan dapatkan Ranked Point' }}</p>
                 </div>
-                <div class="row justify-content-around text-center my-5">
-                    <div class="col-md-5 align-self-center rounded-3 easy-bg shadow-sm py-5 easy-card">
+                <div class="row ranked-level d-flex justify-content-around text-center my-5">
+                    <div class="col-md-5 align-self-center rounded-3 easy-bg shadow-sm py-5">
                         <div class="row text-center">
                             <h3>{{ 'Easy' }}</h3>
                             <img src="{{ url('assets/img/ill_nyawa5.svg') }}" alt="Nyawa Easy"
@@ -44,7 +44,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-5 align-self-center rounded-3 hard-bg shadow-sm py-5 hard-card">
+                    <div class="col-md-5 align-self-center rounded-3 hard-bg shadow-sm py-5">
                         <div class="row text-center">
                             <h3>{{ 'Hard' }}</h3>
                             <img src="{{ url('assets/img/ill_nyawa3.svg') }}" alt="Nyawa Hard"

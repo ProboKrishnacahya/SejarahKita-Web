@@ -11,16 +11,18 @@
                             class="fw-bold fs-1">SejarahKita</span></a></p>
                 <p id="typewriting"></p>
             </div>
-            <a href="{{ url('game') }}">
-                <button class="btn btn-lg btn-primary shadow-sm me-3">
-                    <i class="bi bi-controller"></i>&emsp;{{ __('Mulai Permainan') }}
-                </button>
-            </a>
-            <a href="{{ url('leaderboard') }}">
-                <button class="btn btn-lg btn-outline-primary">
-                    <i class="bi bi-bar-chart"></i>&emsp;{{ __('Lihat Peringkat') }}
-                </button>
-            </a>
+            <div class="btn-cta-home">
+                <a href="{{ url('game') }}">
+                    <button class="btn btn-lg btn-primary btn-cta-primary-home shadow-sm me-3">
+                        <i class="bi bi-controller"></i>&emsp;{{ __('Mulai Permainan') }}
+                    </button>
+                </a>
+                <a href="{{ url('leaderboard') }}">
+                    <button class="btn btn-lg btn-outline-primary">
+                        <i class="bi bi-bar-chart"></i>&emsp;{{ __('Lihat Peringkat') }}
+                    </button>
+                </a>
+            </div>
         </div>
 
         <div class="col-2"></div>
@@ -33,11 +35,12 @@
 
     <div class="my-5" data-aos="fade-up">
         <div class="row">
-            <div class="col-5 align-self-center d-none d-sm-block">
+            <div class="col-md-5 align-self-center d-none d-sm-block">
                 <img src="{{ url('assets/img/ill_tentara.png') }}" alt="Tentara" loading="lazy" class="tentara-img" />
             </div>
-            <div class="col-7 align-self-center">
-                <p class="fs-4 mb-5"><strong>SejarahKita</strong> adalah Game Edukasi berupa Anagram dengan topik mata pelajaran Sejarah Indonesia Kelas 12 (XII).
+            <div class="col-md-7 align-self-center">
+                <p class="fs-4 mb-5"><strong>SejarahKita</strong> adalah Game Edukasi berupa Anagram dengan
+                    topik mata pelajaran Sejarah Indonesia Kelas 12 (XII).
                 </p>
                 <div class="d-flex">
                     <div class="bg-primary bg-gradient rounded-3 w-50 p-3 me-2">
@@ -111,28 +114,32 @@
                     </div>
                 </div>
 
-                <div class="text-center mt-5">
-                    <h5>{{ 'Casual Mode' }}</h5>
-                    <p>{{ 'Berlatih untuk siap bermain Ranked Mode' }}</p>
-                </div>
-                
-                <div class="casual casual-text rounded-3 text-center shadow-sm mx-auto p-4 casualmode-card">
-                    <h4>{{ 'Casual' }}</h2>
-                        <br>
-                        <div class="d-flex justify-content-center">
-                            <div class="row gap-3 text-white">
-                                <div class="col illustration-card rounded-3 px-4 py-3">
-                                    <i class="bi bi-patch-question-fill text-info fs-1"></i>
+                <div class="row justify-content-around">
+                    <div class="col-md-5">
+                        <div class="row justify-content-around text-center mt-5">
+                            <h5>{{ 'Casual Mode' }}</h5>
+                            <p>{{ 'Berlatih untuk siap bermain Ranked Mode' }}</p>
+
+                            <div class="casual casual-text rounded-3 text-center shadow-sm mx-auto p-4">
+                                <h4>{{ 'Casual' }}</h2>
                                     <br>
-                                    <span><strong>10</strong> Nomor Soal</span>
-                                </div>
-                                <div class="col illustration-card rounded-3 px-4 py-3">
-                                    <i class="bi bi-suit-heart-fill text-danger fs-1"></i>
-                                    <br>
-                                    <span><strong>0</strong> Nyawa</span>
-                                </div>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="row gap-3 text-white">
+                                            <div class="col illustration-card rounded-3 px-4 py-3">
+                                                <i class="bi bi-patch-question-fill text-info fs-1"></i>
+                                                <br>
+                                                <span><strong>10</strong> Nomor Soal</span>
+                                            </div>
+                                            <div class="col illustration-card rounded-3 px-4 py-3">
+                                                <i class="bi bi-suit-heart-fill text-danger fs-1"></i>
+                                                <br>
+                                                <span><strong>0</strong> Nyawa</span>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -195,7 +202,7 @@
     <div class="my-5" data-aos="fade-up">
         <p class="fw-bold fs-5 text-center">Tentang Pengembang</p>
         <br>
-        <div class="row row-cols-1 row-cols-md-4">
+        <div class="row row-cols-1 row-cols-md-4 developer">
             <div class="col">
                 <div class="card">
                     <img src="{{ url('assets/img/vanness_zhong_anthony.svg') }}" alt="Vanness Zhong Anthony"
@@ -323,7 +330,7 @@
     </div>
 
     <div data-aos="fade-up">
-        <div class="card illustration-card my-5" data-aos="fade-up">
+        <div class="card illustration-card mt-5" data-aos="fade-up">
             <div class="card-header text-center fw-bold fs-5 pb-3">{{ 'Tentang Universitas Ciputra' }}</div>
             <div class="card-body px-0 py-3">
                 <div class="row">
@@ -340,7 +347,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 iframe-home">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.2300803124476!2d112.62941291424833!3d-7.285587194741468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fde455555555%3A0xd7e2611ae591f046!2sUniversitas%20Ciputra%20Surabaya!5e1!3m2!1sid!2sid!4v1639550236501!5m2!1sid!2sid"
                             width="1440" height="1080" style="border:0;" allowfullscreen="" loading="lazy"
@@ -349,9 +356,8 @@
                 </div>
             </div>
 
-            <div class="mx-auto card-footer bg-transparent">
-                <ul class="list-unstyled d-flex pt-2 mb-1">
-                    
+            <div class="mx-auto card-footer border-0 bg-transparent">
+                <ul class="list-unstyled d-flex mb-1">
                     <li>
                         <a href="mailto:info@ciputra.ac.id" data-bs-toggle="tooltip" title="Email">
                             <i class="bi bi-envelope icon-font"></i>
@@ -400,11 +406,10 @@
                     </li>
                 </ul>
             </div>
-
-
         </div>
 
-        <i class="bi bi-arrow-up-circle-fill scrollToTopBtn fs-1" data-bs-toggle="tooltip" title="Scroll to Top Page"></i>
+        <i class="bi bi-arrow-up-circle-fill scrollToTopBtn fs-1 mt-5" onclick="topFunction()" id="myBtn"
+            data-bs-toggle="tooltip" title="Scroll to Top Page"></i>
 
         {{-- JavaScript Library (TypewriterJS) --}}
         <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>

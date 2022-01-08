@@ -8,7 +8,7 @@
             <div class="col">
                 <div class="row">
                     <div class="col-sm-9 align-self-center">
-                        <div class="row">
+                        <div class="row mainkangamenya-card">
                             <p class="display-6">{{ 'Mainkan Gamenya,' }}</p>
                             <div class="d-inline">
                                 <span class="display-4 highlight">{{ 'Jadilah yang Terbaik' }}</span>
@@ -16,7 +16,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3 align-self-center">
+                    <div class="col-sm-3 align-self-center mainkangamenya-img">
                         <img src="{{ url('assets/img/ill_leaderboard.svg') }}" alt="Leaderboard"
                             class="static-card-img mx-auto d-block">
                     </div>
