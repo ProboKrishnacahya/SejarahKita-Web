@@ -206,7 +206,7 @@
             <div class="col">
                 <div class="card">
                     <img src="{{ url('assets/img/vanness_zhong_anthony.svg') }}" alt="Vanness Zhong Anthony"
-                        loading="lazy" class="developer img-fluid mx-auto d-block p-2" />
+                        loading="lazy" class="img-fluid mx-auto d-block p-2" />
                     <strong class="text-center my-2">
                         <a href="https://www.linkedin.com/in/vanness-zhong-8aa102221/" target="_blank"
                             rel="noopener noreferrer">Vanness Zhong Anthony</a>
@@ -218,18 +218,18 @@
                     <ul class="list-unstyled">
                         <li>
                             <a href="mailto:vanthony@student.ciputra.ac.id">
-                                <button class="btn btn-danger w-100 mt-1 mb-2">
+                                <button class="btn btn-primary w-100 mt-1 mb-2">
                                     <i class="bi bi-envelope"></i>&emsp;{{ __('Email') }}
                                 </button>
                             </a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="https://github.com/vannessza" target="_blank" rel="noopener noreferrer">
                                 <button class="btn btn-dark w-100">
                                     <i class="bi bi-github"></i>&emsp;{{ __('GitHub') }}
                                 </button>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -237,7 +237,7 @@
             <div class="col">
                 <div class="card">
                     <img src="{{ url('assets/img/nathanael_abel_arianto.svg') }}" alt="Nathanael Abel Arianto"
-                        loading="lazy" class="developer img-fluid mx-auto d-block p-2" />
+                        loading="lazy" class="img-fluid mx-auto d-block p-2" />
                     <strong class="text-center my-2">
                         <a href="https://www.linkedin.com/in/nathanael-abel-arianto-61aa73211/" target="_blank"
                             rel="noopener noreferrer">Nathanael Abel Arianto</a>
@@ -249,18 +249,18 @@
                     <ul class="list-unstyled">
                         <li>
                             <a href="mailto:narianto@student.ciputra.ac.id">
-                                <button class="btn btn-danger w-100 mt-1 mb-2">
+                                <button class="btn btn-primary w-100 mt-1 mb-2">
                                     <i class="bi bi-envelope"></i>&emsp;{{ __('Email') }}
                                 </button>
                             </a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="https://github.com/nathanaelabel/" target="_blank" rel="noopener noreferrer">
                                 <button class="btn btn-dark w-100">
                                     <i class="bi bi-github"></i>&emsp;{{ __('GitHub') }}
                                 </button>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -268,7 +268,7 @@
             <div class="col">
                 <div class="card">
                     <img src="{{ url('assets/img/probo_krishnacahya.svg') }}" alt="Probo Krishnacahya" loading="lazy"
-                        class="developer img-fluid mx-auto d-block p-2" />
+                        class="img-fluid mx-auto d-block p-2" />
                     <strong class="text-center my-2">
                         <a href="https://www.linkedin.com/in/probo-krishnacahya/" target="_blank"
                             rel="noopener noreferrer">Probo Krishnacahya</a>
@@ -280,18 +280,18 @@
                     <ul class="list-unstyled">
                         <li>
                             <a href="mailto:pkrishnacahya@student.ciputra.ac.id">
-                                <button class="btn btn-danger w-100 mt-1 mb-2">
+                                <button class="btn btn-primary w-100 mt-1 mb-2">
                                     <i class="bi bi-envelope"></i>&emsp;{{ __('Email') }}
                                 </button>
                             </a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="https://github.com/cahyaa02/" target="_blank" rel="noopener noreferrer">
                                 <button class="btn btn-dark w-100">
                                     <i class="bi bi-github"></i>&emsp;{{ __('GitHub') }}
                                 </button>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -299,7 +299,7 @@
             <div class="col">
                 <div class="card">
                     <img src="{{ url('assets/img/michael_chandra.svg') }}" alt="Michael Chandra" loading="lazy"
-                        class="developer img-fluid mx-auto d-block p-2" />
+                        class="img-fluid mx-auto d-block p-2" />
                     <strong class="text-center my-2">
                         <a href="https://www.linkedin.com/in/michael-chandra-330/" target="_blank"
                             rel="noopener noreferrer">Michael Chandra</a>
@@ -311,18 +311,18 @@
                     <ul class="list-unstyled">
                         <li>
                             <a href="mailto:mchandra05@student.ciputra.ac.id">
-                                <button class="btn btn-danger w-100 mt-1 mb-2">
+                                <button class="btn btn-primary w-100 mt-1 mb-2">
                                     <i class="bi bi-envelope"></i>&emsp;{{ __('Email') }}
                                 </button>
                             </a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="https://github.com/michaellchandra/" target="_blank" rel="noopener noreferrer">
                                 <button class="btn btn-dark w-100">
                                     <i class="bi bi-github"></i>&emsp;{{ __('GitHub') }}
                                 </button>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>

@@ -164,7 +164,6 @@ a:hover,
 
 .btn-primary:hover,
 .navbar-brand:hover,
-.developer:hover,
 .scrollToTopBtn:hover {
     filter: brightness(115%) !important;
 }
