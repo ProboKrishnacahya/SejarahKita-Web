@@ -45,7 +45,7 @@ class LoginController extends Controller
                 if (Auth::attempt($user)) {
                     $this->isLogin(Auth::id());
 
-                    $response = Http::asForm()->post('http://sejarahkita.test/oauth/token', [
+                    $response = Http::asForm()->post('https://sejarahkita.my.id/oauth/token', [
                         'grant_type' => 'password',
                         'client_id' => $this->client->id,
                         'client_secret' => $this->client->secret,
@@ -121,7 +121,7 @@ class LoginController extends Controller
             'refresh_token' => 'Refresh token is required.'
         ]);
 
-        $response = Http::asForm()->post('http://sejarahkita.test/oauth/token', [
+        $response = Http::asForm()->post('https://sejarahkita.my.id/oauth/token', [
             'grant_type' => 'refresh_token',
             'refresh_token' => $request->refresh_token,
             'client_id' => $this->client->id,
