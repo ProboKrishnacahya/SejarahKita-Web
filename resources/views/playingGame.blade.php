@@ -23,7 +23,7 @@
                             <p>Yakin ingin keluar game?</p>
                             <span>Seluruh perolehan skor mu <strong>tidak akan tersimpan</strong> jika keluar game.</span>
                         </div>
-                        <div class="d-flex justify-content-between py-3">
+                        <div class="d-flex justify-content-between gap-2 py-3">
                             <button type="button" class="btn btn-outline-warning ms-3" data-bs-dismiss="modal">
                                 <i class="bi bi-controller"></i>&emsp;{{ 'Lanjutkan Game' }}
                             </button>
@@ -93,7 +93,7 @@
             <span></span>
         @else
             <img src="{{ asset('storage/' . $soal->pertanyaan_path_gambar) }}"
-                class="question-img mx-auto shadow-sm mx-auto d-block" />
+                class="question-img mx-auto shadow-sm d-block mx-auto" />
         @endif
     </div>
 

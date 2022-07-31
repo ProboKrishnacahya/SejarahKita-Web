@@ -142,6 +142,7 @@ lottie-player {
     --static-icon: #FFFF00;
     --text-secondary: #000000;
     --text-primary: #FFFFFF;
+    --text-link: #FFB800;
     --font-primary: 'Poppins', sans-serif !important;
 }
 
@@ -173,17 +174,8 @@ button:active,
     transform: scale(.9);
 }
 
-.btn-lg.btn-outline-primary:hover {
-    border: 2px solid var(--button-primary) !important;
-    background-color: transparent !important;
-    color: var(--button-primary) !important;
-    filter: brightness(150%);
-}
-
-.btn-outline-warning:hover {
-    border: 1px solid var(--button-secondary) !important;
-    background-color: transparent !important;
-    color: var(--button-secondary) !important;
+.btn-secondary:hover {
+    filter: brightness(110%);
 }
 
 .btn-link:hover {
@@ -307,13 +299,15 @@ select:focus-visible {
 
 #pills-easy-tab.active,
 #pills-hard-tab.active {
-    background-color: var(--button-secondary);
-    color: var(--text-secondary) !important;
+    border-bottom: none !important;
+    border-radius: 100px;
+    background-color: var(--button-primary);
+    color: var(--text-primary) !important;
 }
 
 #pills-easy-tab.nav-link:not(.active),
 #pills-hard-tab.nav-link:not(.active) {
-    color: var(--button-secondary) !important;
+    color: var(--button-primary) !important;
 }
 
 /** Selector (Class) */
@@ -357,13 +351,16 @@ select:focus-visible {
     color: var(--text-primary) !important;
 }
 
+.btn-secondary {
+    border: solid 2px var(--button-secondary) !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    color: var(--text-link) !important;
+}
+
 .btn-link {
     text-decoration: none;
     color: var(--button-secondary);
-}
-
-.btn-outline-primary {
-    border: solid 2px var(--button-primary);
 }
 
 .btn-outline-danger {
@@ -419,10 +416,6 @@ select:focus-visible {
     max-height: 15rem !important;
 }
 
-.question-img {
-    border-radius: 5px;
-}
-
 .illustration-img {
     max-width: 100% !important;
 }
@@ -468,7 +461,6 @@ select,
 
 .middle {
     width: 75% !important;
-
 }
 
 .center {
@@ -488,7 +480,8 @@ select,
     border-radius: 10px;
 }
 
-.card {
+.card,
+.accordion {
     padding: .75rem 1.25rem 0 1.25rem;
     border-radius: 15px !important;
     border: 3px solid var(--card-primary-background) !important;
@@ -595,6 +588,10 @@ select,
     background-color: var(--card-secondary);
 }
 
+.list-group-item {
+    color: var(--text-link);
+}
+
 .playingHistory {
     border: 0 !important;
     border-right: solid 10px var(--button-secondary) !important;
@@ -603,10 +600,13 @@ select,
 /*! MOBILE VIEW */
 
 @media only screen and (max-width: 600px) {
+
+    /** Page Structures */
     body {
         background: var(--background) url(../img/bg-mobile.svg) fixed center / cover no-repeat;
     }
 
+    /** Selector (Class) */
     .casual-card {
         text-align: center;
     }
@@ -652,6 +652,11 @@ select,
         text-align: center;
     }
 
+    .pilihan-bab,
+    .objek {
+        display: grid !important;
+    }
+
     .exit-nyawa {
         display: grid !important;
         margin: 0 !important;
@@ -675,6 +680,11 @@ select,
     .btn-playinghistory,
     .btn-banksoal,
     .btn-log {
+        width: 100% !important;
+    }
+
+    .summary {
+        display: grid;
         width: 100% !important;
     }
 }

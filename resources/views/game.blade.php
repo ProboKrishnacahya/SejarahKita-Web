@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 align-self-center">
-                        <img src="{{ url('assets/img/ill_game.svg') }}" alt="Game" class="content-img mx-auto d-block">
+                        <img src="{{ url('assets/img/ill_game.svg') }}" alt="Game" class="content-img d-block mx-auto">
                     </div>
                 </div>
             </div>
@@ -36,9 +36,9 @@
                         <div class="row text-center">
                             <h3>{{ 'Easy' }}</h3>
                             <img src="{{ url('assets/img/ill_nyawa5.svg') }}" alt="Nyawa Easy"
-                                class="content-img mx-auto d-block">
+                                class="content-img d-block mx-auto">
                             <a href="{{ route('countdown', ['level'=>'easy']) }}">
-                                <button class="btn btn-warning fs-4 shadow-sm">
+                                <button class="btn btn-primary fs-4 shadow-sm">
                                     <i class="bi bi-controller"></i>&emsp;{{ 'Main Sekarang' }}
                                 </button>
                             </a>
@@ -48,9 +48,9 @@
                         <div class="row text-center">
                             <h3>{{ 'Hard' }}</h3>
                             <img src="{{ url('assets/img/ill_nyawa3.svg') }}" alt="Nyawa Hard"
-                                class="content-img mx-auto d-block">
+                                class="content-img d-block mx-auto">
                             <a href="{{ route('countdown', ['level'=>'hard']) }}">
-                                <button class="btn btn-warning fs-4 shadow-sm">
+                                <button class="btn btn-primary fs-4 shadow-sm">
                                     <i class="bi bi-controller"></i>&emsp;{{ 'Main Sekarang' }}
                                 </button>
                             </a>
@@ -71,7 +71,7 @@
                             <p>{{ 'Bermain dengan santai tanpa pengaruhi Ranked Point mu' }}</p>
                             <div class="container">
                                 <a href="{{ route('countdown', ['level'=>'casual']) }}">
-                                    <button class="btn btn-warning fs-4 shadow-sm mt-5">
+                                    <button class="btn btn-primary fs-4 shadow-sm mt-5">
                                         <i class="bi bi-controller"></i>&emsp;{{ 'Main Sekarang' }}
                                     </button>
                                 </a>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="col-sm-6 align-self-center d-none d-sm-block">
                         <img src="{{ url('assets/img/ill_casual.svg') }}" alt="Casual"
-                            class="content-img mx-auto d-block mb-2 p-2">
+                            class="content-img d-block mx-auto mb-2 p-2">
                     </div>
                 </div>
             </div>

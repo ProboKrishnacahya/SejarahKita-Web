@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-sm-6 align-self-center">
                         <img src="{{ url('assets/img/ill_profile.svg') }}" alt="Profile"
-                            class="profile mx-auto d-block mt-1 mb-3 p-4">
+                            class="profile d-block mx-auto mt-1 mb-3 p-4">
                     </div>
                     <div class="col-sm-6 align-self-center">
                         <div class="row">
@@ -29,42 +29,62 @@
         </div>
     </div>
 
-        <div class="row my-5 text-center dashboard-card" data-aos="fade-up">
-            <div class="col-sm-6">
-                <div class="bg-primary bg-gradient rounded-3 p-3">
-                    <div class="card-body">
-                        <p>Kumpulan Pertanyaan dan Kunci Jawaban.</p>
-                        <br>
-                        <a href="{{ url('admin/profile/question') }}">
-                            <button class="btn btn-warning btn-banksoal w-50 shadow-sm">
-                                <i class="bi bi-folder"></i>&emsp;{{ 'Bank Soal' }}
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="bg-success bg-gradient rounded-3 p-3">
-                    <div class="card-body">
-                        <p>Pencatatan Riwayat Aktivitas di Aplikasi.</p>
-                        <br>
-                        <a href="{{ url('admin/profile/log') }}">
-                            <button class="btn btn-warning btn-log w-50 shadow-sm">
-                                <i class="bi bi-clock"></i>&emsp;{{ 'Log' }}
-                            </button>
-                        </a>
-                    </div>
+    <div class="row my-5 text-center dashboard-card" data-aos="fade-up">
+        <div class="col-sm-6">
+            <div class="bg-primary bg-gradient rounded-3 p-3">
+                <div class="card-body">
+                    <p>Kumpulan Pertanyaan dan Kunci Jawaban.</p>
+                    <br>
+                    <a href="{{ url('admin/profile/question') }}">
+                        <button class="btn btn-primary btn-banksoal w-50 shadow-sm">
+                            <i class="bi bi-folder"></i>&emsp;{{ 'Bank Soal' }}
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
+        <div class="col-sm-6">
+            <div class="bg-success bg-gradient rounded-3 p-3">
+                <div class="card-body">
+                    <p>Pencatatan Riwayat Aktivitas di Aplikasi.</p>
+                    <br>
+                    <a href="{{ url('admin/profile/log') }}">
+                        <button class="btn btn-primary btn-log w-50 shadow-sm">
+                            <i class="bi bi-clock"></i>&emsp;{{ 'Log' }}
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-        <button class="btn btn-danger px-3 shadow-sm">
-            <i class="bi bi-box-arrow-right"></i>&emsp;{{ __('Logout') }}
+    <button type="button" class="btn btn-danger px-3 shadow-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <i class="bi bi-box-arrow-right"></i>&emsp;{{ __('Logout') }}
+    </button>
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-        </button>
-    </a>
+    <div class="modal fade text-white" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Logout</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Yakin ingin keluar dari akun?
+                    <br>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <button type="button" class="btn btn-danger shadow-sm d-flex mx-auto mt-5">
+                            <i class="bi bi-box-arrow-right"></i>&emsp;{{ 'Logout' }}
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

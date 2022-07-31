@@ -23,9 +23,9 @@ function countCharacters(object, id) {
 }
 
 //* Scroll to Top Page's Button
-var mybutton = document.getElementById("myBtn");
+var scrollToTopButton = document.getElementById("scrollButton");
 
-function topFunction() {
+function scrollToTopPage() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }

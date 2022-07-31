@@ -18,21 +18,20 @@
                     </div>
                     <div class="col-sm-3 align-self-center mainkangamenya-img">
                         <img src="{{ url('assets/img/ill_leaderboard.svg') }}" alt="Leaderboard"
-                            class="static-card-img mx-auto d-block">
+                            class="static-card-img d-block mx-auto">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <ul class="nav nav-pills mt-5 mb-4 justify-content-center" id="pills-tab" role="tablist" data-aos="fade-up">
+    <ul class="nav nav-pills nav-fill mt-5 mb-4 p-1 justify-content-center rounded-5 bg-primary bg-opacity-10 text-primary shadow-sm" id="pills-tab" role="tablist" data-aos="fade-up">
         <li class="nav-item" role="presentation">
             <button class="nav-link active px-5" id="pills-easy-tab" data-bs-toggle="pill" data-bs-target="#pills-easy"
-                type="button" role="tab" aria-controls="pills-easy" aria-selected="true">Easy</button>
+                type="button" role="tab" aria-controls="pills-easy" aria-selected="true">Level Easy</button>
         </li>
         <li class="nav-item" role="presentation">
             <button class="nav-link px-5" id="pills-hard-tab" data-bs-toggle="pill" data-bs-target="#pills-hard"
-                type="button" role="tab" aria-controls="pills-hard" aria-selected="false">Hard</button>
+                type="button" role="tab" aria-controls="pills-hard" aria-selected="false">Level Hard</button>
         </li>
     </ul>
     <div class="tab-content" id="pills-tabContent">

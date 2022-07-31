@@ -9,8 +9,9 @@
     <meta name="keywords"
         content="SejarahKita, Web Application, Game Edukasi Anagram, Sejarah Indonesia, Informatika Universitas Ciputra Surabaya" />
     <meta name="description"
-        content="SejarahKita adalah Aplikasi Web tentang Game Edukasi berupa Anagram dengan topik mata pelajaran Sejarah Indonesia Kelas 12." />
-    <meta name="owner" content="Vanness Zhong Anthony, Nathanael Abel Arianto, Probo Krishnacahya, Michael Chandra." />
+        content="SejarahKita adalah Aplikasi Web tentang Game Edukasi berupa Anagram dengan topik mata pelajaran Sejarah Indonesia Kelas 12 Sekolah Menengah Atas." />
+    <meta name="owner"
+        content="Vanness Zhong Anthony, Nathanael Abel Arianto, Probo Krishnacahya, Michael Chandra." />
     <meta name="robots" content="home, follow" />
     <meta name="theme-color" content="#020E3A">
 
@@ -18,11 +19,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- Bootstrap Framework Content Delivery Network (Cascading Style Sheets, Icon Fonts, JavaScript Bundle with Popper) --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
     </script>
 
     {{-- jQuery Library Content Delivery Network --}}
@@ -58,7 +59,7 @@
     <nav class="navbar navbar-dark navbar-expand-lg py-3 user-select-none">
         <div class="container">
             <a class="navbar-brand" href="{{ route('user') }}" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="Homepage">
+                title="Home">
                 <img src="{{ url('assets/img/logo.svg') }}" alt="Logo" class="nav-logo pe-2">
                 <span class="nav-brand">SejarahKita</span>
             </a>
@@ -72,6 +73,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item me-4">
+                        <a class="nav-link {{ request()->is('summary*') ? 'active' : '' }}" href="/summary">Summary</a>
+                    </li>
+                    <li class="nav-item me-4">
                         <a class="nav-link {{ $active_game ?? '' }}" href="/game">Game</a>
                     </li>
                     <li class="nav-item me-4">
@@ -83,8 +87,8 @@
                             <li class="nav-item">
                                 <a class="nav-link menu-last-child" href="{{ route('admin.profile') }}"
                                     data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                                         <path fill-rule="evenodd"
                                             d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
@@ -95,8 +99,8 @@
                             <li class="nav-item">
                                 <a class="nav-link menu-last-child" href="{{ route('profile') }}"
                                     data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                                         <path fill-rule="evenodd"
                                             d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
@@ -120,8 +124,8 @@
     {{-- Web's Footer --}}
     <footer class="navbar text-center py-3 mt-auto user-select-none">
         <div class="mx-auto">
-            <span>&copy; 2021</span><a href="{{ url('/') }}" data-bs-toggle="tooltip" title="Homepage">&nbsp;<span
-                    class="fw-bold">SejarahKita</span></a>
+            <a href="{{ url('/') }}" data-bs-toggle="tooltip" title="Home">&nbsp;<span
+                    class="fw-bold">SejarahKita</span></a> - Sejarah Indonesia Kelas 12 SMA
         </div>
     </footer>
 
